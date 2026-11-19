@@ -2,17 +2,17 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>北海鱈魚香絲｜北海道 2026.11</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 :root{
-  --pixel:"Pixelify Sans","DotGothic16","PingFang TC","Noto Sans TC","Microsoft JhengHei",monospace;
-  --sans:"Pixelify Sans",-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+  --pixel:"Pixelify Sans","Noto Sans TC","Noto Sans JP","PingFang TC","Microsoft JhengHei",sans-serif;
+  --sans:"Pixelify Sans","Noto Sans TC","Noto Sans JP","PingFang TC","Microsoft JhengHei",sans-serif;
   --bg:#dce9f3;--bar:#f7fbff;--card:#ffffff;--card2:#eef5fb;--ink:#17203a;--muted:#56627f;
   --line:#17203a;--shadow:#17203a;--accent:#d4372c;--accent-ink:#ffffff;
   --blue:#2458c9;--blue-ink:#ffffff;--ok:#1f8a4c;--ok-ink:#ffffff;
@@ -249,6 +249,163 @@ body.lt-open{overflow:hidden}
 .popopts{display:grid;gap:10px;margin-top:10px}
 .choice.popopt{width:100%}
 .choice.popopt small{display:block}
+.btn{position:relative}
+.btn .bdg{top:-9px;right:-7px;min-width:16px;height:16px;padding:0 3px;font-size:10px;line-height:16px}
+details.det summary{display:inline-flex;align-items:center;gap:6px;cursor:pointer;font:13px/1.2 var(--pixel);padding:8px 12px;min-height:38px;border:2px solid var(--blue);background:var(--card2);color:var(--blue);box-shadow:2px 2px 0 var(--shadow);list-style:none}
+details.det summary:active{transform:translate(2px,2px);box-shadow:none}
+details.det[open] summary{background:var(--blue);color:var(--blue-ink)}
+details.det[open] summary .px .k{fill:var(--blue-ink)}
+details.det summary .px{margin:0}
+details.det dl.f{margin-top:8px}
+.top .ttl,.card h2,.card h3,.card h4,.item h3,.bigdate,.bigdate small,.chip,.tbtn,.btn,.tag,.time,.tabs a,.prompt,.choice,.pickd h4,h2.sec,.lt-env h2,.lt-paper h2,.lt-stamps b,.pop h2,.tk-top,.tk-code,.tk-time,.tk-foot,.tk-dur,.tk-ac,.code,.lt-sign,details.det summary,.cand summary{font-weight:700}
+.choice.locked{opacity:.6;cursor:not-allowed;border-style:dashed;box-shadow:none}
+svg.onsen{display:block;width:100%;height:auto;border:3px solid var(--line);margin-top:8px;background:#141b3a}
+svg.onsen .fa{animation:wade 12s ease-in-out infinite;animation-delay:var(--d,0s)}
+svg.onsen .bob{animation:bob 1.6s steps(2) infinite}
+svg.onsen .puff{opacity:.35;animation:steam 4s linear infinite;animation-delay:var(--d,0s)}
+svg.onsen .flk{animation:sfall 7s linear infinite;animation-delay:var(--d,0s)}
+svg.onsen .twk{animation:twk 2.4s steps(2) infinite}
+@keyframes wade{0%{transform:translate(calc(var(--dx)*-1),-4px);opacity:0}6%{opacity:1}56%{transform:translate(0,-4px)}68%{transform:translate(0,0)}92%{opacity:1}97%{opacity:0;transform:translate(0,0)}100%{opacity:0;transform:translate(calc(var(--dx)*-1),-4px)}}
+@keyframes bob{50%{transform:translateY(-1.5px)}}
+@keyframes steam{0%{transform:translateY(0);opacity:0}20%{opacity:.75}100%{transform:translateY(-38px);opacity:0}}
+@keyframes sfall{from{transform:translateY(calc(var(--y0)*-1))}to{transform:translateY(calc(125px - var(--y0)))}}
+@keyframes twk{50%{opacity:.25}}
+.dn{margin-top:10px;padding:10px;background:#fff3d6;color:#2b2233;border:3px solid var(--line);box-shadow:3px 3px 0 var(--shadow)}
+.dn h4{margin:0 0 4px;font:15px var(--pixel);font-weight:700}
+.dn-hint{margin:0 0 6px;font-size:13px;color:#7a6a58}
+.dn-bowlwrap{width:224px;max-width:100%;margin:4px auto;padding:2px}
+
+.dn-bowl{display:block;width:100%;height:auto}
+.dn-bowl.done{animation:dnbounce .8s steps(4) 2}
+.dn-bowl .pop{animation:dnpop .4s steps(4);transform-box:fill-box;transform-origin:center}
+.dn-bowl .spk{animation:twk 1.2s steps(2) infinite}
+.dn-msg{margin:4px 0 8px;text-align:center;font:14px var(--pixel);font-weight:700}
+.dn-msg.ok{color:#d4372c;font-size:17px}
+.dn-tray{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:8px;background:#c8955a;border:3px solid #7b5230}
+.dn-item{text-align:center;min-width:0}
+.dn-item span{display:block;margin-top:4px;font:11px/1.2 var(--pixel);font-weight:700;color:#fff3d6}
+.dn-top{display:block;width:100%;aspect-ratio:1;padding:4px;background:#fff;border:3px solid #2b2233;box-shadow:2px 2px 0 #2b2233;touch-action:none;cursor:grab;-webkit-user-select:none;user-select:none}
+.dn-top svg{display:block;width:100%;height:100%}
+.dn-top:active{cursor:grabbing}
+.dn-top.done{opacity:.3;box-shadow:none;cursor:default}
+.dn .btn{color:#2b2233;background:#fff;border-color:#2b2233;box-shadow:2px 2px 0 #2b2233;margin-top:8px}
+.dn-ghost{position:fixed;z-index:80;width:84px;height:84px;pointer-events:none;transform:translate(-50%,-62%) scale(1.15);filter:drop-shadow(3px 3px 0 rgba(0,0,0,.3))}
+.dn-ghost svg{display:block;width:100%;height:100%}
+@keyframes dnpop{0%{transform:scale(1.5);opacity:0}100%{transform:scale(1);opacity:1}}
+@keyframes dnbounce{50%{transform:translateY(-6px)}}
+.hotels{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:10px;margin-top:10px}
+.hcard{background:var(--card2);border:3px solid var(--line);box-shadow:3px 3px 0 var(--shadow);padding:8px;min-width:0}
+.hcard svg.hart{display:block;width:100%;height:auto;margin-bottom:6px;border:2px solid var(--line)}
+.hcard h5{margin:4px 0;font:13px/1.3 var(--pixel);font-weight:700;word-break:break-word}
+.hwho{display:flex;gap:4px;margin:4px 0}
+.hwho .px.av{width:28px;height:28px}
+.hcard p{margin:2px 0;font-size:12px;line-height:1.5;color:var(--muted)}
+.hcard .btn{margin:6px 6px 0 0}
+.sidebox{display:flex;gap:10px;align-items:center;margin-top:8px}
+.birdsvg{flex:0 0 118px;width:118px;height:auto}
+.birdsvg .bird{animation:birdbob 1.2s steps(2) infinite}
+.birdsvg .eyeb{animation:blink 4s steps(1) infinite}
+.birdsvg.hop .bird{animation:birdhop .6s steps(4) 3}
+.birdsvg.sleep .bird{animation:none;opacity:.8}
+.birdsvg .spk{animation:twk 1.2s steps(2) infinite}
+.bubble{position:relative;flex:1;min-width:0;background:var(--card2);border:3px solid var(--line);padding:8px 10px}
+.bubble::before{content:"";position:absolute;left:-12px;top:16px;border:7px solid transparent;border-right-color:var(--line)}
+.bubble p{margin:0 0 6px;font:14px/1.45 var(--pixel);font-weight:700}
+.sbtns{display:flex;flex-wrap:wrap;gap:6px}
+.sbtns .btn{margin:0}
+@keyframes birdbob{50%{transform:translateY(-1px)}}
+@keyframes blink{0%,92%,100%{opacity:1}94%,98%{opacity:0}}
+@keyframes birdhop{50%{transform:translateY(-3px)}}
+.mact{margin-top:10px;text-align:center}
+svg.mw{display:block;width:100%;height:auto;border:3px solid var(--line);margin:6px 0}
+svg.mw .cl,svg.mw .cr{transition:transform 1.2s steps(8)}
+svg.mw.open .cl{transform:translateX(-170px)}
+svg.mw.open .cr{transform:translateX(170px)}
+svg.mw .flk{animation:mfall 7s linear infinite;animation-delay:var(--d,0s)}
+svg.mw .twk{animation:twk 2.4s steps(2) infinite}
+@keyframes mfall{from{transform:translateY(calc(var(--y0)*-1))}to{transform:translateY(calc(175px - var(--y0)))}}
+.ach{border:3px solid #7b5230;background:#fff3d6;color:#2b2233;padding:10px 12px;box-shadow:3px 3px 0 var(--shadow);animation:dnpop .4s steps(4)}
+.ach-t{font:12px var(--pixel);font-weight:700;color:#d4372c;letter-spacing:2px}
+.ach-n{font:22px var(--pixel);font-weight:700;margin:2px 0}
+.ach p{margin:4px 0 8px;font-size:14px}
+.ach .btn{color:#2b2233;background:#fff;border-color:#2b2233;box-shadow:2px 2px 0 #2b2233;margin-top:4px}
+.ach .btn.go{background:#2458c9;color:#fff}
+svg.shopwalk{display:block;width:100%;height:auto;border:3px solid var(--line);margin-top:8px;background:#fdf1dd}
+svg.shopwalk .wk{transform-box:fill-box;transform-origin:center;animation:stroll 10s linear infinite;animation-delay:var(--d,0s)}
+svg.shopwalk .wb{animation:bob .6s steps(2) infinite}
+svg.shopwalk .twk{animation:twk 2.4s steps(2) infinite}
+@keyframes stroll{0%{transform:translateX(0) scaleX(1)}46%{transform:translateX(var(--a)) scaleX(1)}50%{transform:translateX(var(--a)) scaleX(-1)}96%{transform:translateX(0) scaleX(-1)}100%{transform:translateX(0) scaleX(1)}}
+.flyscene,.snowscene{display:block;width:100%;height:auto;border:3px solid var(--line);margin-top:8px}
+svg.flyscene .cld{animation:cldmove linear infinite}
+svg.flyscene .mtn{animation:mtnscroll 9s linear infinite}
+svg.flyscene .pln{animation:planebob 1.4s steps(2) infinite}
+svg.flyscene .trl{animation:trl .9s linear infinite}
+svg.flyscene .twk{animation:twk 2.4s steps(2) infinite}
+@keyframes cldmove{from{transform:translateX(340px)}to{transform:translateX(-60px)}}
+@keyframes mtnscroll{from{transform:translateX(0)}to{transform:translateX(-320px)}}
+@keyframes planebob{50%{transform:translateY(-3px)}}
+@keyframes trl{from{transform:translateX(0);opacity:1}to{transform:translateX(-50px);opacity:0}}
+svg.snowscene .sbb{animation:bob .8s steps(2) infinite}
+svg.snowscene .flk2{animation:sfall 7s linear infinite;animation-delay:var(--d,0s)}
+svg.snowscene .ba{animation:ballA 4.8s linear infinite}
+svg.snowscene .bay{animation:arcA 4.8s linear infinite}
+svg.snowscene .bb{opacity:0;animation:ballB 4.8s linear infinite}
+svg.snowscene .bby{animation:arcB 4.8s linear infinite}
+svg.snowscene .pa,svg.snowscene .pb{opacity:0;transform-box:fill-box;transform-origin:center}
+svg.snowscene .pa{animation:puffA 4.8s linear infinite}
+svg.snowscene .pb{animation:puffB 4.8s linear infinite}
+svg.snowscene .hitL{animation:hitL 4.8s linear infinite}
+svg.snowscene .hitR{animation:hitR 4.8s linear infinite}
+@keyframes ballA{0%{opacity:1;transform:translateX(0)}50%{opacity:1;transform:translateX(118px)}50.1%,100%{opacity:0;transform:translateX(118px)}}
+@keyframes arcA{0%{transform:translateY(0);animation-timing-function:cubic-bezier(.2,.7,.4,1)}25%{transform:translateY(-36px);animation-timing-function:cubic-bezier(.6,0,.8,.3)}50%,100%{transform:translateY(0)}}
+@keyframes ballB{0%,49.9%{opacity:0;transform:translateX(118px)}50%{opacity:1;transform:translateX(118px)}100%{opacity:1;transform:translateX(0)}}
+@keyframes arcB{0%,50%{transform:translateY(0);animation-timing-function:cubic-bezier(.2,.7,.4,1)}75%{transform:translateY(-36px);animation-timing-function:cubic-bezier(.6,0,.8,.3)}100%{transform:translateY(0)}}
+@keyframes puffA{0%,49%{opacity:0;transform:scale(.3)}52%{opacity:1;transform:scale(1)}64%{opacity:0;transform:scale(1.7)}100%{opacity:0}}
+@keyframes puffB{0%{opacity:1;transform:scale(.6)}8%{opacity:1;transform:scale(1)}16%{opacity:0;transform:scale(1.7)}100%{opacity:0}}
+@keyframes hitR{0%,49%{transform:translateX(0)}52%{transform:translateX(4px)}56%{transform:translateX(-3px)}60%,100%{transform:translateX(0)}}
+@keyframes hitL{0%{transform:translateX(0)}3%{transform:translateX(-4px)}7%{transform:translateX(3px)}11%,100%{transform:translateX(0)}}
+.tx{display:grid;gap:8px;margin-top:8px}
+.txs{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;padding:8px 10px;border:3px solid var(--line);background:var(--card2);color:var(--ink);font:14px/1.5 var(--sans);cursor:pointer;box-shadow:3px 3px 0 var(--shadow)}
+.txs.on{background:var(--ok);color:var(--ok-ink)}
+.txb{flex:0 0 26px;width:26px;height:26px;border:3px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center}
+.txb .px{width:16px;height:16px;margin:0}
+.pcrow{display:flex;gap:10px;align-items:center;margin-top:6px}
+.pcbox{flex:0 0 72px;width:72px;height:auto}
+.pcsd{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap}
+.pcs{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 8px;border:3px solid var(--line);background:var(--card);color:var(--ink);font:12px var(--pixel);font-weight:700;cursor:pointer;box-shadow:2px 2px 0 var(--shadow)}
+.pcs.on{background:var(--accent);color:var(--accent-ink)}
+.pcg{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:8px;margin:10px 0}
+.pct{position:relative;border:3px solid var(--line);background:#fff;padding:3px}
+.pct img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.pcw{position:absolute;left:2px;bottom:2px}
+.pcw .px.av{width:24px;height:24px}
+.pcx{position:absolute;right:-8px;top:-8px;width:28px;height:28px}
+.pccv{display:block;width:62%;max-width:240px;height:auto;margin:10px auto;border:3px solid var(--line)}
+.pcbar{height:16px;border:3px solid var(--line);background:var(--card2);margin:6px 0}
+.pcbar i{display:block;height:100%;width:0;background:var(--accent)}
+.pcv{display:block;width:62%;max-width:260px;margin:10px auto;border:3px solid var(--line);background:#000}
+button:disabled{opacity:.5;cursor:not-allowed}
+.cf label{display:block;margin:10px 0 3px;font:13px var(--pixel);font-weight:700}
+.cf input,.cf textarea{width:100%;box-sizing:border-box;padding:8px 10px;border:3px solid var(--line);background:var(--card);color:var(--ink);font:15px var(--sans)}
+.wxl{font-size:14px;margin-top:3px}
+.pocg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0}
+.pocslot{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1;padding:8px 8px 26px;border:3px solid var(--line);background:#fffdf6;color:#17203a;cursor:pointer;box-shadow:3px 3px 0 var(--shadow)}
+.pocslot img{display:block;width:100%;height:100%;object-fit:cover}
+.pocplus{font:44px var(--pixel);font-weight:700;color:#8a96ad}
+.pocap{width:100%;box-sizing:border-box;margin-top:6px;padding:6px 8px;border:3px solid var(--line);background:var(--card);color:var(--ink);font:14px var(--sans)}
+.poccv,.pocimg{display:block;width:100%;max-width:420px;height:auto;margin:8px auto;border:3px solid var(--line)}
+.pocrow{display:flex;gap:14px;align-items:center}
+.pocmb{flex:0 0 96px;width:96px;padding:0;border:0;background:none;cursor:pointer}
+.postbox{display:block;width:100%;height:auto}
+.postbox .pbody{animation:pbhop 3.2s steps(1) infinite}
+.postbox .eyeb{animation:blink 4s steps(1) infinite}
+.postbox .penv{animation:bob .9s steps(2) infinite}
+.pocrow h2{margin:0 0 4px}
+@keyframes pbhop{0%,86%,100%{transform:translateY(0)}90%{transform:translateY(-1.5px)}94%{transform:translateY(0)}}
+.pocslot{position:relative}
+.pocin{position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:0}
+.filebtn{position:relative;display:inline-block;overflow:hidden;cursor:pointer}
+.filebtn input{position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:0}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -302,9 +459,38 @@ function ticketHTML(t){
   }
   return '<article class="ticket"><div class="tk-top '+t.tone+'"><span>'+esc(t.airline)+'</span><b>'+esc(t.no)+'</b><span>'+esc(t.who)+'</span></div>'
    +'<div class="tk-main">'+side(t.from,false)+'<div class="tk-mid"><div class="tk-dur">'+esc(t.dur)+'</div><div class="tk-route"><i></i>'+icon('plane')+'<i></i></div><div class="tk-ac">'+esc(t.ac)+'</div></div>'+side(t.to,true)+'</div>'
-   +'<div class="tk-foot">'+(t.ref?'<div><small>訂位代號</small>'+esc(t.ref)+'</div>':'')+'<div><small>艙等</small>'+esc(t.cls)+'</div><div class="w2"><small>行李</small>'+esc(t.bag)+'</div></div>'
+   +'<div class="tk-foot"><div><small>訂位代號</small>'+esc(t.ref)+'</div><div><small>艙等</small>'+esc(t.cls)+'</div><div class="w2"><small>行李</small>'+esc(t.bag)+'</div></div>'
    +'<svg class="tk-bar" viewBox="0 0 120 10" preserveAspectRatio="none" shape-rendering="crispEdges" aria-hidden="true">'+bars+'</svg></article>';
 }
+function lockC(o,reason){var c={},k;for(k in o)c[k]=o[k];c.locked=reason;return c}
+var D6_BF=[
+ {name:'武田鮮魚店',sub:'三角市場・超新鮮海鮮丼',addr:'〒047-0032 北海道小樽市稲穂3丁目10-16 三角市場内',transit:'距小樽駅步行約 3 分（估算）',hours:'週四 06:00–17:00',url:'https://maps.app.goo.gl/XfVpiNyTXQtp2dh86',nav:'武田鮮魚店 小樽'},
+ {name:'滝波食堂',sub:'三角市場',addr:'〒047-0032 北海道小樽市稲穂3丁目10-16 三角市場内',transit:'距小樽駅步行約 3 分（估算）',hours:'週四 07:00–17:30',url:'https://maps.app.goo.gl/gsHPajT5hRZ8rsCq8',nav:'滝波食堂 小樽'}
+];
+var D6_BAAL={name:'cafe BAAL',sub:'牛排飯',addr:'〒047-0032 北海道小樽市稲穂3丁目8-10',transit:'距小樽駅步行約 5 分（估算）',hours:'週四 11:30–14:30、17:30–19:30',url:'https://maps.app.goo.gl/s7DwgiiRUGtDX51r5',nav:'cafe BAAL 小樽'};
+var D6_UMI={name:'Uminoya',sub:'炸豬排',addr:'〒047-0024 北海道小樽市花園3丁目5-1',transit:'花園地區，從運河步行約 15–20 分（估算）',hours:'週四 11:00–14:00、17:00–20:00',url:'https://maps.app.goo.gl/QVmaAMuE6iWWjQsY7',nav:'Uminoya 小樽'};
+var D6_MAN={name:'萬次郎 Manjiro',sub:'平價海鮮丼飯',addr:'〒047-0027 北海道小樽市堺町2-15',transit:'堺町通商店街內，從運河步行約 15 分（估算）',hours:'週四 11:00–15:00',url:'https://maps.app.goo.gl/xeHTBMFN6UVaYQmp7',nav:'萬次郎 小樽'};
+var D6_POS={name:'小樽ポセイ丼',sub:'平價海鮮丼飯',addr:'〒047-0027 北海道小樽市堺町4-9',transit:'堺町通商店街內，從運河步行約 15 分（估算）',hours:'週四 11:00–18:00',url:'https://maps.app.goo.gl/4gbUbzBahciApx2QA',nav:'小樽ポセイ丼'};
+var D6_SK=[
+ {name:'小樽洋菓子舗ルタオ本店',sub:'地標高塔・2 樓咖啡',feat:'位在メルヘン交差点的高塔建築，是堺町通的地標；2 樓咖啡區能吃到現做的北海道限定生ドゥーブルフロマージュ。',addr:'北海道小樽市堺町7-16',transit:'在堺町通上，メルヘン交差点旁（步行即達，估算）',hours:'09:00–18:00',nav:'小樽洋菓子舗ルタオ本店'},
+ {name:'北菓楼 小樽本館',sub:'石造倉庫・バウムクーヘン',feat:'石造倉庫改建的店，招牌是濕潤柔軟的バウムクーヘン「妖精の森」，還有小樽本館限定的水果蛋糕「果樹園の六月」。',addr:'北海道小樽市堺町7-22',transit:'在堺町通上（步行即達，估算）',hours:'09:00–18:30，冬季到 18:00（出發前再確認）',nav:'北菓楼 小樽本館'},
+ {name:'小樽オルゴール堂 本館',sub:'メルヘン交差点・蒸氣時鐘',feat:'堺町通的五岔路口「メルヘン交差点」就在店前，蒸氣時鐘會定時鳴響；店內是音樂盒專賣。',addr:'北海道小樽市堺町（メルヘン交差点前）',transit:'在堺町通上（步行即達，估算）',hours:'09:00–18:00（メルヘン交差点的路口自由參觀）',nav:'小樽オルゴール堂 本館'},
+ {name:'ヌーベルバーグ ルタオ ショコラティエ',sub:'巧克力專門店',feat:'巧克力專門店，濃郁可可的軟霜淇淋（ル ショコラ，約 ¥450）可以外帶邊走邊吃。',addr:'北海道小樽市堺町4-19',transit:'在堺町通上（步行即達，估算）',hours:'09:00–18:00（時期而異）',nav:'ヌーベルバーグ ルタオ ショコラティエ 小樽本店'},
+ {name:'こぶしや 小樽店',sub:'伴手禮一次買齊',feat:'販售小樽名產和北海道人氣伴手禮，例如白い恋人、マルセイバターサンド、ロイズ生チョコ。',addr:'北海道小樽市堺町5-29',transit:'在堺町通上（步行即達，估算）',hours:'09:00–18:00',nav:'おみやげの店 こぶしや 小樽店'}
+];
+var D6_WALK=[
+ {name:'ミュンヘン・クリスマス市',sub:'大通公園・11/20 開始',icon:'bag',feat:'2026 年 11/20–12/25 在大通公園 1、2 丁目舉辦，有德國熱紅酒、香腸、椒鹽卷餅和聖誕雜貨，入場免費；同一天起「さっぽろホワイトイルミネーション」也在大通一帶點燈，11/26 剛好趕上。',addr:'北海道札幌市中央区大通西2丁目（大通公園 1・2 丁目）',transit:'距蟹座約 0.5 公里，步行約 7 分（估算）',hours:'11:00–21:00（最後點餐 20:45）',nav:'大通公園 ミュンヘン・クリスマス市'},
+ {name:'狸小路商店街',sub:'蟹座旁・有屋頂商店街',icon:'bag',feat:'離蟹座很近的有屋頂商店街，藥妝、伴手禮、扭蛋店很多，下雪天也好逛。11/27 也會再來逛。',addr:'北海道札幌市中央区南2・3条西（1〜7 丁目）',transit:'距蟹座步行約 5 分（估算）',hours:'各店營業時間不同',nav:'狸小路商店街'},
+ {name:'札幌駅周邊',sub:'ステラプレイス・大丸・東急',icon:'bag',feat:'一回到札幌就在車站旁，11/25 逛過的百貨都在這裡，賣場多營業到 20:00。',addr:'北海道札幌市中央区北5条西2丁目 周邊',transit:'JR 札幌駅直結',hours:'多數賣場 10:00–20:00',nav:'札幌駅'},
+ {name:'回飯店休息',sub:'先歇腳，晚餐再集合',icon:'hotel',feat:'逛累了就先回飯店休息，19:05 前到蟹座集合。',addr:null,transit:null,hours:null}
+];
+var D7_TKJ=[
+ {name:'ガチャガチャの森 moyuk',sub:'扭蛋專門店・營業到 22:00',feat:'moyuk SAPPORO 地下 1 樓的扭蛋專門店，就在市電「狸小路」站旁。',addr:'北海道札幌市中央区南2条西3丁目20 moyuk SAPPORO B1F',transit:'市電「狸小路」站旁，從 PARCO 步行約 5 分（估算）',hours:'10:00–22:00',nav:'ガチャガチャの森 moyuk SAPPORO店'},
+ {name:'#C-pla+ 狸小路2丁目店',sub:'扭蛋專門店・1、2 樓兩層',feat:'報導提到 C-pla 是北海道最大規模的扭蛋專門店系列，狸小路 2 丁目店有 1、2 樓兩層。',addr:'〒060-0063 北海道札幌市中央区南3条西2丁目26番地7-4 佐藤ビル 1F・2F',transit:'狸小路 2 丁目，從 PARCO 步行約 4–5 分（估算）',hours:'週五 10:00–22:00',url:'https://share.google/0SnWuUMglQ2ycEoae',nav:'#C-pla+ 狸小路2丁目店'},
+ {name:'ドン・キホーテ',sub:'大型折扣店・24 小時營業',feat:'狸小路上的大型折扣店，藥妝、零食、雜貨、伴手禮都能一次買齊，24 小時營業。',addr:'〒060-0063 北海道札幌市中央区南3条西4丁目12-1',transit:'狸小路 4 丁目，從 PARCO 步行約 4 分（估算）',hours:'24 小時營業',url:'https://maps.app.goo.gl/yTfzdyrLerWwmt1P7',nav:'ドン・キホーテ 札幌狸小路本店'},
+ {name:'札幌藥妝 狸小路5丁目店',sub:'藥妝・伴手禮專區・營業到 23:00',feat:'賣化妝品、日用品、藥品和北海道特產，伴手禮區特別充實，可免稅，也支援支付寶、微信支付。',addr:'〒060-0063 北海道札幌市中央区南3条西5丁目14',transit:'狸小路 5 丁目，從 PARCO 步行約 5 分（估算）',hours:'週五 12:00–23:00',url:'https://maps.app.goo.gl/HE7wk7xnZYStoy7m6',nav:'サツドラ 狸小路五丁目店'},
+ {name:'Majisand（マジサンド）',sub:'水果三明治專賣店',feat:'2020 年開幕的水果三明治店，依季節挑選當季水果，也有霜淇淋和焦糖烤布蕾。',addr:'〒060-0062 北海道札幌市中央区南2条西1丁目5-9 第13広和ビル 1F',transit:'狸小路 1 丁目，從 PARCO 步行約 4 分（估算）',hours:'週五 11:00–20:00',url:'https://maps.app.goo.gl/it3sJ7mai92DWKzA8',nav:'Majisand 札幌'}
+];
 var DAYS=[
 {id:1,date:'11/21',dow:'六',city:'桃園 → 新千歲 → 旭川',title:'飛抵北海道・租車北上',mode:'driving',
  tip:'14:00 取車後車程約 2–3 小時，約 16:30–17:30 才會到旭川，和 16:30 check in、17:00 晚餐預約會很緊。建議取車後直接出發、先去餐廳吃飯再回飯店；若租車公司能提早取車（待確認）會更從容，晚到也可以先打電話通知餐廳。',
@@ -315,10 +501,10 @@ var DAYS=[
   I('04:30','桃園機場第一航廈集合・辦理登機',{kind:'flight',est:true,dur:'起飛前 2–3 小時到機場（約 04:25–05:25）',note:'免費託運行李：無；機票載明加購 20 公斤（詳見「航班住宿」）。',addr:'桃園國際機場 第一航廈（機票）',transit:null,hours:null,nav:'桃園國際機場 第一航廈'}),
   I('07:25','FD242 桃園 → 新千歲',{kind:'flight',ticket:TK_OUT}),
   I('12:15','入境・領行李・便利商店買午餐',{kind:'flight',est:true,dur:'約 1.5 小時（至約 13:45）',note:'在機場便利商店買午餐、零食飲料，之後一路開車到旭川。',addr:null,transit:null,hours:null}),
-  I('14:00','租車（Toyota）',{kind:'car',dur:'辦理手續約 30–40 分鐘',note:'租期 11/21–11/25，11/25 於札幌車站南口還車。租車公司、取車地點、費用待確認。',transit:'取車後開往旭川，車程約 2–3 小時',hours:null,nav:'新千歲機場 租車'}),
+  I('14:00','租車（Toyota）',{kind:'car',carRole:'pick',dur:'辦理手續約 30–40 分鐘',note:'租期 11/21–11/25，11/25 於札幌車站南口還車。',transit:'取車後開往旭川，車程約 2–3 小時',hours:null,nav:'新千歲機場 租車'}),
   I('16:30','Check in：premier hotel cabin asahikawa',{kind:'hotel',booked:true,bf:'含早餐',sub:'全員同住（茜已訂）',note:'依車程推算可能趕不上 16:30（估算），可先去餐廳再回飯店。電話 0166-73-7430。',addr:'〒070-0031 北海道旭川市1条通7丁目',transit:'JR旭川駅北口西側步行約 3 分；自家停車場約 150 台，每晚約 ¥800–1,100（先到先得、不可預約）',hours:'Check in 15:00–24:00・Check out 11:00',nav:'43.7656419,142.3577346'}),
   I('17:00','晚餐：成吉思汗 大黒屋 旭川五丁目店（本店）',{kind:'food',booked:true,sub:'已預約・成吉思汗烤肉',dur:'約 1.5 小時（至約 18:30）',note:'電話 0166-24-2424。',addr:'北海道旭川市4条通5丁目1425番地（3・4仲通）',transit:'JR旭川駅步行約 10–11 分；隔壁有投幣停車場',hours:'約 16:00–23:00（最後點餐 22:30），週六日約 15:00 起（各網站略有出入，以 Google 地圖為準）',nav:'43.7694439,142.3572799'}),
-  I('19:00','Workman 採購',{kind:'shop',est:true,dur:'約 40–60 分鐘',note:'採購品項待確認。距大黒屋直線約 2 公里（計算）。',addr:'〒078-8220 北海道旭川市10条通20丁目3-19',transit:'開車，從大黒屋出發約 2 公里（直線）',hours:'週六 07:00–20:00（週二公休，其餘每天 07:00–20:00）',nav:'43.7698021,142.3828965'}),
+  I('19:00','Workman 採購',{kind:'shop',est:true,dur:'約 40–60 分鐘',note:'採購清單請看「清單」分頁。距大黒屋直線約 2 公里（計算）。',addr:'〒078-8220 北海道旭川市10条通20丁目3-19',transit:'開車，從大黒屋出發約 2 公里（直線）',hours:'週六 07:00–20:00（週二公休，其餘每天 07:00–20:00）',nav:'43.7698021,142.3828965'}),
 
  ],
  cand:{t:'旭川備選清單',list:[
@@ -344,7 +530,7 @@ var DAYS=[
   I('11:30','旭川動物園',{kind:'sight',sub:'園內午餐',dur:'約 3–3.5 小時（至約 15:00）',note:'11/22 在冬季開園期內（2026/11/11 起）；最後入園 15:00、15:30 閉園。電話 0166-36-1104。',addr:'北海道旭川市東旭川町倉沼',transit:'開車：旭川北 IC 約 20–25 分，免費停車場約 500 台；大眾運輸：JR旭川駅搭旭山動物園線巴士約 40 分',hours:'冬季 10:30–15:30（最後入園 15:00）',nav:'旭山動物園 旭川'}),
   I('15:15','離開動物園 → 回飯店取行李',{kind:'car',est:true,dur:'約 45 分鐘（至約 16:00，含取行李）',note:'到 premier hotel cabin asahikawa 櫃檯取回寄放的行李。',addr:'〒070-0031 北海道旭川市1条通7丁目',transit:'旭山動物園到飯店車程約 25 分鐘（住宿網站資料）',hours:null,nav:'43.7656419,142.3577346'}),
 
-  I('16:20','Airbnb 入住：comma, nagayama',{kind:'hotel',booked:true,est:true,dur:'約 40 分鐘（可入住時間 15:00–20:00）',sub:'11/22–11/24・全員・姊訂，刷茜卡',note:'自助入住，鑰匙盒密碼請看房東來信的說明。民宿旁有免費停車位。',addr:'旭川市永山6条4丁目9-6',transit:'開車；民宿旁有免費停車位',hours:'Check in 15:00–20:00・Check out 10:00',letter:true,nav:'43.7877579,142.4069138'}),
+  I('16:20','Airbnb 入住：comma, nagayama',{kind:'hotel',booked:true,est:true,dur:'約 40 分鐘（可入住時間 15:00–20:00）',sub:'11/22–11/24・全員・姊訂，刷茜卡',note:'自助入住，鑰匙盒密碼在房東來信裡。民宿旁有免費停車位。',addr:'旭川市永山6条4丁目9-6',transit:'開車；民宿旁有免費停車位',hours:'Check in 15:00–20:00・Check out 10:00',letter:true,nav:'43.7877579,142.4069138'}),
 
 
   I('16:30','天黑提醒',{kind:'warn',note:'16:30 左右天黑！注意開車時間！',addr:null,transit:null,hours:null}),
@@ -382,8 +568,8 @@ var DAYS=[
   I('18:15','開車回旭川',{when:'A',kind:'car',est:true,dur:'約 1–1.5 小時（至約 19:30）',note:'夜間開車，雪地請放慢。',addr:null,transit:null,hours:null,nav:'43.7877579,142.4069138'}),
   I('16:10','開車回旭川',{when:'B',kind:'car',est:true,dur:'約 1–1.5 小時（至約 17:30）',note:'天色漸暗，雪地請放慢。',addr:null,transit:null,hours:null,nav:'43.7877579,142.4069138'}),
   I('18:15','晚餐：回旭川',{when:'B',kind:'food',icon:'food',key:'d3dinnerB',prompt:'回到旭川了！今晚想吃什麼？',est:true,dur:'約 1.5 小時（至約 19:45）',choices:[
-   {name:'梁山泊 本通り店',sub:'燒鳥居酒屋',nav:'梁山泊 本通り店 旭川'},
-   {name:'ほろ酔い処 味介',sub:'在地人推薦生魚片・グロ丼 ¥880',note:'必須電話預約。',nav:'ほろ酔い処 味介 旭川'}]}),
+   {name:'梁山泊 本通り店',sub:'燒鳥居酒屋',addr:'〒070-0033 北海道旭川市3条通6丁目',transit:'旭川市區（買物公園通附近），從 Airbnb 開車約 15–20 分（估算）',hours:'週一 18:00–02:00',url:'https://maps.app.goo.gl/LSgUCKkBGZnbfENV7',nav:'梁山泊 本通り店 旭川'},
+   {name:'ほろ酔い処 味介',fillKey:'ajisuke',sub:'在地人推薦生魚片・グロ丼 ¥880',note:'建議預約，但我們沒有日本電話，直接現場碰運氣。',addr:'〒070-0033 北海道旭川市3条通6丁目686-3 LC2号館 2F',transit:'旭川市區（買物公園通附近），從 Airbnb 開車約 15–20 分（估算）',hours:{t:'週三 18:30–23:00；11/23 是週一，週一營業時間',tbd:true},url:'https://maps.app.goo.gl/ARbcy7WgyiySBP9u5',nav:'ほろ酔い処 味介 旭川'}]}),
   I('20:15','宵夜時間',{kind:'cafe',icon:'cup',key:'d3night',prompt:'請選擇今晚想去的咖啡廳',est:true,dur:'約 1 小時（至約 21:15）',choices:[
    {name:'SWITCH FLAVOR',sub:'布丁咖啡廳・營業到 22:00',addr:'〒070-0034 北海道旭川市4条通6丁目825 パリ街',transit:'Airbnb 出發直線約 4.5 公里，開車約 10–15 分（估算）',hours:'18:00–22:00',url:'https://maps.app.goo.gl/oi3dw2set1PZTwrV7?g_st=ic',nav:'SWITCH FLAVOR 旭川'},
    {name:'CAFE CoCoMAMEYA',sub:'旭川駅前・營業到 22:00',addr:'北海道旭川市宮下通8-1962-1 Hotel Route-Inn Grand 旭川駅前 1F',transit:'Airbnb 出發直線約 5 公里，開車約 10–15 分（估算）；JR旭川駅步行約 3 分（估算）',hours:'10:00–22:00，不定休',note:'電話 0166-74-3327。',nav:'カフェ ココマメヤ 旭川'},
@@ -395,79 +581,110 @@ var DAYS=[
  ]}},
 
 {id:4,date:'11/24',dow:'二',city:'旭川 → 洞爺湖',title:'南下洞爺湖',mode:'driving',
- tip:'旭川到洞爺湖車程約 4 小時，加上休息，建議 10:20 前出發、約 14:50 抵達。15:00 check in 後還有一小段天黑前的時間可以湖畔散步。',
+ tip:'珈琲亭ちろる 10:00 才開門，所以出發排到約 11:00，抵達洞爺湖約 15:30–15:45（估算），天黑前只剩一點時間。洞爺湖溫泉街的晚餐：椛 18:00 才開，湯咖哩 mog mog 只開午餐，所以晚餐要從其他三間選。',
  stay:[{who:'全員',name:'WE Hotel Toya',bf:'含早餐',q:'WE Hotel Toya'}],
  items:[
-  I('08:30','Airbnb 退房・出發',{kind:'hotel',est:true,note:'房東規定 10:00 前退房。退房前先訊息通知房東、鎖上大門，再把鑰匙放回鑰匙盒。',addr:'旭川市永山6条4丁目9-6',transit:null,hours:'Check out 10:00',letter:true,nav:'43.7877579,142.4069138'}),
-
-  I('08:45','早餐：珈琲亭ちろる',{kind:'cafe',est:true,dur:'約 1 小時（至約 09:45）',sub:'80 年老字號咖啡店，舒芙蕾鬆餅',note:'營業時間待確認，若較晚開可與買麵包的順序對調。',nav:'珈琲亭ちろる 旭川'}),
-  I('09:50','買麵包：まちのパンや コロコロ',{kind:'food',est:true,dur:'約 20–30 分鐘',sub:'老麵包店',note:'建議買起來在車上吃當午餐。',nav:'まちのパンや コロコロ 旭川'}),
-  I('10:20','旭川 → 洞爺湖',{kind:'car',est:true,dur:'車程約 4 小時，含休息約 4.5 小時（至約 14:50）',addr:null,transit:'車程約 4 小時',hours:null,nav:'WE Hotel Toya'}),
-  I('15:00','Check in：WE Hotel Toya',{kind:'hotel',booked:true,bf:'含早餐',sub:'全員（茜已訂）',note:'最晚 24:00 前 check in。停車場需預約，請向飯店確認。',addr:'〒049-5802 北海道虻田郡洞爺湖町洞爺町293-1',transit:'開車：虻田洞爺湖 IC 約 20 分；免費停車場約 40 台；JR洞爺駅有接駁車（需預約，約 30 分）',hours:'Check in 15:00–24:00・Check out 10:00',nav:'WE Hotel Toya'}),
-  I('16:00','洞爺湖畔散步（備選）',{kind:'sight',opt:true,est:true,dur:'約 40–60 分鐘（天黑前）',note:'check in 後的空檔，行程原本沒排。飯店在湖北高台，到洞爺湖畔／溫泉街車程約 15 分，來回要抓時間。',nav:'洞爺湖'}),
-  I('18:00','晚餐時間',{kind:'food',icon:'food',key:'d4dinner',prompt:'請選擇今天想吃的晚餐',est:true,dur:'約 1.5 小時（至約 19:30）',choices:[{name:'おでん屋 椛',sub:'關東煮',nav:'おでん屋 椛 洞爺湖'},{name:'湯咖哩 mogmog',sub:'湯咖哩',icon:'curry',nav:'湯咖哩 mogmog 洞爺湖'},{name:'焼肉金城',sub:'燒肉',nav:'焼肉金城 洞爺湖'}]}),
-
- ],
- note:'區域標示為「洞爺湖－登別」，登別景點尚未列出（待確認）。'},
-
-{id:5,date:'11/25',dow:'三',city:'洞爺湖 → 札幌',title:'回札幌・還車・啤酒博物館',mode:'driving',
- tip:'15:00 前要在札幌車站南口還車，建議一回到市區就先還，再處理行李與午餐。啤酒博物館建議停留 2–2.5 小時，營業與最後入館時間請先確認。',
- stay:[{who:'涵＋蘇',name:'FAX hotel susukino',q:'FAX hotel susukino'},{who:'茜＋周',name:'hotel androoms Sapporo Susukino',q:'hotel androoms Sapporo Susukino'}],
- items:[
-  I('09:00','早餐：WE HOTEL',{kind:'food',est:true,dur:'約 1 小時',bf:'含早餐',addr:'〒049-5802 北海道虻田郡洞爺湖町洞爺町293-1',transit:null,hours:'早餐 07:30–09:30（住宿網站資料）',nav:'WE Hotel Toya'}),
-  I('10:00 前','退房・出發回札幌',{kind:'car',transit:'回程約 2.5 小時',hours:'Check out 10:00',addr:'〒049-5802 北海道虻田郡洞爺湖町洞爺町293-1',nav:'札幌駅 南口'}),
-  I('12:30','抵達札幌市區・還車（Toyota）',{kind:'car',dur:'約 30–40 分鐘，含加油、驗車（至約 13:10）',note:'15:00 前於札幌車站南口還車。若租車公司要求加滿油，請提早找加油站（待確認）。',hours:'15:00 前還車',nav:'札幌駅 南口'}),
-  I('13:15','午餐：Toriton Kita 8（迴轉壽司）',{kind:'food',est:true,dur:'約 1 小時（至約 14:15）',nav:'トリトン 北8 札幌'}),
-  I('14:30','各自回飯店放行李・check in',{kind:'hotel',est:true,dur:'約 30–45 分鐘（check in 時間待確認）',note:'涵＋蘇：FAX hotel susukino；茜＋周：hotel androoms Sapporo Susukino。',hours:null}),
-  I('15:15','啤酒博物館',{kind:'sight',est:true,dur:'約 2–2.5 小時（至約 17:15–17:45）',note:'閉館時間待確認；若較早閉館，建議最晚 15:30 前入館。',mode:'transit',nav:'サッポロビール博物館'}),
-  I('18:15','札幌車站周邊逛街・可麗餅',{kind:'shop',est:true,dur:'約 45–60 分鐘（至約 19:15）',note:'車站有厲害的可麗餅可以吃。',mode:'transit',nav:'札幌駅'}),
-  I('19:15','晚餐：塩ホルモン 炭や 札幌駅西口店',{kind:'food',est:true,dur:'約 1.5 小時（至約 20:45）',hours:'17:00–23:30',nav:'塩ホルモン 炭や 札幌駅西口店'})
+  I('09:00','Airbnb 退房・出發',{kind:'hotel',est:true,note:'房東規定 10:00 前退房。退房前先訊息通知房東、鎖上大門，再把鑰匙放回鑰匙盒。',addr:'旭川市永山6条4丁目9-6',transit:null,hours:'Check out 10:00',letter:true,nav:'43.7877579,142.4069138'}),
+  I('09:30','買麵包：まちのパンや コロコロ',{kind:'food',est:true,dur:'約 20–30 分鐘（至約 10:00）',sub:'老麵包店',note:'買起來在車上吃當午餐。',addr:'〒070-0031 北海道旭川市1条通7丁目47-1',transit:'從 Airbnb 開車約 10–15 分（估算）',hours:'週二 09:00–19:00',url:'https://share.google/GdLtiu4C2P1VFbaui',nav:'まちのパンや コロコロ 旭川'}),
+  I('10:00','早餐：珈琲亭ちろる',{kind:'cafe',est:true,dur:'約 50 分鐘（至約 10:50）',sub:'80 年老字號咖啡店，舒芙蕾鬆餅',note:'10:00 才開門，所以早餐排在買麵包之後。',addr:'〒070-0033 北海道旭川市3条通8丁目左7',transit:'距コロコロ約 0.3 公里，步行約 5 分（估算）',hours:'週二 10:00–17:00',url:'https://share.google/R8fIpfWPFxRe28Ggv',nav:'珈琲亭ちろる 旭川'}),
+  I('11:00','旭川 → 洞爺湖',{kind:'car',est:true,dur:'車程約 4 小時，含休息約 4.5 小時（至約 15:30）',addr:null,transit:'車程約 4 小時',hours:null,nav:'WE Hotel Toya'}),
+  I('15:45','Check in：WE Hotel Toya',{kind:'hotel',booked:true,est:true,bf:'含早餐',sub:'全員（茜已訂）',note:'最晚 24:00 前 check in。停車場需預約，請向飯店確認。',addr:'〒049-5802 北海道虻田郡洞爺湖町洞爺町293-1',transit:'開車：虻田洞爺湖 IC 約 20 分；免費停車場約 40 台；JR洞爺駅有接駁車（需預約，約 30 分）',hours:'Check in 15:00–24:00・Check out 10:00',nav:'WE Hotel Toya'}),
+  I('16:15','開車去洞爺湖溫泉街',{kind:'car',est:true,dur:'約 15 分鐘（至約 16:30）',addr:null,transit:'WE Hotel 到洞爺湖畔、溫泉街開車約 15 分（住宿網站資料）',hours:null,nav:'洞爺湖'}),
+  I('16:30','洞爺湖畔散步',{kind:'sight',est:true,dur:'約 40–60 分鐘（至約 17:20，天黑前後）',addr:'北海道虻田郡洞爺湖町（洞爺湖畔）',transit:'洞爺湖溫泉街，從 WE Hotel 開車約 15 分',hours:'24 小時開放',url:'https://maps.app.goo.gl/KpN9wovo3oTV5vmc6',nav:'洞爺湖'}),
+  I('17:30','晚餐時間',{kind:'food',icon:'food',key:'d4dinner',prompt:'請選擇今天想吃的晚餐',est:true,dur:'約 1.5 小時（至約 19:00）',choices:[
+   {name:'おでん屋 椛',sub:'關東煮・18:00 才開',note:'18:00 才開門，最早 18:00 入座。',addr:'〒049-5721 北海道虻田郡洞爺湖町洞爺湖温泉78-6',transit:'洞爺湖溫泉街，從 WE Hotel 開車約 15 分（估算）',hours:'週二 18:00–23:30',url:'https://maps.app.goo.gl/eWfFTrFU2THtbfUL9',nav:'おでん屋 椛 洞爺湖'},
+   {name:'炭火ダイニング アペコロ',sub:'黑毛和牛燒肉飯',addr:'〒049-5721 北海道虻田郡洞爺湖町洞爺湖温泉36-15',transit:'洞爺湖溫泉街，從 WE Hotel 開車約 15 分（估算）',hours:'週二 11:00–14:30、17:00–20:00',url:'https://maps.app.goo.gl/AcAfYGQXwZLitHuc9',nav:'炭火ダイニング アペコロ 洞爺湖'},
+   {name:'焼肉金城',sub:'燒肉',addr:'〒049-5721 北海道虻田郡洞爺湖町洞爺湖温泉63',transit:'洞爺湖溫泉街，從 WE Hotel 開車約 15 分（估算）',hours:'週二 17:00–21:00',url:'https://maps.app.goo.gl/6UYWBMpNwWM4YG1M8',nav:'焼肉金城 洞爺湖'},
+   {name:'湯咖哩 mog mog',sub:'湯咖哩',icon:'curry',locked:'只開午餐 11:00–14:30，晚餐吃不到',addr:'〒049-5721 北海道虻田郡洞爺湖町洞爺湖温泉124-4',transit:'洞爺湖溫泉街，從 WE Hotel 開車約 15 分（估算）',hours:'週二 11:00–14:30',url:'https://maps.app.goo.gl/FvTee9BDyWN7DGjR6',nav:'Soup Curry mog mog 洞爺湖'}]}),
+  I('19:15','開車回 WE Hotel',{kind:'car',est:true,dur:'約 15 分鐘（至約 19:30）',addr:null,transit:'洞爺湖溫泉街回飯店約 15 分，雪夜請放慢',hours:null,nav:'WE Hotel Toya'}),
+  I('20:00','WE HOTEL 泡湯＋雪景',{kind:'hotel',scene:'onsen',est:true,dur:'約 1–1.5 小時（至約 21:30）',sub:'泡完湯，順便欣賞雪景',addr:'〒049-5802 北海道虻田郡洞爺湖町洞爺町293-1',transit:null,hours:'24 小時',nav:'WE Hotel Toya'})
  ]},
 
-{id:6,date:'11/26',dow:'四',city:'小樽',title:'小樽一日遊',mode:'transit',
- tip:'下面行程是照 15:33 回札幌的班次排，運河最晚約 15:15 離開、再走 10–15 分鐘到小樽站。想看天黑後的運河，可改搭更晚班次（班次待確認），19:15 的蟹座仍來得及。',
- stay:[{who:'涵＋蘇',name:'FAX hotel susukino',q:'FAX hotel susukino'},{who:'茜＋周',name:'hotel androoms Sapporo Susukino',q:'hotel androoms Sapporo Susukino'}],
+{id:5,date:'11/25',dow:'三',city:'洞爺湖 → 札幌',title:'回札幌・還車・啤酒博物館',mode:'driving',
+ tip:'啤酒博物館 11:00–18:00（每週一公休；Google 地圖顯示週三到 17:30，保守以 17:30 計算），所以行程排成：放行李 → 午餐 → 博物館。Toriton 和啤酒博物館都在札幌東區，走路約 10 分。15:00 才能 check in，行李先寄放，晚餐後再回飯店。',
+ stay:[{who:'涵＋蘇',name:'FAV hotel susukino',q:'FAV hotel susukino'},{who:'茜＋周',name:'hotel androoms Sapporo Susukino',q:'hotel androoms Sapporo Susukino'}],
  items:[
-  I('08:25\n09:10','札幌 → 小樽（JR）',{kind:'train',note:'兩班可選：08:25–09:15、09:10–09:45。建議搭 09:10（估算），10:00 前後吃早餐比較順。',addr:null,hours:null,transit:'JR 札幌 → 小樽，約 35–50 分（依班次）',nav:'小樽駅'}),
-  I('10:00','早餐時間',{kind:'food',icon:'food',key:'d6bf',prompt:'請選擇今天的早餐',est:true,dur:'約 50–60 分鐘（至約 11:00）',choices:[{name:'武田鮮魚店',sub:'三角市場・超新鮮海鮮丼',nav:'武田鮮魚店 小樽'},{name:'滝波食堂',sub:'三角市場',nav:'滝波食堂 小樽'}]}),
+  I('09:00','早餐：WE HOTEL',{kind:'food',morning:true,est:true,dur:'約 1 小時',bf:'含早餐',addr:'〒049-5802 北海道虻田郡洞爺湖町洞爺町293-1',transit:null,hours:'早餐 07:30–09:30（住宿網站資料）',nav:'WE Hotel Toya'}),
+  I('10:00 前','退房・出發回札幌',{kind:'car',transit:'回程約 2.5 小時',hours:'Check out 10:00',addr:'〒049-5802 北海道虻田郡洞爺湖町洞爺町293-1',nav:'札幌駅 南口'}),
+  I('12:30','抵達札幌市區・還車（Toyota）',{kind:'car',carRole:'ret',dur:'約 30–40 分鐘，含加油、驗車（至約 13:10）',note:'15:00 前於札幌車站南口還車。若租車公司要求加滿油，請提早找加油站。',transit:'從洞爺湖開車過來，約 2–2.5 小時（估算）',hours:'15:00 前還車',nav:'札幌駅 南口'}),
+  I('13:20','各自回飯店放行李',{kind:'hotel',hotels:true,est:true,dur:'約 40 分鐘（至約 14:00）',note:'15:00 才能 check in，先把行李寄放在飯店，晚餐後再回來入住。',addr:null,transit:null,hours:null}),
+  I('14:30','午餐：Toriton Kita 8（迴轉壽司）',{kind:'food',est:true,dur:'約 1 小時（至約 15:30）',addr:'〒060-0908 北海道札幌市東区北8条東5丁目19-1',transit:'從薄野搭地鐵或計程車，約 25–30 分（估算）；距啤酒博物館步行約 10 分（估算）',hours:'週三 11:00–22:00',url:'https://maps.app.goo.gl/C7Zw72miCo96hqvH6',nav:'トリトン 北8 札幌'}),
+  I('15:45','啤酒博物館',{kind:'sight',est:true,dur:'約 1.5 小時（至約 17:15）',note:'保守以 17:30 閉館計算，建議最晚 16:00 前入館。',addr:'〒065-8633 北海道札幌市東区北7条東9丁目1-1',transit:'從 Toriton 步行約 10 分（估算）',hours:'11:00–18:00（每週一公休；Google 地圖週三顯示到 17:30）',url:'https://maps.app.goo.gl/hG3ztf531iTCv6pr9',mode:'transit',nav:'サッポロビール博物館'}),
+  I('17:50','札幌車站周邊逛街',{kind:'shop',icon:'bag',key:'d5shop',prompt:'請選擇今天想逛的店（衣服、藥妝、戶外、扭蛋、公仔）',est:true,dur:'約 40 分鐘（至約 18:30）',note:'都在札幌駅附近，營業到 20:00 以後，晚餐前逛得完。',choices:[
+   {name:'ユニクロ／GU',sub:'衣服・東急百貨店 7 樓',feat:'ユニクロ和 GU 在同一層（約 550 坪加 270 坪）。同棟 5 樓有 Bic Camera（含玩具、遊戲），8 樓有 Hands。',note:'兩間 2023 年遷入此館，出發前請在 Google 地圖確認還在營業。',addr:'北海道札幌市中央区北4条西2-1 さっぽろ東急百貨店 7F',transit:'JR 札幌駅、地鐵さっぽろ駅以地下通道連接',hours:'10:00–20:00',nav:'ユニクロ 東急百貨店さっぽろ店'},
+   {name:'コクミン 札幌アピア店',sub:'藥妝・營業到 22:00',feat:'在札幌駅地下街 APIA 裡，週一到週六營業時間很長，逛完晚餐後也來得及。',addr:'北海道札幌市中央区北5条西3丁目 APIA（札幌駅地下街）內',transit:'距地鐵さっぽろ駅約 200 公尺、JR 札幌駅約 400 公尺',hours:'週一至週六 07:45–22:00',nav:'コクミン 札幌アピア店'},
+   {name:'モンベル',sub:'戶外運動・赤れんがテラス店',feat:'地下 1 樓加 1 樓共兩層，約 283 坪，是札幌市內最大級的 mont-bell，登山、露營、防寒衣物都很齊全；只有元旦公休。',addr:'北海道札幌市中央区北2条西4丁目 赤れんがテラス B1・1F',transit:'從札幌駅走地下歩行空間過去，約 10 分（估算）',hours:'10:00–21:00',nav:'モンベル 札幌赤れんがテラス店'},
+   {name:'ケンエレスタンド',sub:'扭蛋・札幌ステラプレイス店',feat:'札幌ステラプレイス裡的扭蛋店，報導提到有一次 ¥10,000 的高價軟膠公仔扭蛋。',addr:'北海道札幌市中央区北5条西2丁目 札幌ステラプレイス內',transit:'JR 札幌駅、地鐵さっぽろ駅直結',hours:'週三 10:00–20:00',nav:'ケンエレスタンド 札幌ステラプレイス店'},
+   {name:'ビックカメラ',sub:'玩具・遊戲・東急百貨店 5 樓',feat:'連鎖大型家電量販店，5 樓是電視、手機、電腦、腳踏車、玩具和遊戲賣場，想找一般玩具、公仔、遊戲可以來這裡。同棟 7 樓是ユニクロ／GU，8 樓是 Hands，可以一起逛。',addr:'〒060-8619 北海道札幌市中央区北4条西2-1 さっぽろ東急百貨店 5F・6F',transit:'JR 札幌駅南口以地下通道連接',hours:'10:00–20:00',nav:'ビックカメラ 札幌店'}]}),
+  I('18:35','支線任務：シマエナガ可麗餅',{side:'crepe',key:'d5crepe',shop:'シマエナガ Creperie',est:true,dur:'約 20 分鐘（至約 18:55）',addr:'〒060-0004 北海道札幌市中央区北4条西2丁目1-3',transit:'距札幌ステラプレイス步行約 5 分（估算）',hours:'週三 12:00–22:00',url:'https://maps.app.goo.gl/R7ugF5z2tv1Z7fF29',nav:'シマエナガ Creperie 札幌'}),
+  I('19:15','晚餐：塩ホルモン 炭や 札幌駅西口店',{kind:'food',est:true,dur:'約 1.5 小時（至約 20:45）',addr:'〒060-0806 北海道札幌市北区北6条西6丁目',transit:'札幌駅西口方向，從車站步行約 5–10 分（估算）',hours:'週三 17:00–23:30',url:'https://maps.app.goo.gl/AgfatvwXmnvcFz668',nav:'塩ホルモン 炭や 札幌駅西口店'}),
+  I('20:45','回飯店 check in・取行李',{kind:'hotel',est:true,dur:'約 30 分鐘',note:'涵＋蘇：FAV hotel susukino；茜＋周：hotel androoms Sapporo Susukino。',addr:null,transit:null,hours:'Check in 15:00 起'})
+ ]},
 
-  I('11:00','小樽住吉神社',{kind:'sight',est:true,dur:'約 25–30 分鐘',nav:'小樽住吉神社'}),
-  I('11:35','Un délice（アンデリス）',{kind:'cafe',est:true,dur:'約 20–30 分鐘',sub:'第一間布丁專賣店',nav:'Un délice 小樽'}),
-  I('12:10','小樽堺町通商店街',{kind:'shop',est:true,dur:'約 30 分鐘（午餐前先逛）',nav:'小樽堺町通り商店街'}),
-  I('12:45','午餐時間',{kind:'food',icon:'food',key:'d6lunch',prompt:'請選擇今天想吃的午餐',est:true,dur:'約 1 小時（至約 13:45）',note:'地點：小樽堺町通商店街。',choices:[{name:'cafe BAAL',sub:'牛排飯',nav:'cafe BAAL 小樽'},{name:'Uminoya',sub:'炸豬排',nav:'Uminoya 小樽'},{name:'萬次郎 Manjiro',sub:'平價海鮮丼飯',nav:'萬次郎 小樽'},{name:'小樽ポセイ丼',sub:'平價海鮮丼飯',nav:'小樽ポセイ丼'}]}),
-
-  I('13:50','北一硝子（咖啡）',{kind:'cafe',est:true,dur:'約 40 分鐘（至約 14:30）',sub:'Kitaichi Hall・百年煤油燈咖啡廳',nav:'北一硝子 北一ホール 小樽'}),
-  I('14:35','日本郵船株式會社（《情書》取景地）',{kind:'sight',est:true,dur:'約 15–20 分鐘',nav:'旧日本郵船小樽支店'}),
-  I('15:00','小樽運河',{kind:'sight',est:true,dur:'約 15–20 分鐘（之後走回小樽站）',nav:'小樽運河'}),
-  I('14:53\n15:33','小樽 → 札幌（JR）',{kind:'train',note:'兩班可選：14:53–15:27、15:33–16:08。上面行程照 15:33 排。',addr:null,hours:null,transit:'JR 小樽 → 札幌，約 34–35 分（依班次）',nav:'札幌駅'}),
-  I('16:30','回飯店休息',{kind:'hotel',est:true,dur:'約 2 小時（整理、休息）',hours:null}),
-  I('19:15','晚餐：蟹座 吃到飽',{kind:'food',booked:true,sub:'已預約',dur:'約 1.5–2 小時（至約 21:00）',note:'電話 011-211-1377。',transit:'地鐵東豐線豐水すすきの駅步行約 1 分',hours:'17:00–22:30（最後點餐 21:00）',nav:'蟹座 札幌'}),
+{id:6,date:'11/26',dow:'四',city:'小樽',title:'小樽一日遊',mode:'transit',branch:'d6train',
+ tip:'路線：三角市場早餐 → 住吉神社 → Un délice → 堺町通商店街＋北一硝子咖啡 → 車站附近的運河 → 午餐 → 搭車回札幌。選 08:25 或 09:10 搭車，下面的行程會自動重排。午餐店家營業到 14:00–15:00，所以午餐不要排太晚。回札幌後分頭逛街，19:15 在蟹座集合。',
+ stay:[{who:'涵＋蘇',name:'FAV hotel susukino',q:'FAV hotel susukino'},{who:'茜＋周',name:'hotel androoms Sapporo Susukino',q:'hotel androoms Sapporo Susukino'}],
+ items:[
+  I('出發前','岔路口：幾點搭車？',{kind:'train',icon:'train',key:'d6train',prompt:'早起趕 08:25，還是多睡一下搭 09:10？',choices:[
+   {name:'08:25 搭車',sub:'09:15 到小樽・時間比較充裕',icon:'train',note:'札幌 08:25 發車、09:15 抵達小樽。下面的行程會自動排成「早班版」，回程搭 14:53。',addr:null,transit:null,hours:null,nav:'小樽駅'},
+   {name:'09:10 搭車',sub:'09:45 到小樽・多睡 45 分鐘',icon:'train',note:'札幌 09:10 發車、09:45 抵達小樽。下面的行程會自動排成「晚班版」，回程搭 15:33。',addr:null,transit:null,hours:null,nav:'小樽駅'}]}),
+  I('08:25','札幌 → 小樽（JR）',{when:'A',kind:'train',note:'08:25 發車，09:15 抵達小樽（約 50 分鐘）。',addr:null,hours:null,transit:'JR 札幌 → 小樽',nav:'小樽駅'}),
+  I('09:25','早餐時間',{when:'A',kind:'food',icon:'food',key:'d6bf',prompt:'請選擇今天的早餐',est:true,dur:'約 45 分鐘（至約 10:10）',choices:D6_BF}),
+  I('10:20','小樽住吉神社',{when:'A',kind:'sight',est:true,dur:'約 40 分鐘，含移動（至約 11:00）',addr:'〒047-0014 北海道小樽市住ノ江2丁目5-1',transit:'從三角市場搭公車或計程車，約 10–15 分（估算）',hours:'週四 06:00–16:00',url:'https://maps.app.goo.gl/rCxboCFLKVRanwb48',nav:'小樽住吉神社'}),
+  I('11:10','Un délice（アンデリス）',{when:'A',kind:'cafe',est:true,dur:'約 25 分鐘（至約 11:35）',sub:'第一間布丁專賣店',addr:'〒047-0014 北海道小樽市住ノ江1丁目5-1',transit:'距住吉神社步行約 5 分（估算）',hours:'週四 10:00–17:00',url:'https://maps.app.goo.gl/YDVtEcVFgdcL6ozc6',nav:'Un délice 小樽'}),
+  I('11:45','小樽堺町通商店街',{when:'A',kind:'shop',est:true,dur:'約 30 分鐘（至約 12:15）',addr:'〒047-0027 北海道小樽市堺町6-11',transit:'從 Un délice 搭公車或計程車，約 15 分（估算）',hours:'週四 09:00–18:00',url:'https://maps.app.goo.gl/oDgAYsMrjf41Rd8S6',nav:'小樽堺町通り商店街'}),
+  I('順路逛','堺町通必逛（可複選）',{when:'A',kind:'shop',icon:'bag',key:'d6sk',multi:true,prompt:'想順路逛哪幾間？（可複選）',choices:D6_SK}),
+  I('12:15','北一硝子 三号館',{when:'A',kind:'cafe',est:true,dur:'約 45 分鐘（至約 13:00）',sub:'百年煤油燈咖啡廳「北一ホール」',addr:'〒047-0027 北海道小樽市堺町7-26',transit:'在堺町通商店街內，步行約 3–5 分（估算）',hours:'週四 09:00–18:00',url:'https://maps.app.goo.gl/ak9qvhDDKJ1FnmwW9',nav:'北一硝子三号館'}),
+  I('13:10','小樽運河',{when:'A',kind:'sight',est:true,dur:'約 20 分鐘（至約 13:30）',sub:'車站附近的運河段',addr:'〒047-0007 北海道小樽市港町5',transit:'從北一硝子走過去，約 15 分（估算）',hours:'24 小時營業',url:'https://maps.app.goo.gl/eXqXqag1Ho4pJs5M7',nav:'小樽運河'}),
+  I('13:40','午餐時間',{when:'A',kind:'food',icon:'food',key:'d6lunchA',prompt:'請選擇今天想吃的午餐',est:true,dur:'約 50 分鐘（至約 14:30）',choices:[D6_BAAL,lockC(D6_UMI,'營業到 14:00，13:40 才到太趕'),D6_MAN,D6_POS]}),
+  I('14:53','小樽 → 札幌（JR）',{when:'A',kind:'train',note:'14:53 發車，15:27 抵達札幌（約 34 分鐘）。',addr:null,hours:null,transit:'JR 小樽 → 札幌',nav:'札幌駅'}),
+  I('15:45','分頭逛街',{when:'A',kind:'shop',icon:'bag',key:'d6walk',multi:true,prompt:'回到札幌，大家分頭逛街！想去哪裡？（可複選）',est:true,dur:'約 2.5 小時（至約 18:15）',choices:D6_WALK}),
+  I('09:10','札幌 → 小樽（JR）',{when:'B',kind:'train',note:'09:10 發車，09:45 抵達小樽（約 35 分鐘）。',addr:null,hours:null,transit:'JR 札幌 → 小樽',nav:'小樽駅'}),
+  I('09:55','早餐時間',{when:'B',kind:'food',icon:'food',key:'d6bf',prompt:'請選擇今天的早餐',est:true,dur:'約 45 分鐘（至約 10:40）',choices:D6_BF}),
+  I('10:50','小樽住吉神社',{when:'B',kind:'sight',est:true,dur:'約 40 分鐘，含移動（至約 11:30）',addr:'〒047-0014 北海道小樽市住ノ江2丁目5-1',transit:'從三角市場搭公車或計程車，約 10–15 分（估算）',hours:'週四 06:00–16:00',url:'https://maps.app.goo.gl/rCxboCFLKVRanwb48',nav:'小樽住吉神社'}),
+  I('11:40','Un délice（アンデリス）',{when:'B',kind:'cafe',est:true,dur:'約 25 分鐘（至約 12:05）',sub:'第一間布丁專賣店',addr:'〒047-0014 北海道小樽市住ノ江1丁目5-1',transit:'距住吉神社步行約 5 分（估算）',hours:'週四 10:00–17:00',url:'https://maps.app.goo.gl/YDVtEcVFgdcL6ozc6',nav:'Un délice 小樽'}),
+  I('12:15','小樽堺町通商店街',{when:'B',kind:'shop',est:true,dur:'約 30 分鐘（至約 12:45）',addr:'〒047-0027 北海道小樽市堺町6-11',transit:'從 Un délice 搭公車或計程車，約 15 分（估算）',hours:'週四 09:00–18:00',url:'https://maps.app.goo.gl/oDgAYsMrjf41Rd8S6',nav:'小樽堺町通り商店街'}),
+  I('順路逛','堺町通必逛（可複選）',{when:'B',kind:'shop',icon:'bag',key:'d6sk',multi:true,prompt:'想順路逛哪幾間？（可複選）',choices:D6_SK}),
+  I('12:45','北一硝子 三号館',{when:'B',kind:'cafe',est:true,dur:'約 45 分鐘（至約 13:30）',sub:'百年煤油燈咖啡廳「北一ホール」',addr:'〒047-0027 北海道小樽市堺町7-26',transit:'在堺町通商店街內，步行約 3–5 分（估算）',hours:'週四 09:00–18:00',url:'https://maps.app.goo.gl/ak9qvhDDKJ1FnmwW9',nav:'北一硝子三号館'}),
+  I('13:40','小樽運河',{when:'B',kind:'sight',est:true,dur:'約 20 分鐘（至約 14:00）',sub:'車站附近的運河段',addr:'〒047-0007 北海道小樽市港町5',transit:'從北一硝子走過去，約 15 分（估算）',hours:'24 小時營業',url:'https://maps.app.goo.gl/eXqXqag1Ho4pJs5M7',nav:'小樽運河'}),
+  I('14:10','午餐時間',{when:'B',kind:'food',icon:'food',key:'d6lunchB',prompt:'請選擇今天想吃的午餐',est:true,dur:'約 50 分鐘（至約 15:00）',choices:[lockC(D6_BAAL,'營業到 14:30，14:10 才到太趕'),lockC(D6_UMI,'14:00 已經打烊'),D6_MAN,D6_POS]}),
+  I('15:33','小樽 → 札幌（JR）',{when:'B',kind:'train',note:'15:33 發車，16:08 抵達札幌（約 35 分鐘）。',addr:null,hours:null,transit:'JR 小樽 → 札幌',nav:'札幌駅'}),
+  I('16:30','分頭逛街',{when:'B',kind:'shop',icon:'bag',key:'d6walk',multi:true,prompt:'回到札幌，大家分頭逛街！想去哪裡？（可複選）',est:true,dur:'約 2 小時（至約 18:30）',choices:D6_WALK}),
+  I('19:15','晚餐：蟹座 吃到飽',{kind:'food',booked:true,sub:'已預約',dur:'約 1.5–2 小時（至約 21:00）',note:'電話 011-211-1377。建議 19:05 前到店集合。',addr:'〒064-0804 北海道札幌市中央区南4条西2丁目10-1 南4西2ビル 9F',transit:'地鐵東豐線豐水すすきの駅步行約 1 分',hours:'17:00–22:30（最後點餐 21:00）',url:'https://maps.app.goo.gl/5vBk6vxedD2QDfAV6',nav:'かに食べ放題 蟹座 札幌'})
  ],
  cand:{t:'小樽備選清單',list:[
-  ['北一硝子 Kitaichi Hall','百年煤油燈咖啡廳','北一硝子 北一ホール 小樽'],
+  ['北一硝子 三号館（北一ホール）','百年煤油燈咖啡廳','北一硝子三号館'],
   ['武田鮮魚店','超新鮮海鮮凍飯（帝王蟹、鮭魚卵…）','武田鮮魚店 小樽'],
   ['雷除志ん古（Kaminari Yoke Shinko）','百年大福店','雷除志ん古 小樽'],
   ['Un délice アンデリス','第一間布丁專賣店','Un délice 小樽']
  ]}},
 
 {id:7,date:'11/27',dow:'五',city:'札幌（圓山）',title:'大通・圓山散步',mode:'transit',
- tip:'行李先寄放在原飯店，下午回大通後取行李、入住 vessel hotel。排隊拉麵建議開店前就到。',
+ tip:'行李早上直接寄放在 vessel hotel（離 FAV 約 2–3 分、離 androoms 約 8 分），晚上直接入住，不用回舊飯店取行李。排隊拉麵建議開店前就到。',
  stay:[{who:'涵＋蘇、茜＋周',name:'vessel hotel campana susukino',bf:'含早餐 buffet',q:'ベッセルホテルカンパーナすすきの'}],
  items:[
-  I('08:45\n–09:00','Check out + 寄放行李',{kind:'hotel',note:'涵＋蘇：FAX hotel susukino；茜＋周：hotel androoms Sapporo Susukino。行李寄放處待確認。',transit:null,hours:null}),
-  I('09:15','早餐時間',{kind:'cafe',icon:'cup',key:'d7bf',prompt:'請選擇今天的早餐',est:true,dur:'約 45 分鐘（至約 10:00）',choices:[{name:'さえら',sub:'大通簡單早餐',nav:'珈琲とサンドイッチの店 さえら 札幌'},{name:"Espresso D'Works",sub:'薄野站',nav:"Espresso D'Works 札幌"}]}),
+  I('08:45\n–09:00','退房・行李寄放到 vessel hotel',{kind:'hotel',note:'涵＋蘇從 FAV 走到 vessel 約 2–3 分，茜＋周從 androoms 走到 vessel 約 8 分（估算）。行李直接寄放在 vessel（櫃檯 24 小時），晚上直接入住，不用回舊飯店取行李。建議先打電話確認可以寄放：011-531-8111。',addr:'北海道札幌市中央区南五条西6丁目16-1',transit:'FAV 步行約 2–3 分；androoms 步行約 8 分（估算）',hours:'FAV、androoms 退房 10:00；vessel 櫃檯 24 小時',nav:'ベッセルホテルカンパーナすすきの'}),
+  I('09:15','大通公園',{kind:'sight',est:true,dur:'約 40 分鐘（至約 09:55）',note:'聖誕市集（ミュンヘン・クリスマス市）11:00 才開，今天早上逛不到；想逛可以 11/26 或 11/28 晚上再來。',addr:'〒060-0042 北海道札幌市中央区大通西1〜12丁目',transit:'從 vessel hotel 步行約 10 分（估算）',hours:'24 小時營業',url:'https://maps.app.goo.gl/2qS6RfJViTcZtJuSA',nav:'大通公園'}),
+  I('10:00','早餐時間',{kind:'cafe',icon:'cup',key:'d7bf',prompt:'請選擇今天的早餐',est:true,dur:'約 45 分鐘（至約 10:45）',choices:[
+   {name:'珈琲とサンドイッチの店 さえら',sub:'大通・咖啡與三明治',addr:'〒060-0042 北海道札幌市中央区大通西2丁目5-1 都心ビル B3F',transit:'大通站地下直結（都心ビル 地下 3 樓），從大通公園步行約 5 分（估算）',hours:'週五 10:00–18:00',url:'https://maps.app.goo.gl/YYiSvd3jhpnJEjwTA',nav:'珈琲とサンドイッチの店 さえら 札幌'},
+   {name:"Espresso D'Works",sub:'營業到半夜 00:00',addr:'〒064-0804 北海道札幌市中央区南4条西4丁目1',transit:'距大通公園約 0.5 公里，步行約 6 分（估算）',hours:'週五 08:00–00:00',url:'https://maps.app.goo.gl/LzaCDbThreWwiFJV8',nav:"Espresso D'Works 札幌"}]}),
+  I('10:50','大通站搭地鐵 → 圓山公園站',{kind:'train',est:true,dur:'約 10 分鐘（至約 11:00）',addr:'〒064-0820 北海道札幌市中央区大通西26丁目2（円山公園駅）',transit:'地鐵東西線，大通站到円山公園站約 6–7 分（估算）',hours:null,url:'https://maps.app.goo.gl/EYbLagdxJ548ZssS7',nav:'円山公園駅'}),
+  I('11:10','北海道神宮',{kind:'sight',est:true,dur:'約 1 小時（至約 12:10）',addr:'〒064-0959 北海道札幌市中央区宮ヶ丘474',transit:'從円山公園駅步行約 15 分（估算）',hours:'週五 06:00–17:00',url:'https://maps.app.goo.gl/kV5KszgHkTvoKfeHA',nav:'北海道神宮'}),
+  I('12:10','神宮茶屋（茶屋餅）',{kind:'cafe',est:true,dur:'約 30 分鐘（至約 12:40）',note:'茶屋餅可以當點心，晚上要吃串燒。',addr:'〒064-0959 北海道札幌市中央区宮ヶ丘474-35',transit:'在神宮境內，步行即達（估算）',hours:'週五 09:00–16:00',url:'https://maps.app.goo.gl/hfXazaMX6UdrxHuH8',nav:'神宮茶屋 札幌'}),
+  I('12:45','午餐時間',{kind:'food',icon:'food',key:'d7lunch',prompt:'請選擇今天想吃的午餐',est:true,dur:'約 1–1.25 小時（至約 14:00）',note:'午餐排晚一點，晚上才吃串燒。兩間都可能排隊，鋳 14:30 打烊，建議 13:30 前到。',choices:[
+   {name:'奧芝商店',sub:'おくしばぁちゃん・湯咖哩',icon:'curry',addr:'〒064-0951 北海道札幌市中央区宮の森1条10丁目7-20',transit:'從円山公園駅搭巴士或計程車約 10 分（估算）',hours:'週五 11:00–15:00',url:'https://maps.app.goo.gl/trkep7iTFGQAFS4n7',nav:'奥芝商店 おくしばぁちゃん'},
+   {name:'支那そば 鋳',sub:'排隊拉麵',addr:'〒064-0821 北海道札幌市中央区北1条西27丁目2-13 リバーサウス円山 1F',transit:'距円山公園駅步行約 5 分（估算）',hours:'週五 11:00–14:30',url:'https://maps.app.goo.gl/6nretKwcBB3PMDzX8',nav:'支那そば 鋳 札幌'}]}),
 
-  I('10:00','大通公園',{kind:'sight',est:true,dur:'約 30 分鐘（至約 10:30）',nav:'大通公園'}),
-  I('10:40','大通站搭地鐵 → 圓山公園站',{kind:'train',est:true,dur:'約 10 分鐘（含步行約 20 分鐘）',addr:null,hours:null,nav:'円山公園駅'}),
-  I('11:00','午餐時間',{kind:'food',icon:'food',key:'d7lunch',prompt:'請選擇今天想吃的午餐',est:true,dur:'約 1–1.5 小時（至約 12:30，排隊請預留時間）',choices:[{name:'奧芝商店',sub:'おくしばぁちゃん・湯咖哩',icon:'curry',nav:'奥芝商店 おくしばぁちゃん 札幌'},{name:'支那そば 鋳',sub:'排隊拉麵',nav:'支那そば 鋳 札幌'}]}),
-
-  I('12:40','北海道神宮 → 神宮茶屋餅',{kind:'sight',est:true,dur:'約 1–1.5 小時（至約 14:00）',navs:[['北海道神宮','北海道神宮'],['神宮茶屋','神宮茶屋 札幌']]}),
-  I('14:15','咖啡：森彥咖啡',{kind:'cafe',est:true,dur:'約 45–60 分鐘（至約 15:15）',sub:'25 年老宅咖啡',nav:'森彦 MORIHIKO 札幌'}),
-  I('15:25','Penguin Bakery 買麵包',{kind:'food',est:true,dur:'約 20–30 分鐘（再回大通站）',sub:'ペンギンベーカリー円山裏参道店（厲害麵包）',nav:'ペンギンベーカリー円山裏参道店'}),
-  I('16:30','取行李・入住 vessel hotel campana susukino',{kind:'hotel',booked:true,est:true,dur:'約 40 分鐘（14:00 起可 check in）',bf:'含早餐 buffet',sub:'涵＋蘇、茜＋周皆住此（各自訂房）',note:'電話 011-531-8111。',addr:'北海道札幌市中央区南五条西6丁目16-1',transit:'地鐵南北線すすきの駅 4 號出口步行約 4 分；市電「資生館小学校前」步行 1 分；停車場 80 台 ¥1,500／晚（先到先得）',hours:'Check in 14:00・Check out 11:00',nav:'ベッセルホテルカンパーナすすきの'}),
-  I('17:15','逛街：狸小路商店街、PARCO',{kind:'shop',est:true,dur:'約 1.5 小時（至約 18:45）',navs:[['狸小路','狸小路商店街'],['PARCO','札幌PARCO']]}),
-  I('19:00','晚餐時間',{kind:'food',icon:'food',key:'d7dinner',prompt:'請選擇今晚想吃的晚餐',est:true,dur:'約 1.5 小時（至約 20:30）',choices:[{name:'やき鳥 福鳥 本店',sub:'燒鳥',hours:'營業到 22:30',nav:'やき鳥 福鳥 本店 札幌'},{name:'串鳥',sub:'連鎖燒鳥',hours:'營業到 23:30',nav:'串鳥 札幌'}]}),
-
+  I('14:15','咖啡：森彥咖啡',{kind:'cafe',est:true,dur:'約 45–60 分鐘（至約 15:15）',sub:'25 年老宅咖啡',addr:'〒064-0802 北海道札幌市中央区南2条西26丁目2-18',transit:'距円山公園駅步行約 3–5 分（估算）',hours:'週五 09:00–19:00',url:'https://maps.app.goo.gl/3xb8EjxkLdHdAaVX9',nav:'森彦 MORIHIKO 札幌'}),
+  I('15:25','Penguin Bakery 買麵包',{kind:'food',est:true,dur:'約 25 分鐘（至約 15:50）',sub:'ペンギンベーカリー円山裏参道店（厲害麵包）',addr:'〒064-0802 北海道札幌市中央区南2条西24丁目1-1',transit:'距森彥咖啡步行約 3–5 分（估算）',hours:'週五 08:30–19:00',url:'https://maps.app.goo.gl/kt9SmhHQC6QCDZRT9',nav:'ペンギンベーカリー円山裏参道店'}),
+  I('16:30','入住 vessel hotel campana susukino',{kind:'hotel',booked:true,est:true,dur:'約 30 分鐘（14:00 起可 check in）',bf:'含早餐 buffet',sub:'涵＋蘇、茜＋周皆住此（各自訂房）',note:'行李早上已經寄放在這裡，直接入住。電話 011-531-8111。',addr:'北海道札幌市中央区南五条西6丁目16-1',transit:'地鐵南北線すすきの駅 4 號出口步行約 4 分；市電「資生館小学校前」步行約 2 分；停車場 80 台 ¥1,500／晚（先到先得）',hours:'Check in 14:00・Check out 11:00',nav:'ベッセルホテルカンパーナすすきの'}),
+  I('17:15','逛街：PARCO',{kind:'shop',icon:'bag',est:true,dur:'約 60 分鐘（至約 18:15）',addr:'〒060-0061 北海道札幌市中央区南1条西3丁目3',transit:'從 vessel hotel 步行約 8 分（估算）',hours:'週五 10:00–20:00',url:'https://maps.app.goo.gl/eWFaqvYwk5Jw7NmP8',nav:'札幌PARCO'}),
+  I('18:20','狸小路必逛（可複選）',{kind:'shop',icon:'bag',key:'d7tkj',multi:true,prompt:'PARCO 逛完，順路逛狸小路！想去哪幾間？（可複選）',est:true,dur:'約 35 分鐘（至約 18:55）',choices:D7_TKJ}),
+  I('19:00','晚餐時間',{kind:'food',icon:'food',key:'d7dinner',prompt:'請選擇今晚想吃的串燒',est:true,dur:'約 1.5 小時（至約 20:30）',note:'串鳥是連鎖店，下面三間是離你們逛街和飯店最近的分店；各網站營業時間略有出入，以 Google 地圖為準。',choices:[
+   {name:'やき鳥 福鳥 本店',sub:'狸小路旁・營業到 22:30',addr:'〒060-0063 北海道札幌市中央区南3条西2丁目7',transit:'狸小路 2 丁目附近，從 PARCO 步行約 5 分（估算）',hours:'週五 16:00–22:30',url:'https://maps.app.goo.gl/Nv2tCrgiPZiawqFN8',nav:'やき鳥 福鳥 本店 札幌'},
+   {name:'串鳥 番外地すすきの店',sub:'離狸小路最近・營業到凌晨 1:30',feat:'座位多（144 席），營業到凌晨 1:30。',addr:'〒064-0804 北海道札幌市中央区南4条西3丁目 N-PLACEビル B1F',transit:'離狸小路 3 丁目步行約 5 分；地鐵すすきの站步行約 1–2 分（估算）',hours:'17:00–翌 01:30（年中無休）',nav:'串鳥 番外地すすきの店'},
+   {name:'串鳥 中央本店',sub:'すすきの旗艦店',feat:'すすきの的旗艦店，和蟹座在同一棟大樓（南4西2ビル）。',addr:'〒064-0804 北海道札幌市中央区南4条西2丁目 南4西2ビル 1F',transit:'離 PARCO 步行約 5–7 分；豐水すすきの站步行約 1 分（估算）',hours:'平日 16:30–23:30',note:'電話 011-223-6111。',nav:'串鳥 中央本店'},
+   {name:'串鳥 すすきの西5丁目店',sub:'離 vessel hotel 最近',feat:'2024 年 10 月開幕的分店，離 vessel hotel 只有約 3 分鐘路程。',addr:'〒064-0804 北海道札幌市中央区南4条西5丁目10-1 つむぎビル 2F',transit:'離 vessel hotel 步行約 3 分；地鐵すすきの站步行約 3 分（估算）',hours:'平日 16:30–23:30（週六日、假日 15:30 起）',nav:'串鳥 すすきの西5丁目店'}]})
  ],
  cand:{t:'札幌市區備選清單',list:[
   ['すき焼 三光舎','壽喜燒','すき焼 三光舎 札幌'],
@@ -485,32 +702,42 @@ var DAYS=[
  ]}},
 
 {id:8,date:'11/28',dow:'六',city:'札幌市區',title:'札幌市區散步',mode:'transit',
- tip:'這天原本沒排午餐，我抓 11:45 讓你從下面四間挑一間；圓山動物園設為備選，11 月可能提早關門，請先確認營業時間。',
+ tip:'早餐吃很飽，午餐改成小份：迴轉壽司或煎餃。根室花まる排隊很長，建議一開門就去、先抽整理券。下午以後都是自由逛街，18:30 在牛禪壽喜燒集合。',
  stay:[{who:'涵＋蘇、茜＋周',name:'vessel hotel campana susukino',bf:'含早餐 buffet',q:'ベッセルホテルカンパーナすすきの'}],
  items:[
-  I('06:00','早餐：飯店吃到飽',{kind:'food',bf:'含早餐 buffet',sub:'vessel hotel campana susukino',note:'吃完 09:00 出門。',hours:null}),
-  I('08:00','Vessel 中島公園 早餐預約',{kind:'food',booked:true,flags:['tbd'],note:'現場付款。看看能不能改成 campana susukino 那間（六月查看時全滿）。與上一項 06:00 飯店早餐何者為準待確認。',nav:'Vessel Hotel 札幌中島公園'}),
-  I('09:00','諏訪神社',{kind:'sight',dur:'約 30 分鐘（至約 09:30）',nav:'諏訪神社 札幌'}),
-  I('09:40','北海道大學',{kind:'sight',est:true,dur:'約 1.5–2 小時（至約 11:30，校園很大）',nav:'北海道大学'}),
-  I('11:45','午餐時間',{kind:'food',icon:'food',key:'d8lunch',prompt:'請選擇今天想吃的午餐',est:true,dur:'約 1–1.5 小時（至約 13:00）',note:'這天原本沒排午餐，下面是從札幌市區備選清單挑出來的四間。',choices:[{name:'SushiDon',sub:'狸小路・物美價廉海鮮丼',nav:'SushiDon 狸小路 札幌'},{name:'根室杉山水產',sub:'超新鮮海鮮丼飯',nav:'根室杉山水産 札幌'},{name:'soup curry garaku',sub:'湯咖哩、起司飯必吃',icon:'curry',nav:'soup curry garaku 札幌'},{name:'Sapporo Gyouzayasan',sub:'超好吃餃子店',nav:'札幌餃子屋 Gyouzayasan'}]}),
-  I('13:15','咖啡時間',{kind:'cafe',icon:'cup',key:'d8cafe',prompt:'請選擇今天想去的咖啡廳',est:true,dur:'約 45 分鐘（至約 14:00）',choices:[{name:'BARISTART COFFEE',sub:'狸小路',nav:'BARISTART COFFEE 狸小路 札幌'},{name:'日晴堂',sub:'方形布丁、軟可麗餅',nav:'日晴堂 札幌すすきの'}]}),
+  I('06:00','早餐：飯店吃到飽',{kind:'food',game:'donburi',bf:'含早餐 buffet',sub:'vessel hotel campana susukino',addr:'北海道札幌市中央区南五条西6丁目16-1',transit:null,note:'早餐很厲害，先來做一碗海鮮丼暖暖身！吃完 09:00 出門。',hours:null}),
+  I('09:20','諏訪神社',{kind:'sight',est:true,dur:'約 30 分鐘（至約 09:50）',note:'09:00 左右從飯店出門。',addr:'〒065-0012 北海道札幌市東区北12条東1丁目1-10',transit:'從 vessel hotel 搭地鐵或計程車，約 20 分（估算）',hours:'週六 09:00–17:00',url:'https://maps.app.goo.gl/GxL9NDAWNejwqTmdA',nav:'諏訪神社 札幌'}),
+  I('10:05','北海道大學',{kind:'sight',est:true,dur:'約 1.5 小時（至約 11:35，校園很大）',addr:'〒060-0808 北海道札幌市北区北8条西5丁目',transit:'從諏訪神社步行約 12 分（估算）；離 JR 札幌駅北口約 0.8 公里',hours:'全天開放（無休息時間）',url:'https://maps.app.goo.gl/EoyksUWy9ESi8Se1A',nav:'北海道大学'}),
+  I('11:45','午餐時間',{kind:'food',icon:'food',key:'d8lunch2',prompt:'早餐吃很飽，午餐吃小份就好！請選擇今天的午餐',est:true,dur:'約 1 小時（至約 12:45）',note:'北大離札幌駅很近，下面幾間都在車站周邊。',choices:[
+   {name:'根室花まる',sub:'迴轉壽司・札幌駅直結',feat:'根室直送的人氣迴轉壽司，鮮度和價格都有口碑，但店前常常大排長龍（有時要等 1.5 小時以上）。無法網路預約，要到店前的機器抽整理券，建議一開門就去。',addr:'〒060-0005 北海道札幌市中央区北5条西2丁目 札幌ステラプレイス センター 6F',transit:'JR 札幌駅直結；從北大步行約 10–12 分（估算）',hours:'11:00–22:00（最後點餐 21:30）',note:'電話 011-209-5330。',nav:'根室花まる JRタワーステラプレイス店'},
+   {name:'根室花まる miredo店',sub:'迴轉壽司・地下步行空間',feat:'同一家的另一間分店，在地下歩行空間可以直接走到，可用 LINE 或 QR code 接收叫號通知，等候時可以先去逛逛。想少排隊可以選這間。',addr:'〒060-0003 北海道札幌市中央区北3条西3丁目1番地 大同生命札幌ビル B1F',transit:'從地下歩行空間步行即達，離札幌駅約 5–8 分（估算）',hours:'週六 11:00–22:00',url:'https://maps.app.goo.gl/KUBd6EDrbQRDzjV59',nav:'根室花まる 大同生命札幌ビル miredo店'},
+   {name:'香香厨房 JR55ビル店',sub:'中華居酒屋・煎餃',feat:'札幌駅旁的中華居酒屋，中午有營業，可以點煎餃、麵類當小份午餐。',addr:'〒060-0005 北海道札幌市中央区北5条西5丁目 JR55札幌ビル 7F',transit:'離 JR 札幌駅很近（估算步行約 5 分）',hours:'11:30–15:00、17:00–23:00',nav:'香香厨房 JR55ビル店'},
+   {name:'さっぽろぎょうざやさん',sub:'煎餃・離 vessel hotel 很近',feat:'你原本清單裡的餃子店，在すすきの，離 vessel hotel 只有一個街區；中午只開到 14:00。',addr:'〒064-0805 北海道札幌市中央区南5条西7丁目8-3',transit:'從北大搭地鐵到すすきの，約 15–20 分（估算）；離 vessel hotel 步行約 2 分（估算）',hours:'週六 11:30–14:00、17:00–22:00',url:'https://maps.app.goo.gl/Yfenz8rs1tndmnHE8',nav:'さっぽろぎょうざやさん'}]}),
+  I('13:15','咖啡時間',{kind:'cafe',icon:'cup',key:'d8cafe',prompt:'請選擇今天想去的咖啡廳',est:true,dur:'約 45 分鐘（至約 14:00）',choices:[
+   {name:'BARISTART COFFEE',sub:'狸小路旁・10:00–18:00',addr:'〒060-0063 北海道札幌市中央区南3条西5丁目14 三条美松ビル 2F',transit:'狸小路 5 丁目附近（估算）',hours:'週六 10:00–18:00',url:'https://maps.app.goo.gl/Fbw7sxeKvxBQmBpx9',nav:'BARISTART COFFEE 札幌'},
+   {name:'日晴堂 札幌すすきの',sub:'cafe&bar・方形布丁、軟可麗餅',addr:'〒064-0804 北海道札幌市中央区南4条西1丁目13-2 1F',transit:'すすきの附近，距狸小路約 5–8 分（估算）',hours:'週六 11:00–23:00',url:'https://maps.app.goo.gl/GRSQZkEfuooaF7148',nav:'日晴堂 札幌すすきの'}]}),
 
-  I('14:30','圓山動物園（備選）',{kind:'sight',opt:true,est:true,dur:'約 1.5–2 小時（至約 16:30）',note:'11 月營業時間可能提早關門，待確認。',nav:'円山動物園'}),
-  I('16:45','回飯店休息',{kind:'hotel',est:true,dur:'約 1.5 小時（晚餐前休息）',hours:null}),
+  I('14:30','自由逛街時間',{kind:'shop',icon:'bag',scene:'shop',est:true,dur:'約 3.5 小時（至約 18:00）',note:'這天下午以後都是逛街，四個人一起走來走去買買買！',addr:null,transit:null,hours:null}),
   I('18:30','晚餐：牛禪壽喜燒（牛禅 札幌駅前通り店）',{kind:'food',booked:true,sub:'已預約',dur:'約 1.5–2 小時（至約 20:30）',note:'電話 011-223-2929。',addr:'北海道札幌市中央区北1条西3丁目3-11 桂和北1条ビル11階',transit:'札幌地下步行空間 9 號出口步行約 0 分；大通駅 6 號出口步行約 4 分',hours:'17:00–23:00（最後點餐約 22:00–22:30）',nav:'牛禅 札幌駅前通り店'}),
  ]},
 
-{id:9,date:'11/29',dow:'日',city:'札幌 → 新千歲 → 桃園',title:'返家日',mode:'transit',
- tip:'起飛前 2–3 小時辦理登機，建議 15:00 前到新千歲機場。涵＋蘇的回程班次之後補上。',
+{id:9,date:'11/29',dow:'日',city:'札幌 → 新千歲 → 桃園',title:'返家日',mode:'transit',branch:'d9who',
+ tip:'涵＋蘇比較早回台灣，茜＋周搭 18:40 的 TR893；選好之後，下面的行程會自動排成各自的版本。2026/11/1 起日本免稅改成「先付含稅價、出境時退稅」，機場採買前先看「退稅提醒」。涵＋蘇的班次之後補上。',
  stay:[],
  items:[
-  I('06:00','早餐：飯店吃到飽 → 退房',{kind:'food',bf:'含早餐 buffet',sub:'vessel hotel campana susukino',note:'退房時間待確認；行李可先寄放飯店（待確認）。',hours:null}),
-  I('10:00','最後逛街・伴手禮（備選）',{kind:'shop',opt:true,est:true,dur:'約 1.5 小時（至約 11:30）',note:'大通、狸小路或札幌車站周邊。'}),
-  I('11:45','午餐：北海道とんかつ『とんかつ恭平』',{kind:'food',est:true,dur:'約 1 小時（至約 12:45，排隊請預留時間）',nav:'とんかつ恭平 札幌'}),
-  I('14:15','搭 JR 前往新千歲機場',{kind:'train',est:true,dur:'約 40 分鐘（至約 15:00）',addr:null,hours:null,note:'前往機場的方式與時間待確認。',nav:'新千歲機場'}),
-  I('15:00','新千歲機場：辦理登機・逛機場',{kind:'flight',est:true,dur:'約 3 小時（至登機）',note:'免費託運行李：無；機票載明加購 25 公斤。國際航廈。',hours:null,nav:'新千歲機場 國際線ターミナル'}),
-  I('18:40','（茜＋周）TR893 新千歲 → 桃園',{kind:'flight',ticket:TK_BACK}),
-  I(null,'（涵＋蘇）回程航班',{kind:'flight',flags:['tbd'],note:'比茜＋周早回來，班次之後提供。',addr:null,transit:null,hours:null})
+  I('出發前','岔路口：誰先出發？',{kind:'flight',icon:'plane',key:'d9who',prompt:'涵＋蘇的班機比較早，茜＋周 18:40 才起飛。請選擇要看誰的最後一天！',choices:[
+   {name:'涵＋蘇',sub:'早班機・早上出發去機場',icon:'plane',note:'早上就搭 JR 去新千歲機場，在機場買伴手禮。下面的行程會自動排成「早班版」。',addr:null,transit:null,hours:null},
+   {name:'茜＋周',sub:'18:40 起飛・白天還能在札幌',icon:'plane',note:'白天在札幌，下午再去機場。下面的行程會自動排成「晚班版」。',addr:null,transit:null,hours:null}]}),
+  I('06:00','早餐：飯店吃到飽 → 退房',{kind:'food',bf:'含早餐 buffet',sub:'vessel hotel campana susukino',addr:'北海道札幌市中央区南五条西6丁目16-1',transit:null,note:'退房時間待確認；行李可先寄放飯店（待確認）。',hours:null}),
+  I('07:10','搭 JR 前往新千歲機場',{when:'A',backRole:'jr',kind:'train',est:true,dur:'約 40 分鐘（至約 07:50）',note:'JR 快速エアポート（快速）約 37–41 分，特別快速最快 33 分；日中約每 10 分一班；運賃 ¥1,230（自由席）。uシート（指定席，4 號車）加 ¥1,000（網路預約 ¥800）。札幌發首班約 05:50，週日班次請以 JR 時刻表為準。',addr:null,transit:'從 vessel hotel 搭地鐵南北線到札幌駅約 5 分，再轉 JR；機場站在航廈地下 1 樓，直結航廈。',hours:null,nav:'新千歳空港駅',mode:'transit'}),
+  I('08:00','新千歲機場：伴手禮採買',{when:'A',backRole:'airport',kind:'shop',icon:'bag',taxpop:true,est:true,dur:'約 1 小時（班機時間確定後再調整）',note:'機場有 2026/11/1 起的退稅新制，買之前先看「退稅提醒」。班機很早的話，退稅現金櫃檯 07:00 才開。',addr:'〒066-0012 北海道千歳市美々987-22',transit:'JR 新千歳空港駅直結',hours:'24 小時營業（機場；各店營業時間不同）',url:'https://maps.app.goo.gl/UQLzDryuGdj1eivW7',nav:'新千歳空港'}),
+  I(null,'（涵＋蘇）回程航班',{when:'A',backRole:'flight',fillBtn:'back',kind:'flight',flags:['tbd'],note:'比茜＋周早回來，班次之後提供，到時候再把出發和採買時間調整好。',addr:null,transit:null,hours:null}),
+  I('09:30','札幌市區血拚或雪球大戰',{when:'B',kind:'sight',icon:'snow',scene:'snowball',est:true,dur:'約 1.5 小時（至約 11:00）',addr:null,transit:null,hours:null}),
+  I('11:45','午餐：北海道とんかつ『とんかつ恭平』',{when:'B',kind:'food',est:true,dur:'約 1 小時（至約 12:45，排隊請預留時間）',addr:'〒060-0062 北海道札幌市中央区南2条西7丁目2 狸小路7丁目 新生会ビル 2F',transit:'狸小路 7 丁目，從 vessel hotel 步行約 5–6 分（估算）',hours:'週日 11:30–14:30、17:30–20:00',url:'https://maps.app.goo.gl/eM7DYqgbudJVww4k9',nav:'とんかつ恭平 札幌'}),
+  I('14:15','搭 JR 前往新千歲機場',{when:'B',kind:'train',est:true,dur:'約 40 分鐘（至約 15:00）',note:'JR 快速エアポート（快速）約 37–41 分，特別快速最快 33 分；日中約每 10 分一班；運賃 ¥1,230（自由席）。uシート（指定席，4 號車）加 ¥1,000（網路預約 ¥800）。',addr:null,transit:'從札幌駅搭 JR 快速エアポート；機場站在航廈地下 1 樓，直結航廈。',hours:null,nav:'新千歳空港駅',mode:'transit'}),
+  I('15:00','新千歲機場：伴手禮採買',{when:'B',kind:'shop',icon:'bag',taxpop:true,est:true,dur:'約 1.5 小時（至約 16:30）',note:'機場有 2026/11/1 起的退稅新制，買之前先看「退稅提醒」。TR893 18:40 起飛，起飛前 2–3 小時辦理登機；免費託運行李：無，機票載明加購 25 公斤。',addr:'〒066-0012 北海道千歳市美々987-22',transit:'JR 新千歳空港駅直結',hours:'24 小時營業（機場；各店營業時間不同）',url:'https://maps.app.goo.gl/UQLzDryuGdj1eivW7',nav:'新千歳空港'}),
+  I('18:40','（茜＋周）TR893 新千歲 → 桃園',{when:'B',kind:'flight',ticket:TK_BACK}),
+  I('返航','搭上飛機返航・明信片郵箱',{when:'AB',kind:'flight',icon:'plane',scene:'flight',mailbox:true,note:'再見北海道！旅途中拍的照片，可以放進明信片郵箱，做成一支回憶影片。',addr:null,transit:null,hours:null})
  ]}
 ];
 
@@ -519,7 +746,7 @@ var LODGE=[
  {d:'11/21–11/22',n:1,name:'premier hotel cabin asahikawa',addr:'〒070-0031 北海道旭川市1条通7丁目',cio:'Check in 15:00–24:00・Check out 11:00',who:'全員',by:'茜已訂',bf:'含早餐',note:'',tot:6792,pp:{涵:1698,蘇:1698,周:1698,茜:1698},q:'premier hotel cabin asahikawa'},
  {d:'11/22–11/24',n:2,name:'旭川 Airbnb：comma, nagayama',addr:'旭川市永山6条4丁目9-6',cio:'Check in 15:00–20:00・Check out 10:00（自助入住）',who:'全員',by:'姊訂，刷茜卡',note:'',q:'43.7877579,142.4069138',letter:true,tot:14766,pp:{涵:3692,蘇:3692,周:3692,茜:3692}},
  {d:'11/24–11/25',n:1,name:'WE Hotel Toya（洞爺湖）',addr:'〒049-5802 北海道虻田郡洞爺湖町洞爺町293-1',cio:'Check in 15:00–24:00・Check out 10:00',who:'全員',by:'茜已訂',bf:'含早餐',note:'',tot:12323,pp:{涵:3081,蘇:3081,周:3081,茜:3081},q:'WE Hotel Toya'},
- {d:'11/25–11/27',n:2,name:'FAX hotel susukino',who:'涵＋蘇',by:'涵已訂',note:'網路上搜尋不到「FAX hotel susukino」；名稱最接近 FAV LUX 札幌すすきの（各網站住址不一致），請對照訂房確認信，待確認',tot:6200,pp:{涵:3100,蘇:3100},q:'FAX hotel susukino'},
+ {d:'11/25–11/27',n:2,name:'FAV hotel susukino',addr:'〒064-0806 北海道札幌市中央区南6条西7丁目2-2',cio:'Check in 15:00・Check out 10:00',who:'涵＋蘇',by:'涵已訂',note:'',tot:6200,pp:{涵:3100,蘇:3100},q:'FAV hotel susukino'},
  {d:'11/25–11/27',n:2,name:'hotel androoms Sapporo Susukino',addr:'北海道札幌市中央区南7条西1-1-9',cio:'Check in 15:00・Check out 10:00（地鐵豐水すすきの駅約 270 m）',who:'茜＋周',by:'茜已訂',note:'',tot:3608,pp:{周:1804,茜:1804},q:'hotel androoms Sapporo Susukino'},
  {d:'11/27–11/29',n:2,name:'vessel hotel campana susukino',addr:'北海道札幌市中央区南五条西6丁目16-1',cio:'Check in 14:00・Check out 11:00',who:'涵＋蘇',by:'涵已訂',bf:'含早餐 buffet',note:'',tot:9500,pp:{涵:4750,蘇:4750},q:'ベッセルホテルカンパーナすすきの'},
  {d:'11/27–11/29',n:2,name:'vessel hotel campana susukino',addr:'北海道札幌市中央区南五条西6丁目16-1',cio:'Check in 14:00・Check out 11:00',who:'茜＋周',by:'茜已訂',bf:'含早餐 buffet',note:'',tot:10979,pp:{周:5490,茜:5490},q:'ベッセルホテルカンパーナすすきの'}
@@ -546,31 +773,93 @@ var OUTLINE=[[141.94,45.52],[142.3,45.25],[142.9,44.7],[143.4,44.38],[144.27,44.
 var TODO_SEED=[
  {id:'t2',t:'補上涵＋蘇的回程航班（比茜＋周早回來，之後提供）'},
  {id:'t3',t:'確認租車公司、取車地點與費用（11/21–11/25 Toyota）'},
- {id:'t8',t:'白金青池夜間點燈：決定要不要改下午去（17:00 後點燈、注意開車安全）'},
- {id:'t9',t:'電話預約 ほろ酔い処 味介（必須電話預約）'},
- {id:'t10',t:'預約 舌とハラミ 肉猿（要預約）'},
- {id:'t11',t:'確認 11/28 Vessel 中島公園早餐預約要不要改'},
- {id:'t13',t:'護照效期需到回程日（11/29）後再滿 6 個月（機票提醒）'},
- {id:'t14',t:'保暖與防滑鞋、手套（11 月北海道可能降雪）',est:true},
- {id:'t15',t:'確認租車能否提早取車（Day 1 取車後到旭川的時間很緊）'},
- {id:'t16',t:'確認圓山動物園、啤酒博物館的 11 月營業時間'},
- {id:'t17',t:'11/21 桃園機場第一航廈約 04:30 集合（07:25 起飛）',est:true},
- {id:'t18',t:'確認 11/25 飯店的正確名稱與地址（FAX hotel susukino？網路查不到，名稱最接近 FAV LUX 札幌すすきの）'}
+ {id:'t15',t:'確認租車能否提早取車（Day 1 取車後到旭川的時間很緊）'}
 ];
 var SHOP_SEED=[
- {id:'s1',t:'Workman 採購（11/21 晚餐後；品項待確認）'},
- {id:'s2',t:'消夜和牛（11/22 回程超市）'},
- {id:'s3',t:'泡麵（11/22 回程超市）'},
- {id:'s4',t:'麵包（11/24 早餐後買，前往洞爺湖路上吃）'}
+ {id:'s1',t:'Workman'},
+ {id:'s5',t:'Uniqlo 發熱褲'},
+ {id:'s6',t:'Mont-bell'}
 ];
-var lists={todos:store.get('todos',null)||TODO_SEED.slice(),shop:store.get('shop',null)||SHOP_SEED.slice()};
+var PACK_SEED=[
+ {id:'p1',t:'護照：效期需到 11/29 回程日後再滿 6 個月'},
+ {id:'p2',t:'11/21 桃園機場第一航廈約 04:30 集合（07:25 起飛）',est:true},
+ {id:'p3',t:'電子機票、訂房憑證、訂位資料（先截圖，沒網路也能看）'},
+ {id:'p4',t:'Visit Japan Web 先填好（入境與海關申報的 QR code）'},
+ {id:'p5',t:'租車：台灣駕照正本＋日文譯本（兩樣都要帶，出發前再向租車公司確認）'},
+ {id:'p6',t:'日幣現金與零錢包、信用卡（先確認海外刷卡手續費）'},
+ {id:'p7',t:'網路：eSIM／網卡／漫遊方案，出發前先開通'},
+ {id:'p8',t:'行動電源與充電線（行動電源要隨身帶，不能托運）'},
+ {id:'p9',t:'發熱衣、發熱褲、保暖中層（洋蔥式穿法）'},
+ {id:'p10',t:'防風防水外套、毛帽、圍巾、手套'},
+ {id:'p11',t:'防滑雪靴或防滑鞋套（11 月可能降雪、結冰）',est:true},
+ {id:'p12',t:'厚襪、暖暖包'},
+ {id:'p13',t:'護唇膏、乳液、護手霜（室內暖氣很乾燥）'},
+ {id:'p14',t:'個人藥品（含處方藥）、口罩'},
+ {id:'p15',t:'折疊購物袋、塑膠袋（買東西、裝濕衣物）'},
+ {id:'p16',t:'太陽眼鏡（雪地反光很刺眼）'},
+ {id:'p17',t:'出境退稅：護照與購物收據要留著（新制，見 11/29「退稅提醒」）'}
+];
+var lists={todos:store.get('todos',null)||TODO_SEED.slice(),shop:store.get('shop',null)||SHOP_SEED.slice(),pack:store.get('pack',null)||PACK_SEED.slice()};
 (function(){
-  if(store.get('seedver',0)>=7)return;
-  var drop={t1:1,t4:1,t5:1,t6:1,t7:1,t12:1,t19:1};
+  if(store.get('seedver',0)>=8)return;
+  var drop={t1:1,t4:1,t5:1,t6:1,t7:1,t12:1,t18:1,t19:1};
   lists.todos=lists.todos.filter(function(i){return !drop[i.id]});
   TODO_SEED.forEach(function(sd){if(!lists.todos.some(function(i){return i.id===sd.id}))lists.todos.push(sd)});
-  store.set('todos',lists.todos);lists.shop.forEach(function(i){if(i.id==='s1')i.t='Workman 採購（11/21 晚餐後；品項待確認）'});store.set('shop',lists.shop);store.set('seedver',7);
+  store.set('todos',lists.todos);lists.shop.forEach(function(i){if(i.id==='s1')i.t='Workman 採購（11/21 晚餐後；品項待確認）'});store.set('shop',lists.shop);store.set('seedver',8);
 })();
+(function(){
+  if(store.get('seedver2',0)>=1)return;
+  lists.todos=lists.todos.filter(function(i){return i.id!=='t11'});
+  store.set('todos',lists.todos);store.set('seedver2',1);
+})();
+(function(){
+  if(store.get('seedver3',0)>=1)return;
+  var dropT={t8:1,t9:1,t13:1,t14:1,t17:1},dropS={s2:1,s3:1,s4:1};
+  lists.todos=lists.todos.filter(function(i){return !dropT[i.id]});store.set('todos',lists.todos);
+  lists.shop=lists.shop.filter(function(i){return !dropS[i.id]});
+  lists.shop.forEach(function(i){if(i.id==='s1')i.t='Workman'});
+  SHOP_SEED.forEach(function(sd){if(!lists.shop.some(function(i){return i.id===sd.id}))lists.shop.push(sd)});
+  store.set('shop',lists.shop);store.set('pack',lists.pack);store.set('seedver3',1);
+})();
+(function(){
+  if(store.get('seedver4',0)>=1)return;
+  lists.todos=lists.todos.filter(function(i){return i.id!=='t10'&&i.id!=='t16'});
+  store.set('todos',lists.todos);store.set('seedver4',1);
+})();
+var car=store.get('car',{}),carEditing=false;
+function carAug(it){
+  var o={},k;for(k in it)o[k]=it[k];
+  if(it.carRole==='pick'){
+    if(car.company)o.title='租車（'+car.company+'）';
+    if(car.pickAddr){o.addr=car.pickAddr;o.nav=car.pickAddr}
+    o.note=(it.note||'')+(car.ref?' 預約編號 '+car.ref+'。':'')+(car.note?' '+car.note:'');
+  }else if(it.carRole==='ret'){
+    if(car.retAddr){o.addr=car.retAddr;o.nav=car.retAddr}
+    o.note=(it.note||'')+(car.note?' '+car.note:'');
+  }
+  return o;
+}
+function carFld(id,label,ph,val,area){
+  return '<label for="car_'+id+'">'+label+'</label>'+(area?'<textarea id="car_'+id+'" rows="2" placeholder="'+ph+'">'+esc(val||'')+'</textarea>':'<input id="car_'+id+'" type="text" placeholder="'+ph+'" value="'+esc(val||'')+'">');
+}
+function carCard(){
+  var v=function(x,t){return x?esc(x):t};
+  var body;
+  if(carEditing){
+    body='<div class="cf"><p class="small muted" style="margin:0 0 4px">租好車的人把資料填在這裡，填完紅色的待確認就會消失，行程裡的租車與還車也會一起更新。只存在這支手機的瀏覽器裡。</p>'
+      +carFld('company','租車公司與車型','例：Toyota Rent a Car・Yaris',car.company)
+      +carFld('pickAddr','取車地點（店名與地址）','例：新千歲機場店・千歳市…',car.pickAddr)
+      +carFld('retAddr','還車地點（地址）','例：札幌駅南口附近的營業所',car.retAddr)
+      +carFld('fee','費用（含幣別）','例：NT$ 12,000 或 ¥55,000',car.fee)
+      +carFld('ref','預約編號（選填）','',car.ref)
+      +carFld('note','備註（選填）','例：是否要加滿油、保險內容',car.note,true)
+      +'<div style="margin-top:10px"><button class="btn go" type="button" data-act="carsave">儲存</button><button class="btn" type="button" data-act="carcancel">取消</button></div></div>';
+  }else{
+    body='<dl class="kv"><dt>車款／公司</dt><dd>'+v(car.company,'Toyota（公司與車型 '+TBD+'）')+'</dd><dt>取車</dt><dd>11/21 14:00・新千歲（'+(car.pickAddr?esc(car.pickAddr):'取車地點 '+TBD)+'）</dd><dt>還車</dt><dd>11/25 15:00 前・札幌車站南口（'+(car.retAddr?esc(car.retAddr):'地址 '+TBD)+'）</dd><dt>費用</dt><dd>'+v(car.fee,TBD)+'</dd>'+(car.ref?'<dt>預約編號</dt><dd>'+esc(car.ref)+'</dd>':'')+(car.note?'<dt>備註</dt><dd>'+esc(car.note)+'</dd>':'')+'</dl>'
+      +'<button class="btn go" type="button" data-act="caredit">'+((car.company||car.pickAddr||car.retAddr||car.fee)?'編輯租車資料':'填寫租車資料')+'</button><a class="btn" target="_blank" rel="noopener" href="'+search(car.retAddr||'札幌駅 南口')+'">還車地點地圖</a>';
+  }
+  return '<section class="card"><h2>'+icon('car','in')+'租車</h2>'+body+'</section>';
+}
 var exp=store.get('exp',[]);
 var rate=store.get('rate',0.2);
 var wx=store.get('wx',{});
@@ -680,29 +969,34 @@ function banner(id){
 
 /* ---------- itinerary ---------- */
 var picks=store.get('pick',{});
+function pdHTML(c,mode){
+  var rows=(c.feat?[['特色','feat']]:[]).concat([['地址','addr'],['交通','transit'],['營業時間','hours']]).filter(function(r){return c[r[1]]!==null}).map(function(r){return '<dt>'+r[0]+'</dt><dd>'+fld(c[r[1]])+'</dd>'}).join('')+(c.fillKey&&!fillGet(c.fillKey,'v')?'<dt></dt><dd>'+fillBtn(c.fillKey,'填寫週一營業時間')+'</dd>':'');
+  return '<div class="pickd"><h4>已選擇：'+esc(c.name)+'</h4>'+(c.note?'<p class="note small">'+esc(c.note)+'</p>':'')+'<dl class="f">'+rows+'</dl>'+((c.nav||c.url)?'<div>'+(c.nav?'<a class="btn go" target="_blank" rel="noopener" href="'+dir(c.nav,mode)+'">導航</a><a class="btn" target="_blank" rel="noopener" href="'+search(c.nav)+'">地圖</a>':'')+(c.url?'<a class="btn go" target="_blank" rel="noopener" href="'+c.url+'">地圖連結</a>':'')+'</div>':'')+'</div>';
+}
 function choiceHTML(it,dayMode){
-  var kind=it.kind||'food',sel=picks[it.key],mode=it.mode||dayMode,missAll=[];
+  if(it.choices&&it.choices.some(function(c){return c.fillKey}))it=Object.assign({},it,{choices:it.choices.map(chAug)});
+  var kind=it.kind||'food',sel=picks[it.key],selArr=it.multi?(Array.isArray(sel)?sel:[]):((sel!==null&&sel!==undefined)?[sel]:[]),mode=it.mode||dayMode,missAll=[];
   it.choices.forEach(function(c){[['地址','addr'],['交通','transit'],['營業','hours']].forEach(function(r){var v=c[r[1]];if((v===undefined||v===''||v===true||(v&&v.tbd))&&missAll.indexOf(r[0])<0)missAll.push(r[0])})});
   var miss=missAll.length?'<span class="tag tbd">待確認：'+missAll.join('・')+'</span>':'';
   var tm='<div class="time">'+esc(it.time)+(it.est?'<small>估算</small>':'')+'</div>';
   var btns=it.choices.map(function(c,i){
-    var on=sel===i;
+    var on=selArr.indexOf(i)>-1;
+    if(c.locked)return '<button type="button" class="choice locked" disabled aria-disabled="true">'+icon('lock','in')+'<span class="cn">'+esc(c.name)+'</span><small>'+esc(c.locked)+'</small></button>';
     return '<button type="button" class="choice'+(on?' on':'')+'" data-act="pick" data-key="'+it.key+'" data-i="'+i+'" aria-pressed="'+on+'">'+icon(c.icon||it.icon||'curry','in')+'<span class="cn">'+esc(c.name)+'</span><small>'+esc(c.sub||'')+'</small></button>';
   }).join('');
-  var detail='';
-  if(sel!=null&&it.choices[sel]){
-    var c=it.choices[sel];
-    var rows=(c.feat?[['特色','feat']]:[]).concat([['地址','addr'],['交通','transit'],['營業時間','hours']]).filter(function(r){return c[r[1]]!==null}).map(function(r){return '<dt>'+r[0]+'</dt><dd>'+fld(c[r[1]])+'</dd>'}).join('');
-    detail='<div class="pickd"><h4>已選擇：'+esc(c.name)+'</h4>'+(c.note?'<p class="note small">'+esc(c.note)+'</p>':'')+'<dl class="f">'+rows+'</dl>'+((c.nav||c.url)?'<div>'+(c.nav?'<a class="btn go" target="_blank" rel="noopener" href="'+dir(c.nav,mode)+'">導航</a><a class="btn" target="_blank" rel="noopener" href="'+search(c.nav)+'">地圖</a>':'')+(c.url?'<a class="btn go" target="_blank" rel="noopener" href="'+c.url+'">地圖連結</a>':'')+'</div>':'')+'</div>';
-  }else detail='<p class="note small muted">▶ 等待選擇中…選一個選項，就會顯示店家資料。</p>';
+  var detail=selArr.filter(function(i){return it.choices[i]}).map(function(i){return pdHTML(it.choices[i],mode)}).join('');
+  if(!detail)detail='<p class="note small muted">▶ 等待選擇中…'+(it.multi?'點一下想逛的，下面就會顯示資料（可以複選）。':'選一個選項，就會顯示店家資料。')+'</p>';
   return '<article class="item k-'+kind+'">'+tm+'<div><h3>'+icon(it.icon||KIND[kind],'in')+esc(it.title)+miss+'</h3>'
     +(it.dur?'<p class="dur">'+icon('clock','in sm')+esc(it.dur)+EST+'</p>':'')
     +(it.note?'<p class="note">'+esc(it.note)+'</p>':'')
     +(it.prompt?'<p class="prompt">▶ '+esc(it.prompt)+'</p>':'')+'<div class="choices" role="group" aria-label="選項">'+btns+'</div>'+detail+'</div></article>';
 }
 function itemHTML(it,dayMode){
+  if(it.carRole)it=carAug(it);
+  if(it.backRole)it=backAug(it);
   if(it.ticket)return ticketHTML(it.ticket);
   if(it.choices)return choiceHTML(it,dayMode);
+  if(it.side==='crepe')return crepeHTML(it);
   if(it.min)return '<article class="item k-'+(it.kind||'sight')+'"><div class="time">'+esc(it.time)+'</div><div><h3>'+icon(KIND[it.kind||'sight'],'in')+esc(it.title)+'</h3>'+(it.who?'<div class="avs">'+it.who.map(avatar).join('')+'</div>':'')+'</div></article>';
   var kind=it.kind||'sight';
   var navs=it.navs||(it.nav?[[null,it.nav]]:[]);
@@ -725,12 +1019,16 @@ function itemHTML(it,dayMode){
   }
   if(it.url)btns+='<a class="btn go" target="_blank" rel="noopener" href="'+it.url+'">地圖連結</a>';
   if(it.letter)btns+=letterBtn(false);
+  if(it.morning)btns+=morningBtn();
+  if(it.taxpop)btns+=taxBtn();
+  if(it.mailbox)btns+=pcBtn();
+  if(it.fillBtn)btns+=fillBtn(it.fillBtn,backDone()?'編輯回程航班':'填寫回程航班');
   return '<article class="item k-'+kind+'">'+tm+'<div>'
     +'<h3>'+icon(KIND[kind],'in')+esc(it.title)+tags+'</h3>'
     +(it.sub?'<p class="sub">'+esc(it.sub)+'</p>':'')
     +(it.dur?'<p class="dur">'+icon('clock','in sm')+esc(it.dur)+EST+'</p>':'')
     +(it.note?'<p class="note">'+esc(it.note)+'</p>':'')
-    +'<details class="det"'+(openAll?' open':'')+'><summary>地址・交通・營業時間</summary><dl class="f">'+rows+'</dl></details>'
+    +(it.hotels?hotelsHTML():'')+(it.scene==='onsen'?onsenScene():'')+(it.scene==='shop'?shopScene():'')+(it.scene==='flight'?flightScene(picks.d9who===0?['涵','蘇']:['茜','周']):'')+(it.scene==='snowball'?snowballScene():'')+(it.game==='donburi'?'<div class="dn" id="dn">'+dnInner()+'</div>':'')+(rows?'<details class="det"'+(openAll?' open':'')+'><summary>'+icon('pin','in sm')+'地址・交通・營業時間</summary><dl class="f">'+rows+'</dl></details>':'')
     +(btns?'<div>'+btns+'</div>':'')+'</div></article>';
 }
 function chipsHTML(cur){
@@ -760,7 +1058,7 @@ function renderDay(id,forCount){
   h+='</section>';
   h+='<div class="toolbar"><span class="muted small">點「地址・交通・營業時間」展開細節</span><button class="btn sm" data-act="toggleAll" type="button">'+(openAll?'全部收合':'全部展開')+'</button></div>';
   var bp=d.branch?picks[d.branch]:undefined;
-  h+=d.items.filter(function(it){return !it.when||(it.when==='A'&&bp===0)||(it.when==='B'&&bp===1)}).map(function(it){
+  h+=d.items.filter(function(it){return !it.when||(it.when==='A'&&bp===0)||(it.when==='B'&&bp===1)||(it.when==='AB'&&(bp===0||bp===1))}).map(function(it){
     return itemHTML(it,d.mode)+((d.branch&&it.key===d.branch&&(bp===null||bp===undefined))?'<p class="note small muted" style="margin:-6px 0 14px">▶ 選好岔路之後，下面的行程會自動排好。</p>':'');
   }).join('');
   if(d.cand){
@@ -768,6 +1066,7 @@ function renderDay(id,forCount){
       return '<li><b>'+esc(c[0])+'</b><br><span class="muted">'+esc(c[1])+'</span><br><a class="btn sm" style="margin-top:6px" target="_blank" rel="noopener" href="'+search(c[2])+'">地圖</a></li>';
     }).join('')+'</ul></details>';
   }
+  if(!forCount)h+=pocCard(id);
   h+='<div class="pager">'+(id>1?'<a class="btn" href="#day-'+(id-1)+'">◀ Day '+(id-1)+'</a>':'<span></span>')+(id<9?'<a class="btn" href="#day-'+(id+1)+'">Day '+(id+1)+' ▶</a>':'<span></span>')+'</div>';
   h+=legend();
   return h;
@@ -778,12 +1077,12 @@ function legend(){return '<p class="foot">'+TBD+' 資料沒有寫到、尚未查
 function renderFlights(){
   var h='<h2 style="font:20px var(--pixel);margin:4px 0 12px">航班與住宿</h2>';
   h+='<h2 class="sec">'+icon('plane','in')+'去程・11/21（六）</h2>'+ticketHTML(TK_OUT);
-  h+='<section class="card"><dl class="kv"><dt>涵＋蘇訂位</dt><dd>與茜＋周同班，訂位代號 '+TBD+'</dd><dt>報到</dt><dd>起飛前 2–3 小時至機場辦理（機票備註）</dd><dt>改期／退票</dt><dd>不可退票；起飛 48 小時前可改期 TWD 2,235／人（另加易遊網服務費 TWD 500）</dd></dl>'
+  h+='<section class="card"><dl class="kv"><dt>涵＋蘇訂位</dt><dd>與茜＋周同班，訂位代號 '+(fillGet('outref','ref')?esc(fillGet('outref','ref')):TBD)+' '+fillBtn('outref',fillGet('outref','ref')?'編輯':'填寫')+'</dd><dt>報到</dt><dd>起飛前 2–3 小時至機場辦理（機票備註）</dd><dt>改期／退票</dt><dd>不可退票；起飛 48 小時前可改期 TWD 2,235／人（另加易遊網服務費 TWD 500）</dd></dl>'
    +'<a class="btn go" target="_blank" rel="noopener" href="'+search('桃園國際機場 第一航廈')+'">桃園第一航廈</a><a class="btn" target="_blank" rel="noopener" href="'+search('新千歲機場')+'">新千歲機場</a></section>';
   h+='<h2 class="sec">'+icon('plane','in')+'回程・11/29（日）茜＋周</h2>'+ticketHTML(TK_BACK);
   h+='<section class="card"><dl class="kv"><dt>改期／退票</dt><dd>不可退票；起飛 4 小時前可改期 TWD 1,304／人（另加易遊網服務費 TWD 500）</dd></dl></section>';
-  h+='<section class="card"><h2>'+icon('plane','in')+'回程・11/29（日）涵＋蘇</h2><dl class="kv"><dt>班次</dt><dd>比茜＋周早回來，之後提供 '+TBD+'</dd></dl></section>';
-  h+='<section class="card"><h2>'+icon('car','in')+'租車</h2><dl class="kv"><dt>車款／公司</dt><dd>Toyota（公司與車型 '+TBD+'）</dd><dt>取車</dt><dd>11/21 14:00・新千歲（取車地點 '+TBD+'）</dd><dt>還車</dt><dd>11/25 15:00 前・札幌車站南口</dd><dt>費用</dt><dd>'+TBD+'</dd></dl><a class="btn go" target="_blank" rel="noopener" href="'+search('札幌駅 南口')+'">還車地點地圖</a></section>';
+  h+=backCard();
+  h+=carCard();
   h+='<h2 style="font:18px var(--pixel);margin:20px 0 10px\">'+icon('hotel','in')+'住宿</h2>';
   h+=LODGE.map(function(l){
     var pp=Object.keys(l.pp).map(function(k){return k+' NT$'+l.pp[k].toLocaleString('en-US')}).join('、');
@@ -819,13 +1118,14 @@ function renderMap(){
   s+='</svg>';
   var routes=[
    ['11/21 新千歲 → 旭川飯店',dirMulti('新千歲機場','premier hotel cabin asahikawa',[], 'driving'),''],
-   ['11/23 旭川 → 美瑛 → 富良野',dirMulti('旭川','富良野神社',['白鬚の滝 美瑛','青い池 美瑛','森の時計 富良野'],'driving'),'起點以「旭川」代替（Airbnb 地址待確認）'],
-   ['11/24 旭川 → 洞爺湖 WE Hotel',dirMulti('旭川','WE Hotel Toya',[],'driving'),'起點以「旭川」代替（Airbnb 地址待確認）'],
+   ['11/23 旭川 Airbnb → 美瑛 → 富良野',dirMulti('43.7877579,142.4069138','富良野神社',['白鬚の滝 美瑛','青い池 美瑛','純平洋食 美瑛'],'driving'),''],
+   ['11/24 旭川 Airbnb → 洞爺湖 WE Hotel',dirMulti('43.7877579,142.4069138','WE Hotel Toya',[],'driving'),''],
    ['11/25 洞爺湖 → 札幌車站南口（還車）',dirMulti('WE Hotel Toya','札幌駅 南口',[],'driving'),''],
-   ['11/26 札幌 → 小樽（JR）',dirMulti('札幌駅','小樽駅',[],'transit'),'']
+   ['11/26 札幌 → 小樽（JR）',dirMulti('札幌駅','小樽駅',[],'transit'),''],
+   ['11/29 札幌 → 新千歲機場（JR）',dirMulti('札幌駅','新千歳空港駅',[],'transit'),'']
   ];
   var h='<h2 style="font:20px var(--pixel);margin:4px 0 12px">地圖</h2>'+s;
-  h+='<div class="legend"><span class="lg"><i></i>自駕（11/21–11/25）</span><span class="lg"><i class="tr"></i>JR（11/26）</span><span class="lg"><i class="gr"></i>返程去機場（方式待確認）</span></div>';
+  h+='<div class="legend"><span class="lg"><i></i>自駕（11/21–11/25）</span><span class="lg"><i class="tr"></i>JR（11/26）</span><span class="lg"><i class="gr"></i>返程去機場（JR，11/29）</span></div>';
   h+='<p class="foot">示意圖：海岸線與城市位置為概略繪製，非精確比例'+EST+'。實際路線請用下方按鈕在 Google 地圖查看。</p>';
   h+='<section class="card"><h2>路線導航</h2>'+routes.map(function(r){
     return '<div class="unit" style="margin-top:10px"><div>'+esc(r[0])+'</div>'+(r[2]?'<div class="small muted">'+esc(r[2])+TBD+'</div>':'')+'<a class="btn go" target="_blank" rel="noopener" href="'+r[1]+'">在 Google 地圖開啟</a></div>';
@@ -838,17 +1138,64 @@ function renderMap(){
 /* ---------- weather ---------- */
 var WX_CITY=['新千歲／旭川','旭川','旭川／美瑛／富良野','旭川／洞爺湖','洞爺湖／札幌','小樽／札幌','札幌','札幌','札幌／新千歲'];
 var WX_Q=['旭川','旭川','美瑛','洞爺湖','札幌','小樽','札幌','札幌','新千歲'];
+var WX_SNAP={asof:'11/17',src:'日本氣象協會 tenki.jp、Yahoo!天氣',days:{
+ 1:'旭川：陰天，可能飄雪；約 −3～2°C；降水機率 40–70%',
+ 2:'旭川：陰天，偶爾飄雪；約 −3～2°C；降水機率 40–50%',
+ 3:'旭川：陰天；約 −3～4°C（部分預報到 6°C）；降水機率 30–40%',
+ 4:'旭川：陰時晴，氣溫回升，約 1～8°C（有預報到 10°C、可能下小雨）；降水機率 40–70%。洞爺湖：目前沒有可靠預報',
+ 5:'札幌：陰時晴，約 2～4°C；降水機率 40%。洞爺湖：目前沒有可靠預報',
+ 6:'札幌：陰天，約 1～6°C；降水機率 40%。小樽可先參考札幌',
+ 7:'札幌：陰天，約 0～5°C；降水機率 40%，但有預報顯示可能飄雪（機率 70–80%），變動大',
+ 8:'札幌：陰天，約 0～6°C；降水機率 30–40%，有預報顯示可能下雪或雨（信心低）',
+ 9:'札幌：陰天，之後可能有雪，約 1～5°C；降水機率 40–70%（信心低）。下雪的話搭 JR 去機場建議多抓時間'
+}};
+var WX_LOC={'旭川':[43.7706,142.3650],'美瑛':[43.5878,142.4663],'富良野':[43.3420,142.3830],'洞爺湖':[42.5640,140.8170],'札幌':[43.0621,141.3544],'小樽':[43.1907,140.9947],'新千歲':[42.7752,141.6923]};
+var wxLive=null,wxState='idle';
+function wxText(c){
+  if(c===0)return '晴';if(c<=2)return '晴時多雲';if(c===3)return '陰';if(c===45||c===48)return '霧';
+  if(c>=51&&c<=57)return '毛毛雨';if(c>=61&&c<=67)return '雨';if(c>=71&&c<=77)return '雪';
+  if(c>=80&&c<=82)return '陣雨';if(c===85||c===86)return '陣雪';if(c>=95)return '雷雨';return '—';
+}
+function wxFetch(){
+  if(wxState!=='idle')return;
+  wxState='loading';
+  var names=Object.keys(WX_LOC),la=names.map(function(n){return WX_LOC[n][0]}).join(','),lo=names.map(function(n){return WX_LOC[n][1]}).join(',');
+  var url='https://api.open-meteo.com/v1/forecast?latitude='+la+'&longitude='+lo+'&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,snowfall_sum&timezone=Asia%2FTokyo&start_date=2026-11-21&end_date=2026-11-29';
+  var done=function(ok){wxState=ok?'ok':'fail';if(location.hash==='#weather')go(true)};
+  try{
+    var ctl=window.AbortController?new AbortController():null,tm=setTimeout(function(){if(ctl)ctl.abort()},9000);
+    fetch(url,ctl?{signal:ctl.signal}:{}).then(function(r){if(!r.ok)throw new Error('http');return r.json()}).then(function(j){
+      clearTimeout(tm);var arr=Array.isArray(j)?j:[j];wxLive={t:new Date(),d:{}};
+      arr.forEach(function(o,i){if(o&&o.daily)wxLive.d[names[i]]=o.daily});
+      done(true);
+    }).catch(function(){clearTimeout(tm);done(false)});
+  }catch(e){done(false)}
+}
+function wxLiveLines(i,cities){
+  if(wxState!=='ok'||!wxLive)return '';
+  return cities.map(function(n){
+    var d=wxLive.d[n];if(!d)return '';
+    var c=d.weather_code&&d.weather_code[i],hi=d.temperature_2m_max&&d.temperature_2m_max[i],lo=d.temperature_2m_min&&d.temperature_2m_min[i],pp=d.precipitation_probability_max&&d.precipitation_probability_max[i],sn=d.snowfall_sum&&d.snowfall_sum[i];
+    if(c==null||hi==null||lo==null)return '';
+    return '<div class="wxl"><b>'+n+'</b>：'+wxText(c)+' '+Math.round(lo)+'～'+Math.round(hi)+'°C'+(sn>0?'・降雪 '+sn.toFixed(1)+' cm':'')+(pp!=null?'・降水機率 '+pp+'%':'')+'</div>';
+  }).join('');
+}
 function renderWeather(){
+  setTimeout(wxFetch,0);
+  var msg=wxState==='ok'?'已取得即時預報，每次打開這一頁都會更新（資料來源：Open-Meteo）。下面每天也留了 '+WX_SNAP.asof+' 的備份預報。':(wxState==='fail'?'目前無法取得即時預報（可能離線，或這個版本不支援），先顯示 '+WX_SNAP.asof+' 的備份預報。':'正在取得即時預報…先顯示 '+WX_SNAP.asof+' 的備份預報。');
   var h='<h2 style="font:20px var(--pixel);margin:4px 0 12px">天氣</h2>';
-  h+='<section class="card"><p class="small" style="margin-top:0">這個頁面無法自動抓取即時天氣，所以預報欄位標為待確認。出發前可點城市連結看最新預報，再把重點記在每一天的欄位（只會存在你這支手機）。</p>'
+  h+='<section class="card"><p class="small" style="margin-top:0">'+msg+'</p>'
     +'<div>'+['旭川','美瑛','富良野','洞爺湖','札幌','小樽','新千歲'].map(function(n){
       return '<a class="btn go" target="_blank" rel="noopener" href="https://www.google.com/search?q='+enc(n+' 天氣')+'">'+n+'</a>';}).join('')
     +'<a class="btn" target="_blank" rel="noopener" href="https://www.jma.go.jp/bosai/forecast/">日本氣象廳</a></div></section>';
   h+='<section class="card"><h2>11 月下旬概況'+EST+'</h2><dl class="kv"><dt>札幌／小樽</dt><dd>約 −2～5°C</dd><dt>旭川</dt><dd>約 −4～3°C</dd><dt>洞爺湖</dt><dd>約 −3～4°C</dd><dt>路況</dt><dd>可能降雪、結冰，開車放慢（行程中也寫了「雪況高就 pass」）</dd><dt>天黑時間</dt><dd>16:30 左右</dd></dl></section>';
   h+='<section class="card"><h2>每日預報</h2>'+DAYS.map(function(d,i){
+    var cities=WX_CITY[i].split('／'),live=wxLiveLines(i,cities),snap=WX_SNAP.days[d.id];
     return '<div class="unit" style="border-top:2px dashed var(--line);padding:8px 0"><div><b>'+d.date+'（'+d.dow+'）</b>・'+WX_CITY[i]+'</div>'
-      +'<div class="small muted">預報：'+((wx[d.id]||'').trim()?'':TBD)+'</div><div style="margin-top:4px"><input type="text" data-wx="'+d.id+'" value="'+esc(wx[d.id]||'')+'" placeholder="例如：晴 −2/4°C" aria-label="'+d.date+' 天氣記錄"></div></div>';
-  }).join('')+'</section>';
+      +(live?'<div style="margin-top:4px"><span class="tag bf">即時</span>'+live+'</div>':'')
+      +(snap?'<div class="small muted" style="margin-top:4px">備份（'+WX_SNAP.asof+'）：'+esc(snap)+'</div>':'')
+      +'<div style="margin-top:4px"><input type="text" data-wx="'+d.id+'" value="'+esc(wx[d.id]||'')+'" placeholder="自己的天氣筆記，例如：晴 −2/4°C" aria-label="'+d.date+' 天氣記錄"></div></div>';
+  }).join('')+'<p class="small muted" style="margin-bottom:0">備份預報來自 '+WX_SNAP.src+'，各家預報略有不同，11/24 以後變動較大，請以出發前的即時預報為準。</p></section>';
   return h+legend();
 }
 
@@ -861,13 +1208,13 @@ function listCard(key,title,ph){
   +'<div class="addrow"><input type="text" id="add-'+key+'" data-add="'+key+'" placeholder="'+ph+'"><button class="btn go" type="button" data-act="add" data-k="'+key+'">新增</button></div></section>';
 }
 function renderLists(){
-  var h='<h2 style="font:20px var(--pixel);margin:4px 0 12px">待辦與購物</h2>';
+  var h='<h2 style="font:20px var(--pixel);margin:4px 0 12px">待辦・提醒・購物</h2>';
   h+='<section class="card"><h2>已預約</h2><ul class="chk">'
    +'<li><span>11/21 17:00・成吉思汗 大黒屋 旭川五丁目店（本店）</span></li>'
    +'<li><span>11/26 19:15・蟹座 吃到飽</span></li>'
-   +'<li><span>11/28 18:30・牛禪壽喜燒（牛禅 札幌駅前通り店）</span></li>'
-   +'<li><span>11/28 08:00・Vessel 中島公園 早餐（現場付款）'+TBD+'</span></li></ul></section>';
+   +'<li><span>11/28 18:30・牛禪壽喜燒（牛禅 札幌駅前通り店）</span></li></ul></section>';
   h+=listCard('todos',icon('check','in')+'待辦清單','新增待辦…');
+  h+=listCard('pack',icon('warn','in')+'提醒與必帶清單','新增提醒或要帶的東西…');
   h+=listCard('shop',icon('bag','in')+'購物清單','新增要買的東西…');
   return h+legend();
 }
@@ -902,7 +1249,7 @@ function renderMoney(){
    +'<tr><td>機票</td>'+PEOPLE.map(function(p){return '<td>'+FLIGHT_PP[p].toLocaleString('en-US')+'</td>'}).join('')+'</tr>'
    +'<tr><td>住宿</td>'+PEOPLE.map(function(p){return '<td>'+lod[p].toLocaleString('en-US')+'</td>'}).join('')+'</tr>'
    +'<tr><td>原檔合計</td>'+PEOPLE.map(function(p){return '<td><b>'+PDF_TOTAL[p].toLocaleString('en-US')+'</b></td>'}).join('')+'</tr></tbody></table></div>'
-   +'<p class="small muted">單位 NT$。住宿總計 NT$64,168；租車費用 '+TBD+'。原檔合計與逐項加總有 NT$1 的四捨五入差。</p></section>';
+   +'<p class="small muted">單位 NT$。住宿總計 NT$64,168；租車費用 '+(car.fee?esc(car.fee):TBD)+'。原檔合計與逐項加總有 NT$1 的四捨五入差。</p></section>';
   /* rate */
   h+='<section class="card"><h2>匯率</h2><div class="addrow"><input type="number" inputmode="decimal" step="0.001" min="0" id="rate" value="'+esc(rate)+'" aria-label="日圓換台幣匯率"><span style="align-self:center;white-space:nowrap" class="small">NT$／¥1</span></div><p class="small muted">預設 0.20'+EST+'：由原檔兩筆退款換算（¥32,580 ≈ NT$6,485；¥48,242 ≈ NT$9,826）約 0.20。請依實際刷卡或換匯修改。</p></section>';
   /* form */
@@ -933,7 +1280,7 @@ function renderMoney(){
 
 /* ---------- 像素小人頭 ---------- */
 var AVD={"周":{"rows":[".....h...hh.....","....hhhhhhhh....","..hhhhhhhhhhhh..","..hhhhhhhhhhhh..","..hhhhhhhhhhhh..","..hhhsssssshhh..","..hggggggggggh..","..sgsegssgesgs..","..sgssgssgssgs..","..sggggssggggs..","...ssssssssss...","...sssttttsss...","....ssmmmmss....","......ssss......",".WWWWWssssWWWWW.","WWWWWWWWWWWWWWWW"],"pal":{"s":"#e9bd98","S":"#d49b72","e":"#15151a","m":"#b0405a","t":"#ffffff","q":"#1c1c26","r":"#7f90c0","h":"#1d1d22","g":"#15151a","W":"#f6f6f6"}},"茜":{"rows":["................","....hhhhhhhh....","..hhhhhhhhhhhh..",".hhhhhhhhhhhhhh.",".hhhhhhhhhhhhhh.",".hhhhhhhhhhhhhh.",".hhsssssssssshh.",".hhsggssssggshh.",".hhgsegssgesghh.",".hhsggssssggshh.",".hhsssssssssshh.",".hhsssttttssshh.",".hhhssmmmmsshhh.","..hhhsssssshhh..",".nnnnnssssnnnnn.","nnnnnnnnnnnnnnnn"],"pal":{"s":"#f3cfb0","S":"#d99d74","e":"#15151a","m":"#b0405a","t":"#ffffff","q":"#1c1c26","r":"#7f90c0","h":"#34241a","g":"#2b231f","n":"#243a5e"}},"蘇":{"rows":["................","....hhhhhhhh....","..hhhhhhhhhhhh..","..hhhhhhhhhhhh..","..hhhhhhhhhhhh..","..hhhhhhhhhhhh..","..hhhhhhhhhhhh..","..ssGGssssGGss..","..sGSeGGGGeSGs..","..ssGGssssGGss..","...ssssssssss...","...ssssmmssss...","....ssssssss....","......ssss......",".yyyyyssssyyyyy.","yyyyyyyyyyyyyyyy"],"pal":{"s":"#e6b891","S":"#cf9a72","e":"#15151a","m":"#b0405a","t":"#ffffff","q":"#1c1c26","r":"#7f90c0","h":"#1d1d22","G":"#9aa0aa","y":"#f2b01e"}},"涵":{"rows":["................","....hhhhhhhh....","..hhhhhhhhhhhh..","..hrqqrhhrqqrh..","..hhhhhhhhhhhh..",".hhhhhhhhhhhhhh.",".hhhsssssssshhh.",".hhhshhsshhshhh.",".hhhsesssseshhh.",".hhhsssssssshhh.",".hhhsssSSssshhh.",".hhhssttttsshhh.",".hhhsssmmssshhh.",".hhhhhsssshhhhh.",".hhdddssssdddhh.","hhddddddddddddhh"],"pal":{"s":"#e8bb98","S":"#d49e78","e":"#15151a","m":"#b0405a","t":"#ffffff","q":"#1c1c26","r":"#7f90c0","h":"#241a16","d":"#4a4f57"}}};
-function avatar(n){
+function avatarRects(n,ol){
   var a=AVD[n];if(!a)return '';
   var g=[],y,x,o='';
   for(y=0;y<18;y++){g.push([]);for(x=0;x<18;x++)g[y].push('.')}
@@ -942,12 +1289,44 @@ function avatar(n){
     var c=g[y][x],cls='',fill='';
     if(c==='.'){
       var nb=[[1,0],[-1,0],[0,1],[0,-1]].some(function(d){var yy=y+d[1],xx=x+d[0];return yy>=0&&yy<18&&xx>=0&&xx<18&&g[yy][xx]!=='.'});
-      if(!nb)continue;cls=' class="k"';
+      if(!nb)continue;
+      if(ol)fill=' fill="'+ol+'"';else cls=' class="k"';
     }else fill=' fill="'+a.pal[c]+'"';
     o+='<rect x="'+x+'" y="'+y+'" width="1" height="1"'+cls+fill+'/>';
   }
-  return '<svg class="px av" viewBox="0 0 18 18" shape-rendering="crispEdges" role="img" aria-label="'+n+'">'+'<title>'+n+'</title>'+o+'</svg>';
+  return o;
 }
+function avatar(n){
+  if(!AVD[n])return '';
+  return '<svg class="px av" viewBox="0 0 18 18" shape-rendering="crispEdges" role="img" aria-label="'+n+'"><title>'+n+'</title>'+avatarRects(n)+'</svg>';
+}
+function onsenScene(){
+  var o='',k;
+  function r(x,y,w,h,f,c,st){o+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"'+(c?' class="'+c+'"':'')+(st?' style="'+st+'"':'')+'/>'}
+  function mt(cx,top,half,col,cap){for(var y=top,i=0;y<90;y+=4,i++){var w=Math.min((i+1)*4,half);r(cx-w,y,w*2,4,i<2?cap:col)}}
+  r(0,0,320,120,'#141b3a');
+  [[20,10],[60,24],[110,8],[150,18],[200,12],[250,24],[290,10],[304,38],[36,42]].forEach(function(p,i){r(p[0],p[1],2,2,'#e8f0ff','twk','animation-delay:'+(i*0.4)+'s')});
+  mt(70,34,70,'#26346b','#dfe8f7');mt(240,24,80,'#2f3f80','#dfe8f7');
+  r(0,88,320,32,'#dfe8f7');
+  for(k=0;k<3;k++)r(6+k*16,62,4,30,'#7b5230');
+  r(0,68,48,3,'#7b5230');r(0,82,48,3,'#7b5230');
+  r(52,54,3,38,'#3b2a1a');r(48,48,11,8,'#ffd24a');r(50,50,7,4,'#fff3b0');
+  r(56,70,208,50,'#8a96ad');r(56,70,208,3,'#b4bfd3');r(60,66,56,4,'#ffffff');r(184,66,64,4,'#ffffff');
+  ['涵','蘇','茜','周'].forEach(function(n,i){
+    var X=90+i*40,dx=(X+40)/1.6;
+    o+='<g transform="translate('+X+',54) scale(1.6)"><g class="fa" style="--dx:'+dx.toFixed(1)+'px;--d:'+(i*1.3)+'s"><g class="bob">'+avatarRects(n,'#0b1030')
+      +'<rect x="3" y="18" width="12" height="12" fill="#f6f6f6"/><rect x="5" y="30" width="3" height="7" fill="#e8bb98"/><rect x="10" y="30" width="3" height="7" fill="#e8bb98"/></g></g></g>';
+  });
+  r(64,80,192,32,'#3fd0b5',null,'opacity:.88');r(64,80,192,2,'#a8f5e4');
+  [[80,90,24],[140,98,30],[200,92,20],[110,104,22]].forEach(function(p,i){r(p[0],p[1],p[2],2,'#7be8d0','twk','animation-delay:'+(i*0.6)+'s')});
+  r(56,112,208,8,'#6c7893');
+  [80,108,136,164,192,220,150].forEach(function(x,i){r(x,74,6,6,'#e8f0ff','puff','--d:'+(i*0.7)+'s')});
+  for(k=0;k<18;k++){var fx=(k*53)%312,fy=(k*37)%100;r(fx,fy,2,2,'#ffffff','flk','--y0:'+fy+'px;--d:'+(-(k%6))+'s')}
+  r(268,56,46,24,'#7b5230');r(270,58,42,20,'#a8703a');
+  o+='<text x="291" y="73" text-anchor="middle" font-size="13" font-weight="700" fill="#2b1a0a" style="font-family:var(--pixel)">玉池</text>';
+  return '<svg class="onsen" viewBox="0 0 320 120" shape-rendering="crispEdges" role="img" aria-label="四個小人走進玉池泡湯，外面下著雪">'+o+'</svg>';
+}
+
 /* ---------- pixel icons & badges ---------- */
 function icon(n,cls){
   var o='';
@@ -1034,6 +1413,24 @@ function icon(n,cls){
      r(3,3,8,1,'o');r(2,4,10,2,'o');r(4,4,1,1,'y');r(7,5,1,1,'g');r(9,4,1,1,'n');
      ol([[2,6,10,2],[3,8,8,2],[5,10,4,1]],'r');r(3,6,2,1,'w');
      r(5,0,1,2,'s');r(8,1,1,2,'s');r(11,1,1,1,'k');r(10,2,1,1,'k');
+   },
+   lock:function(){
+     ol([[3,6,8,6]],'y');r(4,2,1,4,'k');r(9,2,1,4,'k');r(4,2,6,1,'k');r(6,8,2,2,'k');
+   },
+   snow:function(){
+     ol([[6,1,2,12],[1,6,12,2],[3,3,2,2],[9,3,2,2],[3,9,2,2],[9,9,2,2]],'s');r(6,6,2,2,'b');
+   },
+   star:function(){
+     ol([[6,1,2,2],[5,3,4,2],[1,5,12,2],[3,7,8,2],[2,9,4,3],[8,9,4,3]],'y');
+   },
+   passport:function(){
+     ol([[3,2,8,11]],'b');r(6,5,2,2,'y');r(5,9,4,1,'cr');
+   },
+   mailbox:function(){
+     ol([[3,3,8,8]],'r');r(5,6,4,1,'k');r(6,11,2,3,'n');r(11,1,1,4,'y');r(11,1,3,2,'y');
+   },
+   camera:function(){
+     ol([[1,4,12,8]],'n');r(5,2,4,2,'n');r(5,6,4,4,'w');r(6,7,2,2,'b');r(10,5,2,1,'y');
    }
   };
   (I[n]||I.calendar)();
@@ -1050,7 +1447,7 @@ function badgeFor(v){
   if(v==='day')return dayTbd().reduce(function(a,b){return a+b},0);
   if(v==='flights')return tbdIn(renderFlights());
   if(v==='map')return tbdIn(renderMap());
-  if(v==='weather')return DAYS.filter(function(d){return !(wx[d.id]||'').trim()}).length;
+  if(v==='weather')return DAYS.filter(function(d){return !(wx[d.id]||'').trim()&&!(WX_SNAP.days&&WX_SNAP.days[d.id])}).length;
   if(v==='lists')return lists.todos.filter(function(i){return !i.done}).length;
   if(v==='money')return tbdIn(renderMoney());
   return 0;
@@ -1067,7 +1464,7 @@ function drawTabs(view){
 
 /* ---------- 房東來信 ---------- */
 var ltRead=store.get('ltread',false),ltOpener=null;
-function letterBtn(sm){return '<button class="btn'+(sm?' sm':'')+' go" type="button" data-act="letter">'+icon('mail','in sm')+'房東來信'+(ltRead?'':'<i class="dot"></i>')+'</button>'}
+function letterBtn(sm){return '<button class="btn'+(sm?' sm':'')+' go" type="button" data-act="letter">'+icon('mail','in sm')+'房東來信'+'<em class="bdg lt-badge">1</em>'+'</button>'}
 function envSVG(){
   var o='';
   function r(x,y,w,h,k){o+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" class="'+k+'"/>'}
@@ -1083,8 +1480,9 @@ function letterHTML(){
   var A='旭川市永山6条4丁目9-6',M='79 439 218*15';
   return '<div class="lt-paper" id="ltp"><h2>'+icon('mail','in')+'給旅人的一封信</h2><p class="lt-from">來自 comma, nagayama</p>'
    +'<div class="lt-stamps"><div><small>Check in</small><b>15:00～20:00</b></div><div><small>Check out</small><b>10:00</b></div></div>'
-   +'<p>我們民宿是採自助入住方式，大門門把上有掛著鑰匙盒，鑰匙盒密碼請看房東傳給你們的訊息，請自行取出鑰匙後，即可開門入住哦 '+icon('smile','in sm')+'</p>'
-   +'<p>退房時，請訊息通知我們後，將大門鎖上，再把鑰匙放在鑰匙盒裡（密碼同上）後，即可離開。</p>'
+   +'<p>我們民宿是採自助入住方式，大門門把上有掛著鑰匙盒，鑰匙盒密碼是 <b class="code" data-c="請問房東來信或群組"></b>，請自行取出鑰匙後，即可開門入住哦 '+icon('smile','in sm')+'</p>'
+   +'<button class="btn go" type="button" data-act="code">'+icon('key','in sm')+'<span id="codeLbl">看鑰匙盒密碼</span></button>'
+   +'<p>退房時，請訊息通知我們後，將大門鎖上，再把鑰匙放在鑰匙盒裡（密碼：<b class="code" data-c="請問房東來信或群組"></b>）後，即可離開。</p>'
    +'<p>如您是開車前來，民宿旁附有免費的停車空間。</p>'
    +'<p>民宿備品提供沐浴乳、洗髮精、潤髮乳、吹風機、浴毛巾。為響應環保，不提供拋棄式用品（牙膏牙刷、刮鬍刀、梳子、棉花棒等）。</p>'
    +'<p>包棟期間我們不會入內打擾，續住不會進行打掃，也不會更換毛巾被單類哦。</p>'
@@ -1105,7 +1503,7 @@ function readLetter(){
   var st=document.getElementById('ltstage');if(!st)return;
   st.innerHTML=letterHTML();
   ltRead=true;store.set('ltread',true);
-  [].forEach.call(document.querySelectorAll('.dot'),function(d){d.parentNode.removeChild(d)});
+  
   var x=document.querySelector('#lt .lt-x');if(x)x.focus();
 }
 function closeLetter(){
@@ -1133,6 +1531,884 @@ function openPopup(key,opener){
   var b=ov.querySelector('.popopt');if(b)b.focus();
 }
 
+/* ---------- 海鮮丼小遊戲 ---------- */
+var dnPlaced={},dnLast=null,dnDrag=null;
+var DN_TOP=[
+ {k:'salmon',n:'生鮭魚片',vb:'6 7 20 12'},
+ {k:'shrimp',n:'甜蝦',vb:'33 8 18 14'},
+ {k:'uni',n:'海膽',vb:'24 6 15 11'},
+ {k:'ikura',n:'鮭魚卵',vb:'20 12 18 8'}
+];
+function dnRects(k){
+  var o='';
+  function r(x,y,w,h,f){o+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"/>'}
+  function piece(x,y,w,h,f,oc){r(x-1,y-1,w+2,h+2,oc);r(x,y,w,h,f)}
+  if(k==='salmon'){
+    [[8,13],[11,11],[14,9]].forEach(function(p){piece(p[0],p[1],10,4,'#ff8a5c','#c0482a');r(p[0]+1,p[1]+1,8,1,'#ffd0b8')});
+  }else if(k==='shrimp'){
+    [11,15].forEach(function(y){
+      piece(39,y,7,3,'#ffb3a0','#c0482a');piece(36,y,3,3,'#ff9d8a','#c0482a');
+      r(40,y,1,3,'#ff7d6b');r(43,y,1,3,'#ff7d6b');r(37,y+1,1,1,'#2a1612');
+      piece(46,y-1,2,2,'#e0524a','#a82820');piece(46,y+2,2,2,'#e0524a','#a82820');
+    });
+  }else if(k==='uni'){
+    piece(26,11,5,3,'#ffc83d','#c98a14');piece(29,9,5,3,'#ffc83d','#c98a14');piece(33,10,4,4,'#ffc83d','#c98a14');
+    r(27,11,2,1,'#fff0a0');r(30,9,2,1,'#fff0a0');r(34,10,1,1,'#fff0a0');r(27,13,9,1,'#e9a020');
+  }else if(k==='ikura'){
+    [[22,16],[24,14],[26,16],[28,14],[30,16],[32,14],[34,16],[25,17],[29,17],[33,18]].forEach(function(p){r(p[0],p[1],2,2,'#ff5a2a');r(p[0],p[1],1,1,'#ffd0b0')});
+  }
+  return o;
+}
+function dnBowl(done){
+  var o='';
+  function r(x,y,w,h,f,c){o+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"'+(c?' class="'+c+'"':'')+'/>'}
+  function layer(list,oc){list.forEach(function(a){r(a[0]-1,a[1]-1,a[2]+2,a[3]+2,oc)});list.forEach(function(a){r(a[0],a[1],a[2],a[3],a[4])})}
+  r(9,36,38,2,'#e0c9a0');
+  layer([[6,18,44,2,'#d4372c'],[7,20,42,2,'#d4372c'],[8,22,40,2,'#d4372c'],[9,24,38,2,'#d4372c'],[11,26,34,2,'#d4372c'],[13,28,30,2,'#d4372c'],[16,30,24,2,'#d4372c'],[18,32,20,3,'#a82820']],'#2a1612');
+  r(8,22,40,1,'#ffd24a');r(8,20,3,5,'#f27a6c');
+  layer([[14,8,28,2,'#fffdf4'],[10,10,36,2,'#fffdf4'],[8,12,40,2,'#fffdf4'],[7,14,42,2,'#fffdf4'],[7,16,42,2,'#fffdf4']],'#9c927a');
+  [[12,13],[18,11],[40,12],[44,15],[10,16],[36,16],[20,14],[30,12]].forEach(function(p){r(p[0],p[1],1,1,'#e9e2cf')});
+  DN_TOP.forEach(function(t){if(dnPlaced[t.k])o+='<g class="tp'+(dnLast===t.k?' pop':'')+'">'+dnRects(t.k)+'</g>'});
+  if(done)[[3,4],[50,6],[4,26],[49,28],[27,2]].forEach(function(p,i){o+='<g class="spk" style="animation-delay:'+(i*0.25)+'s"><rect x="'+(p[0]+1)+'" y="'+p[1]+'" width="1" height="3" fill="#ffb62e"/><rect x="'+p[0]+'" y="'+(p[1]+1)+'" width="3" height="1" fill="#ffb62e"/></g>'});
+  return '<svg class="dn-bowl'+(done?' done':'')+'" viewBox="0 0 56 40" shape-rendering="crispEdges" role="img" aria-label="一碗白飯'+(done?'，已經放好所有配料，完成海鮮丼':'')+'">'+o+'</svg>';
+}
+function dnInner(){
+  var n=0;DN_TOP.forEach(function(t){if(dnPlaced[t.k])n++});
+  var done=n===DN_TOP.length;
+  var tray=DN_TOP.map(function(t){
+    var on=!!dnPlaced[t.k];
+    return '<div class="dn-item"><button type="button" class="dn-top'+(on?' done':'')+'" data-k="'+t.k+'"'+(on?' disabled':'')+' aria-label="'+t.n+(on?'（已放上白飯）':'（拖到白飯上，或點一下放上去）')+'"><svg viewBox="'+t.vb+'" preserveAspectRatio="xMidYMid meet" shape-rendering="crispEdges" aria-hidden="true">'+dnRects(t.k)+'</svg></button><span>'+t.n+'</span></div>';
+  }).join('');
+  return '<h4>'+icon('food','in')+'海鮮丼小遊戲</h4>'
+   +'<p class="dn-hint">▶ 把配料拖到白飯上，做一碗海鮮丼！（也可以直接點配料）</p>'
+   +'<div class="dn-bowlwrap" id="dnBowl">'+dnBowl(done)+'</div>'
+   +'<p class="dn-msg'+(done?' ok':'')+'">'+(done?'完成！いただきます！':'已放 '+n+' / '+DN_TOP.length+' 種配料')+'</p>'
+   +'<div class="dn-tray">'+tray+'</div>'
+   +'<div style="text-align:right"><button class="btn sm" type="button" data-act="dnreset">'+(done?'再做一碗':'重來')+'</button></div>';
+}
+function dnRender(){var el=document.getElementById('dn');if(el)el.innerHTML=dnInner()}
+function dnPlace(k){if(dnPlaced[k])return;dnPlaced[k]=true;dnLast=k;dnRender()}
+function dnOver(ev){
+  var b=document.getElementById('dnBowl');if(!b)return false;
+  var r=b.getBoundingClientRect(),m=14;
+  return ev.clientX>=r.left-m&&ev.clientX<=r.right+m&&ev.clientY>=r.top-m&&ev.clientY<=r.bottom+m;
+}
+function dnMove(ev){
+  if(!dnDrag)return;
+  var g=dnDrag.ghost;g.style.left=ev.clientX+'px';g.style.top=ev.clientY+'px';
+  if(Math.abs(ev.clientX-dnDrag.x0)+Math.abs(ev.clientY-dnDrag.y0)>8)dnDrag.moved=true;
+  var b=document.getElementById('dnBowl');if(b)b.classList.toggle('over',dnOver(ev));
+}
+function dnEnd(ev,cancel){
+  if(!dnDrag)return;
+  var d=dnDrag;dnDrag=null;
+  if(d.ghost.parentNode)d.ghost.parentNode.removeChild(d.ghost);
+  var b=document.getElementById('dnBowl');if(b)b.classList.remove('over');
+  if(!cancel&&(!d.moved||dnOver(ev)))dnPlace(d.key);
+}
+document.addEventListener('pointerdown',function(ev){
+  var b=ev.target.closest&&ev.target.closest('.dn-top');
+  if(!b||b.disabled||(ev.button!==undefined&&ev.button>0))return;
+  ev.preventDefault();
+  var g=document.createElement('div');g.className='dn-ghost';g.innerHTML=b.querySelector('svg').outerHTML;
+  document.body.appendChild(g);
+  dnDrag={key:b.getAttribute('data-k'),ghost:g,x0:ev.clientX,y0:ev.clientY,moved:false};
+  dnMove(ev);
+});
+document.addEventListener('pointermove',function(ev){if(dnDrag)dnMove(ev)});
+document.addEventListener('pointerup',function(ev){dnEnd(ev,false)});
+document.addEventListener('pointercancel',function(ev){dnEnd(ev,true)});
+document.addEventListener('click',function(ev){
+  var b=ev.target.closest&&ev.target.closest('.dn-top');
+  if(b&&!b.disabled&&ev.detail===0){dnPlace(b.getAttribute('data-k'));var nx=document.querySelector('.dn-top:not([disabled])');if(nx)nx.focus()}
+});
+
+/* ---------- 兩間飯店小圖 ---------- */
+var HOTELS=[
+ {name:'FAV hotel susukino',art:'fav',who:['涵','蘇'],cio:'入住 15:00・退房 10:00',addr:'〒064-0806 北海道札幌市中央区南6条西7丁目2-2',q:'FAV hotel susukino',url:'https://maps.app.goo.gl/MxEZY5AKRMffWLPR7'},
+ {name:'hotel androoms Sapporo Susukino',art:'androoms',who:['茜','周'],cio:'入住 15:00・退房 10:00',addr:'〒064-0807 北海道札幌市中央区南7条西1丁目1-9',q:'hotel androoms Sapporo Susukino',url:'https://maps.app.goo.gl/59nm4t8GzmAoFQkW9'}
+];
+function hotelArt(kind){
+  var o='',i,j;
+  function r(x,y,w,h,f,c,st){o+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"'+(c?' class="'+c+'"':'')+(st?' style="'+st+'"':'')+'/>'}
+  function pine(x,y){r(x+2,y,1,1,'#ffffff');r(x+1,y+1,3,1,'#2f7d4f');r(x,y+2,5,1,'#2f7d4f');r(x+1,y+3,3,1,'#2f7d4f');r(x,y+4,5,1,'#2f7d4f');r(x+2,y+5,1,2,'#7b5230')}
+  r(0,0,56,40,'#a9cbe6');
+  [[4,4],[48,6],[30,2],[10,12]].forEach(function(p,k){r(p[0],p[1],1,1,'#ffffff','twk','animation-delay:'+(k*0.5)+'s')});
+  r(0,34,56,6,'#eef4fb');
+  if(kind==='fav'){
+    r(13,6,30,29,'#2a1612');r(14,7,28,27,'#ff8a3d');r(12,4,32,3,'#ffffff');
+    r(18,9,20,6,'#ffffff');
+    for(i=0;i<3;i++)for(j=0;j<3;j++)r(17+i*8,18+j*5,6,3,((i+j)%2?'#ffd24a':'#fff3b0'),((i+j)%2?'twk':''),'animation-delay:'+((i*3+j)*0.35)+'s');
+    r(25,29,6,5,'#7b5230');pine(3,26);pine(48,26);
+    o+='<text x="28" y="13.6" text-anchor="middle" font-size="5" font-weight="700" fill="#2a1612" style="font-family:var(--pixel)">FAV</text>';
+  }else{
+    r(5,13,46,22,'#2a1612');r(6,14,44,20,'#4a7bd0');r(4,11,48,3,'#ffffff');
+    r(12,16,32,6,'#ffffff');
+    for(i=0;i<6;i++)for(j=0;j<2;j++)r(9+i*7,24+j*5,5,3,((i+j)%2?'#ffd24a':'#fff3b0'),((i+j)%2?'twk':''),'animation-delay:'+((i*2+j)*0.3)+'s');
+    r(25,29,6,5,'#7b5230');pine(0,27);pine(51,27);
+    o+='<text x="28" y="20.6" text-anchor="middle" font-size="5" font-weight="700" fill="#2a1612" style="font-family:var(--pixel)">androoms</text>';
+  }
+  return '<svg class="hart" viewBox="0 0 56 40" shape-rendering="crispEdges" role="img" aria-label="'+(kind==='fav'?'FAV hotel susukino':'hotel androoms Sapporo Susukino')+'的像素小圖">'+o+'</svg>';
+}
+function hotelsHTML(){
+  return '<div class="hotels">'+HOTELS.map(function(h){
+    return '<div class="hcard">'+hotelArt(h.art)+'<h5>'+esc(h.name)+'</h5><div class="hwho">'+h.who.map(avatar).join('')+'</div><p>'+esc(h.cio)+'</p><p>'+esc(h.addr)+'</p>'+(h.note?'<p>'+esc(h.note)+'</p>':'')
+      +'<div><a class="btn sm go" target="_blank" rel="noopener" href="'+dir(h.q,'transit')+'">導航</a><a class="btn sm" target="_blank" rel="noopener" href="'+h.url+'">地圖連結</a></div></div>';
+  }).join('')+'</div>';
+}
+
+/* ---------- 支線任務：シマエナガ可麗餅 ---------- */
+function spriteRects(rows,pal,ol,cmap){
+  var h=rows.length,w=rows[0].length,g=[],y,x,o='';
+  for(y=0;y<h+2;y++){g.push([]);for(x=0;x<w+2;x++)g[y].push('.')}
+  rows.forEach(function(row,yy){for(var xx=0;xx<w;xx++)g[yy+1][xx+1]=row.charAt(xx)});
+  for(y=0;y<h+2;y++)for(x=0;x<w+2;x++){
+    var c=g[y][x],cls='',fill='';
+    if(c==='.'){
+      var nb=[[1,0],[-1,0],[0,1],[0,-1]].some(function(d){var yy=y+d[1],xx=x+d[0];return yy>=0&&yy<h+2&&xx>=0&&xx<w+2&&g[yy][xx]!=='.'});
+      if(!nb)continue;fill=' fill="'+ol+'"';
+    }else{fill=' fill="'+pal[c]+'"';if(cmap&&cmap[c])cls=' class="'+cmap[c]+'"'}
+    o+='<rect x="'+x+'" y="'+y+'" width="1" height="1"'+cls+fill+'/>';
+  }
+  return o;
+}
+var BIRD_PAL={w:'#ffffff',g:'#dfe8f4',e:'#1b2236',k:'#1b2236',p:'#ffb7c4',t:'#3a4260'};
+var CREPE_PAL={c:'#fff7e6',s:'#e8384f',y:'#f0c27a',d:'#d9a050',p:'#ffc9d6'};
+var CREPE_ROWS=["...ccccc....","..ccsccscc..",".cccccccccc.",".yyyyyyyyyy.",".yydyyyydyy.","..yyyyyyyy..","..pppyyyppp.","...pppppp...","...pppppp...","....pppp....","....pppp....",".....pp.....",".....pp....."];
+function birdRows(st){
+  var r=["....wwwwwwww....","..wwwwwwwwwwww..",".wwwwwwwwwwwwww.",".wwwwwwwwwwwwww.",".wwwewwwwwwewww.",".wwwewwwwwwewww.",".wppwwwkkwwwppw.",".wwwwwwwwwwwwww.",".wgwwwwwwwwwwgw.",".wgwwwwwwwwwwgtt","..wwwwwwwwwwwttt","...wwwwwwwwwwttt","....kk....kk..tt"];
+  if(st===0){r[4]=".wwwwwwwwwwwwww.";r[5]=".wweewwwwwweeww."}
+  return r;
+}
+function birdSVG(st){
+  var o=spriteRects(birdRows(st),BIRD_PAL,'#1b2236',st===0?null:{e:'eyeb'});
+  var sc='';
+  if(st===1){
+    o='<g class="bird">'+o+'</g><g transform="translate(23,3)">'+spriteRects(CREPE_ROWS,CREPE_PAL,'#1b2236')+'</g>';
+    [[20,2],[36,5],[22,16],[37,15]].forEach(function(p,i){sc+='<g class="spk" style="animation-delay:'+(i*0.25)+'s"><rect x="'+(p[0]+1)+'" y="'+p[1]+'" width="1" height="3" fill="#ffb62e"/><rect x="'+p[0]+'" y="'+(p[1]+1)+'" width="3" height="1" fill="#ffb62e"/></g>'});
+  }else o='<g class="bird">'+o+'</g>'+(st===0?'<text x="22" y="6" font-size="5" font-weight="700" fill="#7a6a58" style="font-family:var(--pixel)">zzz</text>':'');
+  return '<svg class="birdsvg'+(st===1?' hop':'')+(st===0?' sleep':'')+'" viewBox="0 0 40 20" shape-rendering="crispEdges" role="img" aria-label="シマエナガ（小小的白色鳥）'+(st===1?'拿著可麗餅':'')+'">'+o+sc+'</svg>';
+}
+function crepeHTML(it){
+  var v=picks[it.key],mode=it.mode||'transit';
+  var ask=(v===undefined||v===null);
+  var say=v===1?'太好了！一起去吃可麗餅吧～':(v===0?'好的，下次再一起吃！':'要不要順路吃一份可麗餅呢？');
+  var btns=ask?'<button class="btn go" type="button" data-act="crepe" data-v="1">▶ 好呀！</button><button class="btn" type="button" data-act="crepe" data-v="0">▶ 下次吧</button>':'<button class="btn sm" type="button" data-act="crepe" data-v="null">改變心意</button>';
+  var detail='';
+  if(v===1){
+    var rows=[['地址','addr'],['交通','transit'],['營業時間','hours']].filter(function(r){return it[r[1]]!==null}).map(function(r){return '<dt>'+r[0]+'</dt><dd>'+fld(it[r[1]])+'</dd>'}).join('');
+    detail='<div class="pickd"><h4>已接受：'+esc(it.shop)+'</h4><dl class="f">'+rows+'</dl><div><a class="btn go" target="_blank" rel="noopener" href="'+dir(it.nav,mode)+'">導航</a><a class="btn" target="_blank" rel="noopener" href="'+search(it.nav)+'">地圖</a>'+(it.url?'<a class="btn go" target="_blank" rel="noopener" href="'+it.url+'">地圖連結</a>':'')+'</div></div>';
+  }
+  return '<article class="item k-food"><div class="time">'+esc(it.time)+(it.est?'<small>估算</small>':'')+'</div><div><h3>'+icon('food','in')+esc(it.title)+'<span class="tag opt">選做</span></h3>'
+    +(it.dur?'<p class="dur">'+icon('clock','in sm')+esc(it.dur)+EST+'</p>':'')
+    +'<div class="sidebox">'+birdSVG(v===1?1:(v===0?0:2))+'<div class="bubble"><p>'+say+'</p><div class="sbtns">'+btns+'</div></div></div>'+detail+'</div></article>';
+}
+
+/* ---------- 洞爺湖晨雪 ---------- */
+var tzDone=false;
+function morningBtn(){return '<button class="btn go" type="button" data-act="morning">'+icon('snow','in sm')+(tzDone?'晨雪成就（已獲得）':'拉開窗簾')+(tzDone?'':'<em class="bdg">1</em>')+'</button>'}
+function morningScene(open){
+  var o='',i,k;
+  function r(x,y,w,h,f,c,st){o+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"'+(c?' class="'+c+'"':'')+(st?' style="'+st+'"':'')+'/>'}
+  function mt(cx,top,half,col){for(var y=top,j=0;y<110;y+=4,j++){var w=Math.min((j+1)*4,half);r(cx-w,y,w*2,4,j<2?'#ffffff':col)}}
+  function pine(x,y){r(x+4,y,4,3,'#ffffff');r(x+2,y+3,8,3,'#2f7d4f');r(x,y+6,12,3,'#2f7d4f');r(x+2,y+9,8,3,'#2f7d4f');r(x,y+12,12,3,'#2f7d4f');r(x+4,y+15,4,5,'#7b5230')}
+  [['#2b2f6b',0,30],['#5a4f9c',30,24],['#c46a9a',54,20],['#f4909a',74,16],['#ffc9a0',90,20]].forEach(function(b){r(0,b[1],320,b[2],b[0])});
+  [[24,10],[70,20],[120,8],[180,18],[240,12],[290,26]].forEach(function(p,j){r(p[0],p[1],2,2,'#ffffff','twk','animation-delay:'+(j*0.4)+'s')});
+  r(212,92,28,16,'#fff2a8');r(216,88,20,4,'#fff2a8');r(220,84,12,4,'#fff2a8');
+  mt(60,66,60,'#4a5a9a');mt(150,78,52,'#5a6aa8');mt(270,70,64,'#4a5a9a');
+  r(0,108,320,44,'#5a7fd0');
+  [[20,116,60],[110,122,70],[200,114,50],[250,128,60],[40,134,40]].forEach(function(p,j){r(p[0],p[1],p[2],2,'#ffe0b0','twk','animation-delay:'+(j*0.5)+'s')});
+  [[222,111,12],[225,117,8],[221,123,14]].forEach(function(p,j){r(p[0],p[1],p[2],2,'#fff2a8','twk','animation-delay:'+(j*0.4)+'s')});
+  r(118,104,64,8,'#3b4f7a');r(128,96,44,8,'#2f6a5a');r(136,90,28,6,'#2f6a5a');r(142,86,16,4,'#2f6a5a');
+  r(142,85,16,2,'#ffffff');r(134,92,32,2,'#ffffff');r(126,98,48,2,'#ffffff');
+  r(0,152,320,28,'#eef4fb');
+  pine(8,134);pine(26,142);pine(292,136);pine(274,144);
+  for(i=0;i<22;i++){var fx=(i*47)%316,fy=(i*29)%140;r(fx,fy,2,2,'#ffffff','flk','--y0:'+fy+'px;--d:'+(-(i%7))+'s')}
+  r(0,0,320,6,'#7b5230');r(0,174,320,6,'#7b5230');r(0,0,6,180,'#7b5230');r(314,0,6,180,'#7b5230');r(157,0,6,180,'#a8703a');r(0,87,320,5,'#a8703a');
+  var cl='',cr='';
+  for(k=0;k<160;k+=16){cl+='<rect x="'+k+'" y="0" width="12" height="180" fill="#e86a8a"/><rect x="'+(k+12)+'" y="0" width="4" height="180" fill="#c9506e"/>'}
+  for(k=0;k<160;k+=16){cr+='<rect x="'+(160+k)+'" y="0" width="12" height="180" fill="#e86a8a"/><rect x="'+(172+k)+'" y="0" width="4" height="180" fill="#c9506e"/>'}
+  o+='<g class="cl">'+cl+'</g><g class="cr">'+cr+'</g>';
+  return '<svg class="mw'+(open?' open':'')+'" viewBox="0 0 320 180" shape-rendering="crispEdges" role="img" aria-label="窗外是洞爺湖的晨雪，天空泛著粉橘色的朝霞">'+o+'</svg>';
+}
+function achHTML(again){
+  return '<div class="ach"><div class="ach-t">'+icon('star','in sm')+'成就解鎖</div><div class="ach-n">洞爺湖晨雪</div><p>恭喜！你們看到洞爺湖的晨雪了！</p>'+(again?'<button class="btn" type="button" data-act="ltclose">關閉</button>':'<button class="btn go" type="button" data-act="mdone">收下成就</button>')+'</div>';
+}
+function openMorning(opener){
+  ltOpener=opener||null;
+  var ov=document.getElementById('lt');
+  ov.innerHTML='<div class="lt-card"><button class="x lt-x" type="button" data-act="ltclose" aria-label="關閉">'+icon('x')+'</button><div class="pop"><h2>'+icon('snow','in')+'洞爺湖的早晨</h2><p class="prompt">▶ 今天要離開洞爺湖了，先拉開窗簾看看外面吧！</p>'+morningScene(tzDone)+'<div id="mact" class="mact">'+(tzDone?achHTML(true):'<button class="btn go" type="button" data-act="mopen">拉開窗簾</button>')+'</div></div></div>';
+  ov.hidden=false;document.body.classList.add('lt-open');
+  var b=ov.querySelector('[data-act="mopen"]')||ov.querySelector('.lt-x');if(b)b.focus();
+}
+function morningOpen(){
+  var svg=document.querySelector('svg.mw'),m=document.getElementById('mact');
+  if(!svg||!m)return;
+  svg.classList.add('open');m.innerHTML='';
+  setTimeout(function(){var mm=document.getElementById('mact');if(mm&&!tzDone)mm.innerHTML=achHTML(false)},1400);
+}
+
+/* ---------- 四個人逛街小動畫 ---------- */
+function shopScene(){
+  var o='',i,k;
+  function r(x,y,w,h,f,c,st){o+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"'+(c?' class="'+c+'"':'')+(st?' style="'+st+'"':'')+'/>'}
+  r(0,0,320,120,'#fdf1dd');
+  r(0,0,320,14,'#8a96ad');r(0,14,320,3,'#6c7893');
+  for(i=0;i<20;i++)r(6+i*16,6,3,3,['#ffd24a','#ff7d6b','#7be8d0','#8cc2f5'][i%4],'twk','animation-delay:'+(i*0.15)+'s');
+  var cols=['#ffb3a0','#a8d8ea','#c9e4a8','#ffd9a0','#d9b8f0'];
+  for(i=0;i<5;i++){
+    var x=2+i*64;
+    r(x,18,60,64,cols[i]);
+    for(k=0;k<6;k++)r(x+k*10,18,10,9,k%2?'#ffffff':'#d4372c');
+    r(x+4,32,52,34,'#2a1612');r(x+6,34,48,30,'#fff3b0');
+    if(i===0){r(x+16,38,20,22,'#e8f0ff');r(x+18,40,4,4,'#ff5a2a');r(x+24,40,4,4,'#3b7de0');r(x+30,40,4,4,'#ffd24a');r(x+20,46,4,4,'#2fa36b');r(x+26,46,4,4,'#ff5a2a');r(x+32,46,4,4,'#3b7de0');r(x+14,58,24,4,'#d4372c')}
+    if(i===1){r(x+26,38,8,22,'#2fa36b');r(x+19,45,22,8,'#2fa36b')}
+    if(i===2){r(x+20,40,20,16,'#3b7de0');r(x+14,40,6,8,'#3b7de0');r(x+40,40,6,8,'#3b7de0');r(x+26,40,8,4,'#fff3b0')}
+    if(i===3){r(x+20,48,20,12,'#ffc9d6');r(x+20,44,20,4,'#ffffff');r(x+28,38,4,6,'#e8384f')}
+    if(i===4){r(x+20,38,6,6,'#c8955a');r(x+34,38,6,6,'#c8955a');r(x+22,40,16,12,'#c8955a');r(x+24,52,12,10,'#c8955a');r(x+27,46,2,2,'#2a1612');r(x+33,46,2,2,'#2a1612')}
+  }
+  r(0,82,320,38,'#d9c8a8');r(0,100,320,2,'#c8b890');
+  for(k=0;k<8;k++)r(k*40,82,2,38,'#c8b890');
+  var shirt={'涵':'#4a4f57','蘇':'#f2b01e','茜':'#243a5e','周':'#f6f6f6'};
+  [['涵',10,150,'9s',0],['蘇',70,120,'11s',1.5],['茜',130,100,'10s',3],['周',190,90,'12s',4.5]].forEach(function(f){
+    o+='<g transform="translate('+f[1]+',74) scale(1.35)"><g class="wk" style="--a:'+Math.round(f[2]/1.35)+'px;animation-duration:'+f[3]+';--d:-'+f[4]+'s"><g class="wb">'+avatarRects(f[0],'#0b1030')
+      +'<rect x="5" y="18" width="3" height="5" fill="#3b4a7a"/><rect x="10" y="18" width="3" height="5" fill="#3b4a7a"/><rect x="4" y="23" width="4" height="2" fill="#2a1612"/><rect x="10" y="23" width="4" height="2" fill="#2a1612"/>'
+      +'<rect x="14" y="15" width="5" height="6" fill="#ff7d6b"/><rect x="15" y="13" width="1" height="2" fill="#2a1612"/><rect x="-1" y="16" width="5" height="6" fill="#3b7de0"/><rect x="0" y="14" width="1" height="2" fill="#2a1612"/></g></g></g>';
+  });
+  return '<svg class="shopwalk" viewBox="0 0 320 120" shape-rendering="crispEdges" role="img" aria-label="四個小人在商店街走來走去購物，手上提著購物袋">'+o+'</svg>';
+}
+
+/* ---------- 11/29：退稅提醒・飛機動畫・雪球大戰・明信片郵箱 ---------- */
+var taxCk=[false,false,false,false];
+var TAX_STEPS=[
+ '買東西：同一間店、同一天未稅滿 ¥5,000，結帳出示護照並保留收據。現在是「先付含稅價」。',
+ '到機場先別托運：在國際線航廈 3 樓出發大廳，用海關的免稅端末機掃描護照做確認（要在托運行李之前）。',
+ '商品要帶在身邊：收據上只要有一件不在手邊（例如已經托運），那張收據就無法退稅。',
+ '領現金退稅：Cash Japan 櫃檯在國際線航廈 3 樓，07:00–20:00（端末機 06:00–20:30），只退日圓現金。'
+];
+function taxBtn(){return '<button class="btn go" type="button" data-act="tax">'+icon('passport','in sm')+'退稅提醒<em class="bdg">!</em></button>'}
+function taxHTML(){
+  var n=taxCk.filter(Boolean).length,all=n===taxCk.length;
+  return '<div class="pop"><h2>'+icon('passport','in')+'退稅任務</h2><p class="prompt">▶ 2026/11/1 起日本免稅改成「先付含稅價、出境時退稅」，機場先做完這四關！</p><div class="tx">'
+   +TAX_STEPS.map(function(s,i){return '<button type="button" class="txs'+(taxCk[i]?' on':'')+'" data-act="taxck" data-i="'+i+'" aria-pressed="'+taxCk[i]+'"><span class="txb">'+(taxCk[i]?icon('check','in sm'):'')+'</span><span>'+esc(s)+'</span></button>'}).join('')
+   +'</div><p class="small muted" style="margin:8px 0 0">購買日起 90 天內出境都有效。也可以用 Visit Japan Web，在保安檢查前的出發大廳用手機辦理。班機很早的話，Cash Japan 櫃檯 07:00 才開，端末機 06:00 起可用。這是 2026/11/1 的新制，現場細節以機場公告為準。</p>'
+   +(all?'<div class="ach" style="margin-top:10px"><div class="ach-t">'+icon('star','in sm')+'任務完成</div><div class="ach-n">退稅 OK！</div></div>':'')
+   +'<div class="mact"><button class="btn" type="button" data-act="ltclose">我知道了</button></div></div>';
+}
+function openTax(opener){
+  ltOpener=opener||null;
+  var ov=document.getElementById('lt');
+  ov.innerHTML='<div class="lt-card"><button class="x lt-x" type="button" data-act="ltclose" aria-label="關閉">'+icon('x')+'</button><div id="taxbody">'+taxHTML()+'</div></div>';
+  ov.hidden=false;document.body.classList.add('lt-open');
+  var b=ov.querySelector('.txs');if(b)b.focus();
+}
+
+/* 飛機返航 */
+function flightScene(who){
+  var o='',i,k;
+  function r(x,y,w,h,f,c,st){o+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"'+(c?' class="'+c+'"':'')+(st?' style="'+st+'"':'')+'/>'}
+  [['#2b2f6b',0,28],['#5a4f9c',28,22],['#c46a9a',50,20],['#f4909a',70,18],['#ffc9a0',88,32]].forEach(function(b){r(0,b[1],320,b[2],b[0])});
+  [[24,8],[80,18],[140,6],[210,14],[270,10],[300,30]].forEach(function(p,j){r(p[0],p[1],2,2,'#ffffff','twk','animation-delay:'+(j*0.4)+'s')});
+  function cloud(x,y,sp,d){return '<g class="cld" style="animation-duration:'+sp+'s;animation-delay:-'+d+'s"><g transform="translate('+x+','+y+')"><rect x="6" y="4" width="22" height="6" fill="#ffffff"/><rect x="0" y="8" width="38" height="6" fill="#ffffff"/><rect x="10" y="0" width="12" height="6" fill="#ffffff"/></g></g>'}
+  o+=cloud(0,20,14,0)+cloud(0,60,10,3)+cloud(0,36,18,8)+cloud(0,74,12,6);
+  function mts(dx){var s='';[[40,70,40],[130,76,34],[230,66,44]].forEach(function(m){for(var y=m[1],j=0;y<120;y+=4,j++){var w=Math.min((j+1)*4,m[2]);s+='<rect x="'+(m[0]-w+dx)+'" y="'+y+'" width="'+(w*2)+'" height="4" fill="'+(j<2?'#ffffff':'#4a5a9a')+'"/>'}});return s}
+  o+='<g class="mtn">'+mts(0)+mts(320)+'</g>';
+  r(0,112,640,8,'#eef4fb');
+  // contrails
+  for(i=0;i<3;i++)r(40+i*18,64+i*4,14,2,'#ffffff','trl','animation-delay:-'+(i*0.3)+'s');
+  // plane
+  var n=who.length,px=104,py=48;
+  o+='<g class="pln"><g transform="translate('+px+','+py+')">';
+  o+='<rect x="0" y="12" width="112" height="22" fill="#17203a"/><rect x="2" y="14" width="108" height="18" fill="#ffffff"/>';
+  o+='<rect x="112" y="16" width="6" height="14" fill="#ffffff"/><rect x="118" y="20" width="4" height="6" fill="#17203a"/>';
+  o+='<rect x="2" y="26" width="108" height="3" fill="#d4372c"/>';
+  o+='<rect x="0" y="-6" width="14" height="20" fill="#17203a"/><rect x="2" y="-4" width="10" height="18" fill="#d4372c"/>';
+  o+='<rect x="42" y="30" width="34" height="8" fill="#17203a"/><rect x="44" y="32" width="30" height="4" fill="#8a96ad"/><rect x="50" y="4" width="26" height="10" fill="#8a96ad"/>';
+  for(k=0;k<n;k++){var wx=26+k*(n>2?18:24);o+='<rect x="'+wx+'" y="15" width="14" height="12" fill="#17203a"/><rect x="'+(wx+1)+'" y="16" width="12" height="10" fill="#bfe0f7"/><g transform="translate('+(wx+1)+',16) scale(0.55)">'+avatarRects(who[k],'#0b1030')+'</g>'}
+  o+='</g></g>';
+  o+='<text x="10" y="16" font-size="10" font-weight="700" fill="#ffffff" style="font-family:var(--pixel)">再見，北海道！</text>';
+  return '<svg class="flyscene" viewBox="0 0 320 120" shape-rendering="crispEdges" role="img" aria-label="'+who.join('、')+'搭著飛機飛過雲層，返航回家">'+o+'</svg>';
+}
+
+/* 雪球大戰 */
+function snowballScene(){
+  var o='',i;
+  function r(x,y,w,h,f,c,st){o+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"'+(c?' class="'+c+'"':'')+(st?' style="'+st+'"':'')+'/>'}
+  [['#a9d4f2',0,40],['#c4e2f6',40,30],['#e0f0fb',70,20]].forEach(function(b){r(0,b[1],320,b[2],b[0])});
+  r(250,12,22,22,'#fff3a8');r(246,16,30,14,'#fff3a8');
+  function pine(x,y){r(x+4,y,4,3,'#ffffff');r(x+2,y+3,8,3,'#2f7d4f');r(x,y+6,12,3,'#2f7d4f');r(x+2,y+9,8,3,'#2f7d4f');r(x,y+12,12,3,'#2f7d4f');r(x+4,y+15,4,5,'#7b5230')}
+  function bare(x,y){r(x,y,4,34,'#7b5230');r(x-8,y+6,8,3,'#7b5230');r(x+4,y+12,10,3,'#7b5230');r(x-6,y+18,6,3,'#7b5230')}
+  bare(24,46);bare(292,50);pine(52,60);pine(262,62);pine(6,74);pine(306,76);
+  r(0,84,320,36,'#f6fbff');r(0,84,320,3,'#dce9f3');
+  for(i=0;i<8;i++)r(i*44+10,100+(i%3)*6,12,3,'#dce9f3');
+  // snowman
+  r(148,64,24,22,'#17203a');r(150,66,20,18,'#ffffff');r(152,48,16,18,'#17203a');r(154,50,12,14,'#ffffff');r(154,38,12,12,'#17203a');r(156,40,8,8,'#ffffff');
+  r(158,43,2,2,'#17203a');r(162,43,2,2,'#17203a');r(160,45,6,2,'#f08a1c');r(154,34,12,4,'#17203a');r(157,28,6,6,'#17203a');
+  // 茜 (left, faces right) and 周 (right, faces left)
+  function fig(name,x,coat,flip,hit){
+    var body='<rect x="2" y="18" width="14" height="12" fill="'+coat+'"/><rect x="0" y="19" width="3" height="9" fill="'+coat+'"/><rect x="15" y="19" width="3" height="9" fill="'+coat+'"/><rect x="4" y="30" width="4" height="6" fill="#3b4a7a"/><rect x="10" y="30" width="4" height="6" fill="#3b4a7a"/><rect x="3" y="36" width="5" height="2" fill="#2a1612"/><rect x="10" y="36" width="5" height="2" fill="#2a1612"/><rect x="5" y="17" width="8" height="2" fill="#e8384f"/>';
+    return '<g transform="translate('+x+',58)"><g class="'+hit+'" style="transform-box:fill-box;transform-origin:center"><g '+(flip?'transform="translate(36,0) scale(-1,1)"':'')+'><g class="sbb"'+'><g transform="scale(1.9)">'+avatarRects(name,'#0b1030')+body+'</g></g></g></g></g>';
+  }
+  o+=fig('茜',56,'#e86a8a',false,'hitL');
+  o+=fig('周',226,'#2458c9',true,'hitR');
+  // balls
+  function ball(cls){return '<g class="'+cls+'"><g class="'+cls+'y"><rect x="0" y="0" width="8" height="8" fill="#17203a"/><rect x="1" y="1" width="6" height="6" fill="#ffffff"/><rect x="2" y="2" width="2" height="2" fill="#dce9f3"/></g></g>'}
+  o+='<g transform="translate(96,90)">'+ball('ba')+'</g><g transform="translate(96,90)">'+ball('bb')+'</g>';
+  function puff(cls,x){return '<g transform="translate('+x+',92)"><g class="'+cls+'"><rect x="-6" y="-6" width="4" height="4" fill="#fff"/><rect x="4" y="-8" width="4" height="4" fill="#fff"/><rect x="-10" y="2" width="4" height="4" fill="#fff"/><rect x="8" y="0" width="4" height="4" fill="#fff"/><rect x="-2" y="-12" width="4" height="4" fill="#fff"/></g></g>'}
+  o+=puff('pa',214)+puff('pb',100);
+  for(i=0;i<20;i++){var fx=(i*53)%316,fy=(i*31)%110;r(fx,fy,2,2,'#ffffff','flk2','--y0:'+fy+'px;--d:'+(-(i%7))+'s')}
+  return '<svg class="snowscene" viewBox="0 0 320 120" shape-rendering="crispEdges" role="img" aria-label="茜和周在雪地公園裡互相丟雪球">'+o+'</svg>';
+}
+
+/* 明信片郵箱 */
+var pcPhotos=[],pcSender='涵',pcBusy=false,pcVideo=null,pcMsg='';
+function pcBtn(){return '<button class="btn go" type="button" data-act="pcopen">'+icon('mailbox','in sm')+'明信片郵箱'+(pcPhotos.length?'<em class="bdg">'+pcPhotos.length+'</em>':'')+'</button>'}
+function pcBox(n){
+  var o='';
+  function r(x,y,w,h,f){o+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="'+f+'"/>'}
+  r(6,30,2,10,'#7b5230');r(4,28,6,2,'#7b5230');
+  r(0,6,16,22,'#17203a');r(1,7,14,20,'#d4372c');r(1,7,14,4,'#f27a6c');r(3,14,10,2,'#17203a');r(3,19,10,5,'#fff3d6');
+  r(15,n?4:12,6,2,'#ffb62e');r(15,n?4:12,2,n?10:4,'#ffb62e');
+  return '<svg class="pcbox'+(n?' up':'')+'" viewBox="0 0 24 40" shape-rendering="crispEdges" aria-hidden="true">'+o+'</svg>';
+}
+function pcBody(){
+  var senders=['涵','蘇','茜','周'].map(function(n){return '<button type="button" class="pcs'+(pcSender===n?' on':'')+'" data-act="pcsender" data-s="'+n+'" aria-pressed="'+(pcSender===n)+'">'+avatar(n)+'<span>'+n+'</span></button>'}).join('');
+  var head='<h2>'+icon('mailbox','in')+'明信片郵箱</h2>';
+  if(pcBusy){
+    return '<div class="pop">'+head+'<p class="prompt">▶ 郵差正在把明信片做成影片…請保持這個畫面不要切換</p><canvas id="pcCanvas" class="pccv" width="720" height="1280"></canvas><div class="pcbar"><i id="pcfill"></i></div></div>';
+  }
+  if(pcVideo){
+    return '<div class="pop">'+head+'<p class="prompt">▶ 明信片影片做好了！</p><video class="pcv" controls playsinline src="'+pcVideo.url+'"></video><div class="mact"><button class="btn go" type="button" data-act="pcdl">下載影片（'+pcVideo.ext+'）</button><button class="btn" type="button" data-act="pcback">回到郵箱</button></div><p class="small muted" style="margin:8px 0 0">下載後在手機的「檔案」App 找得到，再用分享選單存到相簿。</p></div>';
+  }
+  var thumbs=pcPhotos.map(function(p,i){return '<div class="pct"><img src="'+p.thumb+'" alt="明信片 '+(i+1)+'"><span class="pcw">'+avatar(p.s)+'</span><button class="x pcx" type="button" data-act="pcdel" data-i="'+i+'" aria-label="移除這張">'+icon('x')+'</button></div>'}).join('');
+  return '<div class="pop">'+head+'<div class="pcrow">'+pcBox(pcPhotos.length)+'<p class="prompt" style="margin:0">▶ 選好寄件人，把旅途中的照片放進郵箱，最後做成一支明信片影片！</p></div>'
+   +'<div class="pcsd">'+senders+'</div>'
+   +'<div class="mact"><label class="btn go filebtn">放進郵箱（選擇照片）<input type="file" id="pcfile" accept="image/*" multiple></label></div>'
+   +(pcMsg?'<p class="small" style="margin:6px 0;color:var(--accent)">'+esc(pcMsg)+'</p>':'')
+   +'<div class="pcg">'+(thumbs||'<p class="small muted" style="grid-column:1/-1;margin:4px 0">郵箱還是空的。</p>')+'</div>'
+   +'<div class="mact"><button class="btn red" type="button" data-act="pcmake"'+(pcPhotos.length?'':' disabled')+'>製作明信片影片'+(pcPhotos.length?'（'+pcPhotos.length+' 張）':'')+'</button></div>'
+   +'<p class="small muted" style="margin:8px 0 0">也可以直接把照片拖進這個視窗，或按 Ctrl+V 貼上。影片裡會穿插旅途小貼紙（海鮮丼、洞爺湖雪人、大通電視塔…）。照片只在這支手機的瀏覽器裡處理，不會上傳到任何地方。想把四個人的照片放進同一支影片，請在同一支手機上分別選擇寄件人後放入；關掉頁面後照片會清空。</p></div>';
+}
+function pcRender(){var b=document.getElementById('pcbody');if(b)b.innerHTML=pcBody()}
+function openPostcard(opener){
+  ltOpener=opener||null;
+  var ov=document.getElementById('lt');
+  ov.innerHTML='<div class="lt-card"><button class="x lt-x" type="button" data-act="ltclose" aria-label="關閉">'+icon('x')+'</button><div id="pcbody">'+pcBody()+'</div></div>';
+  ov.hidden=false;document.body.classList.add('lt-open');
+  var b=ov.querySelector('.filebtn input');if(b)b.focus();
+}
+function pcLoad(file){
+  return new Promise(function(res){
+    var u=URL.createObjectURL(file),im=new Image();
+    im.onload=function(){
+      var m=1280,sc=Math.min(1,m/Math.max(im.naturalWidth,im.naturalHeight)),c=document.createElement('canvas');
+      c.width=Math.max(1,Math.round(im.naturalWidth*sc));c.height=Math.max(1,Math.round(im.naturalHeight*sc));
+      c.getContext('2d').drawImage(im,0,0,c.width,c.height);
+      var t=document.createElement('canvas');t.width=160;t.height=160;
+      var tc=t.getContext('2d'),s2=Math.max(160/c.width,160/c.height);
+      tc.drawImage(c,(160-c.width*s2)/2,(160-c.height*s2)/2,c.width*s2,c.height*s2);
+      URL.revokeObjectURL(u);res({src:c,thumb:t.toDataURL('image/jpeg',0.6)});
+    };
+    im.onerror=function(){URL.revokeObjectURL(u);res(null)};
+    im.src=u;
+  });
+}
+async function pcAddFiles(files){
+  var list=[].slice.call(files||[]).filter(function(f){return /^image\//.test(f.type)||/\.(heic|jpg|jpeg|png|webp)$/i.test(f.name)});
+  pcMsg='';
+  for(var i=0;i<list.length;i++){
+    if(pcPhotos.length>=30){pcMsg='郵箱最多放 30 張。';break}
+    var r=await pcLoad(list[i]);
+    if(r)pcPhotos.push({src:r.src,thumb:r.thumb,s:pcSender});else pcMsg='有照片無法讀取（可能是不支援的格式），已略過。';
+  }
+  pcRender();
+}
+function drawAvC(ctx,n,x,y,s){
+  var a=AVD[n];if(!a)return;
+  var g=[],yy,xx;
+  for(yy=0;yy<18;yy++){g.push([]);for(xx=0;xx<18;xx++)g[yy].push('.')}
+  a.rows.forEach(function(row,rr){for(var c=0;c<16;c++)g[rr+1][c+1]=row.charAt(c)});
+  for(yy=0;yy<18;yy++)for(xx=0;xx<18;xx++){
+    var c=g[yy][xx],col=null;
+    if(c==='.'){if([[1,0],[-1,0],[0,1],[0,-1]].some(function(d){var Y=yy+d[1],X=xx+d[0];return Y>=0&&Y<18&&X>=0&&X<18&&g[Y][X]!=='.'}))col='#0b1030'}
+    else col=a.pal[c];
+    if(col){ctx.fillStyle=col;ctx.fillRect(Math.round(x+xx*s),Math.round(y+yy*s),Math.ceil(s),Math.ceil(s))}
+  }
+}
+var STK=[
+ {n:'海鮮丼',pal:{o:'#ff8c1a',O:'#e8590c',p:'#ff9eb0',r:'#d4372c',w:'#ffffff',k:'#17203a',B:'#c9302c'},rows:[
+  "....oOoOoO....",
+  "..oOoOoOoOoO..",
+  ".pppoOoOrrrrr.",
+  "wpppwwwwrrrrw.",
+  "kkkkkkkkkkkkkk",
+  "kBBBBBBBBBBBBk",
+  ".kBBBBBBBBBBk.",
+  "..kkBBBBBBkk..",
+  "....kkkkkk...."]},
+ {n:'洞爺湖雪人',pal:{k:'#17203a',w:'#ffffff',o:'#f08a1c',r:'#e8384f'},rows:[
+  "....kkkk....",
+  "....kkkk....",
+  "..kkkkkkkk..",
+  "...wwwwww...",
+  "..wwkwwkww..",
+  "..wwwoowww..",
+  "...wwwwww...",
+  "..rrrrrrrr..",
+  ".wwwwwwwwww.",
+  ".wwwwkwwwww.",
+  ".wwwwwwwwww.",
+  ".wwwwkwwwww.",
+  "..wwwwwwww..",
+  "...wwwwww..."]},
+ {n:'大通電視塔',pal:{k:'#17203a',r:'#d4372c',w:'#ffffff',y:'#ffe08a'},rows:[
+  "....kk....",
+  "....rr....",
+  "....rr....",
+  "...rwwr...",
+  "..kkkkkk..",
+  "..kyyyyk..",
+  "..kkkkkk..",
+  "...rwwr...",
+  "...rrrr...",
+  "..rwwwwr..",
+  "..rrwwrr..",
+  ".rwwrrwwr.",
+  ".rrwwwwrr.",
+  "rwwrrrrwwr",
+  "rrrr..rrrr"]},
+ {n:'湯咖哩',pal:{b:'#8a4010',o:'#ff8c1a',g:'#2f9d4f',w:'#ffffff',R:'#e8384f',k:'#17203a'},rows:[
+  "..............",
+  "..bbbbbbbbbb..",
+  ".bboobgbbwwbb.",
+  ".bbobbbggwwbb.",
+  "kkkkkkkkkkkkkk",
+  "kRRRRRRRRRRRRk",
+  ".kRRRRRRRRRRk.",
+  "..kkRRRRRRkk..",
+  "....kkkkkk...."]},
+ {n:'旭山動物園',pal:{k:'#2a3350',w:'#ffffff',o:'#ff9a1a'},rows:[
+  "...kkkk...",
+  "..kkkkkk..",
+  "..kwkkwk..",
+  "..kkookk..",
+  "..kkkkkk..",
+  ".kkwwwwkk.",
+  ".kwwwwwwk.",
+  ".kwwwwwwk.",
+  ".kkwwwwkk.",
+  "..kkkkkk..",
+  "..oo..oo.."]},
+ {n:'洞爺湖泡湯',pal:{w:'#ffffff',n:'#8a5a2c',c:'#7fd0f0'},rows:[
+  "...w....w.....",
+  "....w....w....",
+  "...w....w.....",
+  "nnnnnnnnnnnnnn",
+  "ncccccccccccnn",
+  "nccwccccwcccnn",
+  "ncccccccccccnn",
+  "nnnnnnnnnnnnnn",
+  "..n........n.."]},
+ {n:'蟹座吃到飽',pal:{r:'#d4372c',k:'#17203a',w:'#ffffff'},rows:[
+  "..r........r..",
+  ".rrr......rrr.",
+  ".rr..rrrr..rr.",
+  "..rr.rkrkr.rr.",
+  "...rrrrrrrrr..",
+  "..rrrrrrrrrr..",
+  ".r.rrrrrrrr.r.",
+  "r..r.r..r.r..r",
+  "...r......r..."]},
+ {n:'啤酒博物館',pal:{w:'#ffffff',k:'#17203a',y:'#ffb62e',h:'#ffe08a'},rows:[
+  "..www.ww...",
+  ".wwwwwwww..",
+  "kkkkkkkkk..",
+  "kyyyyyyykkk",
+  "kyyhyyyyk.k",
+  "kyyyyyyyk.k",
+  "kyyyyyyykkk",
+  "kyyyyyyyk..",
+  "kkkkkkkkk.."]},
+ {n:'北海道神宮',pal:{r:'#d4372c',k:'#17203a'},rows:[
+  "rrrrrrrrrrrrrr",
+  ".rrrrrrrrrrrr.",
+  "...rr....rr...",
+  "...rr....rr...",
+  "kkkkkkkkkkkkkk",
+  "...rr....rr...",
+  "...rr....rr...",
+  "...rr....rr...",
+  "...rr....rr..."]},
+ {n:'雪精靈 シマエナガ',pal:BIRD_PAL,rows:null},
+ {n:'牛禪壽喜燒',pal:{w:'#ffffff',p:'#ff9eb0',g:'#2f9d4f',y:'#ffb62e',k:'#17203a',d:'#3a4260'},rows:[
+  "...w..w..w....",
+  "..............",
+  "..pppwwggpp...",
+  ".kppwwyggppk..",
+  "kkkkkkkkkkkkkk",
+  "kddddddddddddk",
+  ".kddddddddddk.",
+  "..kkkkkkkkkk.."]},
+ {n:'鱈魚香絲',pal:{w:'#ffffff',o:'#ff8c1a',k:'#17203a'},rows:[
+  "owwwwwwwwwwwwo",
+  "..............",
+  "owwwwwwwwwwwwo",
+  "..............",
+  "owwwwwwwwwwwwo",
+  "..............",
+  "owwwwwwwwwwwwo"]},
+ {n:'咖啡時間',pal:{w:'#ffffff',b:'#8a4010',k:'#17203a',p:'#ff9eb0'},rows:[
+  "...w..w.....",
+  "....w..w....",
+  "kkkkkkkkk...",
+  "kbbbbbbbkkk.",
+  "kbbbbbbbk.k.",
+  "kbbbbbbbk.k.",
+  ".kbbbbbbkk..",
+  "..kkkkkkk..."]},
+ {n:'回家囉',pal:{w:'#ffffff',r:'#d4372c',k:'#17203a',s:'#8a96ad'},rows:[
+  "..........r...",
+  "...wwwwwwwwwk.",
+  "wwwwwwwwwwwwww",
+  ".rrrrrrrrrrrr.",
+  "....ssss......",
+  "...ssssss....."]}
+];
+STK[9].rows=birdRows(2);
+function stkDraw(ctx,st,x,y,s,rot,sc){
+  var rows=st.rows,h=rows.length,w=rows[0].length,P=3,g=[],yy,xx,dy,dx;
+  for(yy=0;yy<h+2*P;yy++){g.push([]);for(xx=0;xx<w+2*P;xx++)g[yy].push('.')}
+  rows.forEach(function(row,r){for(var c=0;c<w;c++){var ch=row.charAt(c);if(ch!=='.')g[r+P][c+P]=ch}});
+  ctx.save();ctx.translate(x,y);ctx.rotate(rot||0);ctx.scale(sc||1,sc||1);
+  var ox=-(w+2*P)*s/2,oy=-(h+2*P)*s/2;
+  for(yy=0;yy<h+2*P;yy++)for(xx=0;xx<w+2*P;xx++){
+    var ch=g[yy][xx],col=null;
+    if(ch!=='.')col=st.pal[ch]||'#17203a';
+    else{
+      var ink=false,wh=false;
+      for(dy=-2;dy<=2;dy++)for(dx=-2;dx<=2;dx++){
+        var Y=yy+dy,X=xx+dx;
+        if(Y<0||X<0||Y>=h+2*P||X>=w+2*P||g[Y][X]==='.')continue;
+        if(Math.abs(dx)+Math.abs(dy)===1)ink=true;else wh=true;
+      }
+      col=ink?'#17203a':(wh?'#ffffff':null);
+    }
+    if(col){ctx.fillStyle=col;ctx.fillRect(Math.round(ox+xx*s),Math.round(oy+yy*s),Math.ceil(s),Math.ceil(s))}
+  }
+  ctx.restore();
+}
+async function pcMake(){
+  if(pcBusy||!pcPhotos.length)return;
+  pcBusy=true;pcVideo=null;pcMsg='';pcRender();
+  try{
+    if(document.fonts&&document.fonts.load){try{await Promise.all([document.fonts.load('700 40px "Pixelify Sans"'),document.fonts.load('700 40px "Noto Sans TC"')])}catch(e){}}
+    var W=720,H=1280,cv=document.getElementById('pcCanvas'),ctx=cv.getContext('2d');
+    var types=['video/mp4;codecs=avc1.42E01E','video/mp4','video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm'],mt='',i;
+    for(i=0;i<types.length;i++){if(window.MediaRecorder&&MediaRecorder.isTypeSupported(types[i])){mt=types[i];break}}
+    if(!mt||!cv.captureStream)throw new Error('unsupported');
+    var FONT='"Pixelify Sans","Noto Sans TC",sans-serif';
+    var segs=[{t:'title',d:2.8}],nph=pcPhotos.length,sj=0;
+    pcPhotos.forEach(function(p,k){segs.push({t:'photo',d:2.8,p:p,i:k});if(k%2===1||k===nph-1){segs.push({t:'stk',d:1.5,k:sj%STK.length});sj++}});
+    segs.push({t:'end',d:3});
+    var total=segs.reduce(function(a,s){return a+s.d},0);
+    function bg(t){
+      var gr=ctx.createLinearGradient(0,0,0,H);gr.addColorStop(0,'#a9d4f2');gr.addColorStop(1,'#eaf4fb');ctx.fillStyle=gr;ctx.fillRect(0,0,W,H);
+      [[120,900,220],[360,960,260],[600,880,200]].forEach(function(m){for(var y=m[1],j=0;y<H;y+=16,j++){var w=Math.min((j+1)*16,m[2]);ctx.fillStyle=j<2?'#ffffff':'#9db8e0';ctx.fillRect(m[0]-w,y,w*2,16)}});
+      ctx.fillStyle='#f6fbff';ctx.fillRect(0,1130,W,150);
+      for(var k=0;k<46;k++){var fx=(k*97)%W,fy=((k*53)+t*70*(0.5+(k%3)/3))%H,s=6+(k%3)*3;ctx.fillStyle='rgba(255,255,255,.95)';ctx.fillRect(Math.round(fx),Math.round(fy),s,s)}
+    }
+    function cover(img,x,y,w,h){
+      var sc=Math.max(w/img.width,h/img.height),sw=w/sc,sh=h/sc;
+      ctx.drawImage(img,(img.width-sw)/2,(img.height-sh)/2,sw,sh,x,y,w,h);
+    }
+    function text(s,x,y,size,col,al){ctx.font='700 '+size+'px '+FONT;ctx.fillStyle=col;ctx.textAlign=al||'center';ctx.fillText(s,x,y)}
+    function drawTitle(lt){
+      text('北海鱈魚香絲',W/2,430,88,'#17203a');text('Postcards from Hokkaido',W/2,500,34,'#2458c9');text('2026.11.21 – 11.29',W/2,560,38,'#17203a');
+      ['涵','蘇','茜','周'].forEach(function(n,k){drawAvC(ctx,n,W/2-190+k*100,640+(Math.floor(lt*3+k)%2)*-6,5)});
+      for(var q=0;q<6;q++)stkDraw(ctx,STK[q],78+q*113,250+Math.sin(lt*4+q)*10,4.4,Math.sin(lt*3+q)*0.1,1);
+    }
+    function drawStk(seg,lt){
+      var st=STK[seg.k];
+      stkDraw(ctx,st,W/2,H/2-60,14,Math.sin(lt*6)*0.08,1+0.06*Math.sin(lt*10));
+      text(st.n,W/2,H/2+330,64,'#17203a');
+      for(var q=0;q<6;q++){if(Math.floor(lt*4+q)%2){var sx=120+q*100,sy=260+(q%3)*60;ctx.fillStyle='#ffb62e';ctx.fillRect(sx+8,sy,8,24);ctx.fillRect(sx,sy+8,24,8)}}
+    }
+    function drawPhoto(p,idx,lt){
+      var e=Math.min(1,lt/0.5);e=1-Math.pow(1-e,3);
+      var ang=(idx%2?1:-1)*(0.035*(1-e)+0.012);
+      ctx.save();ctx.translate(W/2,H/2-20+(1-e)*170);ctx.rotate(ang);
+      ctx.fillStyle='rgba(23,32,58,.25)';ctx.fillRect(-300,-452,624,940);
+      ctx.fillStyle='#17203a';ctx.fillRect(-312,-470,624,940);
+      ctx.fillStyle='#fffdf6';ctx.fillRect(-306,-464,612,928);
+      cover(p.p.src,-282,-440,564,640);
+      ctx.strokeStyle='#17203a';ctx.lineWidth=6;ctx.strokeRect(-282,-440,564,640);
+      ctx.fillStyle='#d4372c';ctx.fillRect(196,-450,92,112);ctx.fillStyle='#fffdf6';ctx.fillRect(204,-442,76,96);ctx.fillStyle='#d4372c';ctx.fillRect(212,-426,60,40);ctx.fillStyle='#ffffff';ctx.fillRect(232,-436,20,16);
+      ctx.strokeStyle='rgba(23,32,58,.55)';ctx.lineWidth=4;ctx.beginPath();ctx.arc(140,-392,46,0,Math.PI*2);ctx.stroke();
+      text('SAPPORO',140,-396,14,'rgba(23,32,58,.6)');text('2026',140,-376,14,'rgba(23,32,58,.6)');
+      text('Hello from Hokkaido',-282,262,34,'#17203a','left');
+      drawAvC(ctx,p.p.s,-282,290,4);
+      text('From '+p.p.s,-282+88,346,40,'#2458c9','left');
+      text('No. '+String(idx+1).padStart(2,'0'),282,346,34,'#17203a','right');
+      ctx.strokeStyle='#c8b890';ctx.lineWidth=3;ctx.setLineDash([10,8]);ctx.beginPath();ctx.moveTo(-282,392);ctx.lineTo(282,392);ctx.moveTo(-282,428);ctx.lineTo(282,428);ctx.stroke();ctx.setLineDash([]);
+      var pp=Math.min(1,Math.max(0,(lt-0.5)/0.4)),sc=pp<=0?0:(pp<0.7?pp/0.7*1.2:1.2-0.2*((pp-0.7)/0.3));
+      if(sc>0){stkDraw(ctx,STK[(idx*2+5)%STK.length],-232,190,6.5,-0.14,sc);stkDraw(ctx,STK[(idx*2+6)%STK.length],226,212,6.5,0.12,sc)}
+      ctx.restore();
+    }
+    function drawEnd(lt){
+      text('謝謝這趟旅行',W/2,480,84,'#17203a');text('北海鱈魚香絲',W/2,560,44,'#2458c9');
+      ['涵','蘇','茜','周'].forEach(function(n,k){drawAvC(ctx,n,W/2-190+k*100,640+(Math.floor(lt*3+k)%2)*-6,5)});
+      for(var k=0;k<8;k++){var ex=(k*97+60)%W,ey=H+60-((lt*190+k*170)%(H+220));stkDraw(ctx,STK[(k*2+3)%STK.length],ex,ey,3.6,Math.sin(lt*3+k)*0.12,1)}
+    }
+    function draw(t){
+      var acc=0,seg=segs[segs.length-1],lt=seg.d;
+      for(var k=0;k<segs.length;k++){if(t<acc+segs[k].d){seg=segs[k];lt=t-acc;break}acc+=segs[k].d}
+      bg(t);
+      ctx.save();ctx.globalAlpha=Math.max(0,Math.min(1,lt/0.3,(seg.d-lt)/0.3));
+      if(seg.t==='title')drawTitle(lt);else if(seg.t==='end')drawEnd(lt);else if(seg.t==='stk')drawStk(seg,lt);else drawPhoto(seg,seg.i,lt);
+      ctx.restore();
+    }
+    draw(0);
+    var stream=cv.captureStream(30),rec=new MediaRecorder(stream,{mimeType:mt,videoBitsPerSecond:3500000}),chunks=[];
+    rec.ondataavailable=function(e){if(e.data&&e.data.size)chunks.push(e.data)};
+    var stopped=new Promise(function(r){rec.onstop=r});
+    rec.start(250);
+    var t0=performance.now();
+    await new Promise(function(res){
+      function frame(){
+        var t=(performance.now()-t0)/1000,f=document.getElementById('pcfill');
+        if(t>=total){draw(total-0.01);if(f)f.style.width='100%';setTimeout(res,300);return}
+        draw(t);if(f)f.style.width=Math.round(t/total*100)+'%';requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    });
+    rec.stop();await stopped;
+    var blob=new Blob(chunks,{type:mt.split(';')[0]});
+    if(!blob.size)throw new Error('empty');
+    pcVideo={blob:blob,url:URL.createObjectURL(blob),ext:mt.indexOf('mp4')>-1?'mp4':'webm'};
+  }catch(e){
+    pcMsg='這個瀏覽器沒辦法直接製作影片，請改用較新的 Chrome 或 Safari 再試。';
+  }
+  pcBusy=false;pcRender();
+}
+async function pcDl(){
+  if(!pcVideo)return;
+  var name='hokkaido-postcards.'+pcVideo.ext;
+  try{
+    var dls=(window.claude&&window.claude.use)?await window.claude.use('downloads'):null;
+    if(dls){await dls.save({filename:name,data:pcVideo.blob});return}
+  }catch(e){if(e&&e.code==='declined')return}
+  var a=document.createElement('a');a.href=pcVideo.url;a.download=name;document.body.appendChild(a);a.click();a.remove();
+}
+
+/* ---------- 每日拍立得 ---------- */
+var poc={};
+var POC_STK={1:[12,11],2:[4,3],3:[11,1],4:[1,5],5:[7,6],6:[0,6],7:[2,8],8:[10,13],9:[12,11]};
+function pocSt(id){if(!poc[id])poc[id]={photos:[],sender:'涵',result:null,busy:false,msg:''};return poc[id]}
+function pocInner(id){
+  var st=pocSt(id),n=st.photos.length;
+  var head='<h2>'+icon('mailbox','in')+'今日郵筒</h2>';
+  if(st.busy){
+    return head+'<p class="prompt">▶ 郵差正在把照片沖洗成拍立得…</p><canvas id="pocCanvas" class="poccv" width="1080" height="1350"></canvas>';
+  }
+  if(st.result){
+    return head+'<p class="prompt">▶ 沖洗好了！</p><img class="pocimg" src="'+st.result.url+'" alt="今天的四張北海道拍立得"><div class="mact"><button class="btn go" type="button" data-act="pocdl" data-d="'+id+'">下載圖片</button><button class="btn" type="button" data-act="pocredo" data-d="'+id+'">回到郵筒</button></div><p class="small muted" style="margin:8px 0 0">圖片存起來之後，就可以傳給大家或貼到限時動態。</p>';
+  }
+  var senders=['涵','蘇','茜','周'].map(function(nm){return '<button type="button" class="pcs'+(st.sender===nm?' on':'')+'" data-act="pocsender" data-s="'+nm+'" aria-pressed="'+(st.sender===nm)+'">'+avatar(nm)+'<span>'+nm+'</span></button>'}).join('');
+  var thumbs=st.photos.map(function(p,i){
+    return '<div><div class="pct"><img src="'+p.thumb+'" alt="第 '+(i+1)+' 張"><span class="pcw">'+avatar(p.s)+'</span><button class="x pcx" type="button" data-act="pocdel" data-i="'+i+'" aria-label="移除這張">'+icon('x')+'</button></div><input class="pocap" type="text" maxlength="14" data-pocap="'+i+'" data-d="'+id+'" placeholder="寫一句話（選填）" value="'+esc(p.cap||'')+'" aria-label="第 '+(i+1)+' 張的文字"></div>';
+  }).join('');
+  return '<div class="pop">'+head+'<div class="pcrow">'+postSVG(n,false).replace('class="postbox"','class="pcbox postbox"')+'<p class="prompt" style="margin:0">▶ 選好寄件人，把今天最喜歡的 4 張照片放進郵筒，沖洗成一張北海道拍立得！電腦也可以直接把照片拖進這個視窗，或按 Ctrl+V 貼上。</p></div>'
+   +'<div class="pcsd">'+senders+'</div>'
+   +'<div class="mact"><label class="btn go filebtn">放進郵筒（選擇照片）<input type="file" id="pocfile" accept="image/*" multiple></label></div>'
+   +(st.msg?'<p class="small" style="margin:6px 0;color:var(--accent)">'+esc(st.msg)+'</p>':'')
+   +'<div class="pocg" style="margin-top:10px">'+(thumbs||'<p class="small muted" style="grid-column:1/-1;margin:4px 0">郵筒還是空的。</p>')+'</div>'
+   +'<div class="mact"><button class="btn red" type="button" data-act="pocmake" data-d="'+id+'"'+(n===4?'':' disabled')+'>'+(n===4?'沖洗拍立得':'還差 '+(4-n)+' 張（'+n+' / 4）')+'</button>'+(n?'<button class="btn" type="button" data-act="pocclear" data-d="'+id+'">清空重選</button>':'')+'</div>'
+   +'<p class="small muted" style="margin:8px 0 0">照片只在這支裝置的瀏覽器裡處理，不會上傳到任何地方；每天最多放 4 張，重新整理頁面後會清空。</p></div>';
+}
+var pocOpen=0;
+var POST_ROWS=["....wwwwww....","..wwwwwwwwww..","..rrrrrrrrrr..",".rRRrrrrrrrrr.",".rRrrrrrrrrrr.",".rrkkkkkkkkrr.",".rrrrrrrrrrrr.","..rryyyyyyrr..",".rrrryyyyrrrr.",".rrrrryyrrrrr.",".rrrrryyrrrrr.",".rrrrrrrrrrrr.",".rrrerrrrerrr.",".rrrerrrrerrr.",".rpprrrrrrppr.",".rrrrrrrrrrrr.",".rrrrrrrrrrrr.","..kkkkkkkkkk..","..gggggggggg..","...gggggggg..."];
+var POST_PAL={w:'#ffffff',r:'#d4372c',R:'#f27a6c',k:'#17203a',y:'#ffd24a',e:'#17203a',p:'#ffb3b3',g:'#8a96ad'};
+function postSVG(n,done){
+  var o=spriteRects(POST_ROWS,POST_PAL,'#17203a',{e:'eyeb'});
+  var env='<g class="penv"><rect x="16" y="7" width="7" height="5" fill="#17203a"/><rect x="17" y="8" width="5" height="3" fill="#ffffff"/><rect x="19" y="9" width="1" height="1" fill="#d4372c"/></g>';
+  var heart=done?'<g class="penv"><rect x="17" y="2" width="2" height="2" fill="#e8384f"/><rect x="20" y="2" width="2" height="2" fill="#e8384f"/><rect x="17" y="3" width="5" height="2" fill="#e8384f"/><rect x="18" y="5" width="3" height="1" fill="#e8384f"/></g>':'';
+  return '<svg class="postbox" viewBox="0 0 24 22" shape-rendering="crispEdges" role="img" aria-label="紅色的日本郵筒，戴著雪帽，有一張可愛的臉"><g class="pbody">'+o+'</g>'+(n||done?env:'')+heart+'</svg>';
+}
+function pocCardInner(id){
+  var st=pocSt(id),n=st.photos.length;
+  var stat=st.result?'照片已經沖洗好了，點郵筒打開就能下載！':(n?'已放進 '+n+' / 4 張':'郵筒還是空的');
+  return '<div class="pocrow"><button type="button" class="pocmb" data-act="pocopen" data-d="'+id+'" aria-label="打開今日郵筒">'+postSVG(n,!!st.result)+'</button><div><h2>今日郵筒</h2><p class="small" style="margin:0 0 6px">把今天最喜歡的 4 張照片投進郵筒，沖洗成一張北海道拍立得！</p><p class="small muted" style="margin:0 0 8px">'+stat+'</p><button class="btn go" type="button" data-act="pocopen" data-d="'+id+'">'+(st.result?'打開看看':'投進郵筒')+'</button></div></div>';
+}
+function pocCard(id){return '<section class="card poc" id="poc-'+id+'">'+pocCardInner(id)+'</section>'}
+function pocRefresh(id){
+  var b=document.getElementById('pocbody');if(b&&pocOpen===id)b.innerHTML=pocInner(id);
+  var c=document.getElementById('poc-'+id);if(c)c.innerHTML=pocCardInner(id);
+}
+function openPoc(id,opener){
+  pocOpen=id;ltOpener=opener||null;
+  var ov=document.getElementById('lt');
+  ov.innerHTML='<div class="lt-card"><button class="x lt-x" type="button" data-act="ltclose" aria-label="關閉">'+icon('x')+'</button><div id="pocbody" class="pop">'+pocInner(id)+'</div></div>';
+  ov.hidden=false;document.body.classList.add('lt-open');
+  var b=ov.querySelector('.pocslot,.btn');if(b)b.focus();
+}
+async function pocMake(id){
+  var st=pocSt(id);
+  if(st.busy||st.photos.length<4)return;
+  st.busy=true;pocRefresh(id);
+  try{
+    if(document.fonts&&document.fonts.load){try{await Promise.all([document.fonts.load('700 40px "Pixelify Sans"'),document.fonts.load('700 40px "Noto Sans TC"')])}catch(e){}}
+    var cv=document.getElementById('pocCanvas'),ctx=cv.getContext('2d'),W=1080,H=1350,d=DAYS[id-1];
+    var FONT='"Pixelify Sans","Noto Sans TC",sans-serif';
+    function text(s,x,y,size,col,al){ctx.font='700 '+size+'px '+FONT;ctx.fillStyle=col;ctx.textAlign=al||'left';ctx.fillText(s,x,y)}
+    function cover(img,x,y,w,h){var sc=Math.max(w/img.width,h/img.height),sw=w/sc,sh=h/sc;ctx.drawImage(img,(img.width-sw)/2,(img.height-sh)/2,sw,sh,x,y,w,h)}
+    var cell=[[70,245],[570,245],[70,790],[570,790]],PW=440,PH=420,stk=POC_STK[id]||[11,1];
+    function flake(x,y,s,col,sc){
+      sc=sc==null?1:sc;if(sc<=0)return;s=s*sc;ctx.fillStyle=col;
+      ctx.fillRect(x-s/2,y-s*2.5,s,s*5);ctx.fillRect(x-s*2.5,y-s/2,s*5,s);
+      ctx.fillRect(x-s*1.5,y-s*1.5,s,s);ctx.fillRect(x+s*0.5,y-s*1.5,s,s);ctx.fillRect(x-s*1.5,y+s*0.5,s,s);ctx.fillRect(x+s*0.5,y+s*0.5,s,s);
+    }
+    var FLK=[[540,232,5],[540,470,4],[540,1000,5],[540,1236,4],[150,752,4],[300,752,5],[430,752,3],[650,752,3],[780,752,5],[930,752,4],[1012,300,4],[58,1000,4],[1020,1000,3],[300,1318,3],[780,1318,3]];
+    var SNM=[[540,752,5.2,0.05],[92,618,3.6,-0.1],[992,618,3.4,0.12],[92,806,3.4,0.1],[992,1166,3.8,-0.08],[1010,236,3,0.1]];
+    function draw(T){
+      var gr=ctx.createLinearGradient(0,0,0,H);gr.addColorStop(0,'#f6f9fd');gr.addColorStop(1,'#d9e8f7');ctx.fillStyle=gr;ctx.fillRect(0,0,W,H);
+      for(var k=0;k<46;k++){ctx.fillStyle='rgba(140,182,232,.55)';var s2=6+(k%3)*3;ctx.fillRect((k*97)%W,((k*61)+T*40*(0.5+(k%3)/3))%H,s2,s2)}
+      text('北海鱈魚香絲',70,112,72,'#17203a');
+      text(d.date+'（'+d.dow+'）'+d.city.split(' → ')[0]+'・Hokkaido',72,172,36,'#2458c9');
+      ['涵','蘇','茜','周'].forEach(function(n,i){drawAvC(ctx,n,W-70-(4-i)*96,50,5)});
+      ctx.fillStyle='#17203a';ctx.fillRect(70,206,940,4);
+      for(var i=0;i<4;i++){
+        var delay=0.3+i*0.45,kk=Math.min(1,Math.max(0,(T-delay)/0.5));if(kk<=0)continue;
+        var e=1-Math.pow(1-kk,3),dev=Math.min(1,Math.max(0,(T-delay-0.5)/2.2)),x=cell[i][0],y=cell[i][1];
+        ctx.save();ctx.translate(0,(1-e)*70);ctx.globalAlpha=e;
+        ctx.fillStyle='rgba(23,32,58,.16)';ctx.fillRect(x+8,y+8,PW,PH);
+        ctx.fillStyle='#17203a';ctx.fillRect(x-4,y-4,PW+8,PH+8);
+        ctx.fillStyle='#ffffff';ctx.fillRect(x,y,PW,PH);
+        cover(st.photos[i].src,x+10,y+10,PW-20,PH-20);
+        if(dev<1){ctx.fillStyle='rgba(226,234,243,'+(0.96*Math.pow(1-dev,1.6)).toFixed(3)+')';ctx.fillRect(x+10,y+10,PW-20,PH-20)}
+        text((st.photos[i].cap||'').trim()||('From '+st.photos[i].s),x+2,y+PH+46,30,'#17203a','left');
+        text('no.'+String(i+1).padStart(2,'0'),x+PW,y+PH+46,24,'#6b7a95','right');
+        ctx.restore();
+      }
+      var sp=Math.min(1,Math.max(0,(T-2.4)/0.5));
+      FLK.forEach(function(f,q){var pp=Math.min(1,Math.max(0,(T-2.3-q*0.05)/0.3));flake(f[0],f[1],f[2],q%2?'#8ab6ea':'#6ea3e2',pp<=0?0:(pp<0.7?pp/0.7*1.25:1.25-0.25*((pp-0.7)/0.3)))});
+      SNM.forEach(function(m,q){var pp=Math.min(1,Math.max(0,(T-2.5-q*0.12)/0.4));if(pp<=0)return;var sc=pp<0.7?pp/0.7*1.2:1.2-0.2*((pp-0.7)/0.3);stkDraw(ctx,STK[1],m[0],m[1],m[2],m[3],sc)});
+      var tp=Math.min(1,Math.max(0,(T-3)/0.4)),ts=tp<=0?0:(tp<0.7?tp/0.7*1.2:1.2-0.2*((tp-0.7)/0.3));
+      if(ts>0){stkDraw(ctx,STK[stk[0]],92,276,5,-0.12,ts);stkDraw(ctx,STK[stk[1]%STK.length],996,1000,5,0.1,ts)}
+      text('Hokkaido 2026.11・北海鱈魚香絲',70,1322,30,'rgba(23,32,58,.7)','left');
+      if(T<0.25){ctx.fillStyle='rgba(255,255,255,'+(1-T/0.25).toFixed(3)+')';ctx.fillRect(0,0,W,H)}
+    }
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){draw(99)}else{
+      await new Promise(function(res){var t0=performance.now();(function fr(){var T=(performance.now()-t0)/1000;if(T>=4){draw(99);res();return}draw(T);requestAnimationFrame(fr)})()});
+    }
+    var blob=await new Promise(function(r){cv.toBlob(r,'image/png')});
+    if(!blob)throw new Error('blob');
+    if(st.result)URL.revokeObjectURL(st.result.url);
+    st.result={blob:blob,url:URL.createObjectURL(blob)};
+  }catch(e){}
+  st.busy=false;pocRefresh(id);
+}
+async function pocDl(id){
+  var st=pocSt(id);if(!st.result)return;
+  var name='hokkaido-polaroid-day'+id+'.png';
+  try{
+    var dls=(window.claude&&window.claude.use)?await window.claude.use('downloads'):null;
+    if(dls){await dls.save({filename:name,data:st.result.blob});return}
+  }catch(e){if(e&&e.code==='declined')return}
+  var a=document.createElement('a');a.href=st.result.url;a.download=name;document.body.appendChild(a);a.click();a.remove();
+}
+
+/* ---------- 放照片：選檔、拖曳、貼上 ---------- */
+async function pocAdd(id,files){
+  var st=pocSt(id),list=[].slice.call(files||[]).filter(function(f){return /^image\//.test(f.type)||/\.(heic|jpg|jpeg|png|webp)$/i.test(f.name||'')});
+  st.msg='';
+  if(!list.length){pocRefresh(id);return}
+  var room=4-st.photos.length;
+  if(list.length>room)st.msg='每天最多 4 張，多的先略過。';
+  list=list.slice(0,Math.max(0,room));
+  for(var k=0;k<list.length;k++){
+    var r=await pcLoad(list[k]);
+    if(r)st.photos.push({src:r.src,thumb:r.thumb,s:st.sender,cap:''});else st.msg='有照片無法讀取（可能是不支援的格式），已略過。';
+  }
+  pocRefresh(id);
+}
+document.addEventListener('dragover',function(ev){if(ev.target.closest&&ev.target.closest('#pocbody,#pcbody'))ev.preventDefault()});
+document.addEventListener('drop',function(ev){
+  var t=ev.target.closest?ev.target.closest('#pocbody,#pcbody'):null;if(!t)return;
+  ev.preventDefault();
+  var files=ev.dataTransfer&&ev.dataTransfer.files;
+  if(t.id==='pocbody'){if(!pocSt(pocOpen).busy&&!pocSt(pocOpen).result)pocAdd(pocOpen,files)}
+  else if(!pcBusy&&!pcVideo){pcAddFiles(files)}
+});
+document.addEventListener('paste',function(ev){
+  var files=ev.clipboardData&&ev.clipboardData.files;if(!files||!files.length)return;
+  if(document.getElementById('pocbody')){if(!pocSt(pocOpen).busy&&!pocSt(pocOpen).result)pocAdd(pocOpen,files)}
+  else if(document.getElementById('pcbody')&&!pcBusy&&!pcVideo)pcAddFiles(files);
+});
+
+/* ---------- 之後可以自己填的資料 ---------- */
+var fillv=store.get('fillv',{});
+var FILL_DEF={
+  outref:{title:'涵＋蘇 去程訂位代號',fields:[['ref','訂位代號','例：ABC123']]},
+  ajisuke:{title:'ほろ酔い処 味介・11/23（週一）營業時間',fields:[['v','11/23（週一）營業時間','例：18:30–23:00，或寫「公休」']]},
+  back:{title:'涵＋蘇 回程航班（11/29）',fields:[['al','航空公司','例：酷航'],['no','班次號','例：TR893'],['dep','起飛時間（新千歲，24 小時制）','例：12:30'],['arr','抵達時間（桃園）','例：15:50'],['ref','訂位代號（選填）',''],['bag','行李備註（選填）','']]}
+};
+function fillGet(k,f){return (fillv[k]&&fillv[k][f])||''}
+function fillBtn(k,label){return '<button class="btn sm" type="button" data-act="fillopen" data-k="'+k+'">'+label+'</button>'}
+function chAug(c){
+  if(c.fillKey&&fillGet(c.fillKey,'v')){var o={},k;for(k in c)o[k]=c[k];o.hours='週一 '+fillGet(c.fillKey,'v');return o}
+  return c;
+}
+function hmToMin(t){var m=/^(\d{1,2}):(\d{2})$/.exec((t||'').trim());if(!m)return null;var h=+m[1],mi=+m[2];return(h>23||mi>59)?null:h*60+mi}
+function minToHm(x){x=Math.max(0,x);return String(Math.floor(x/60)).padStart(2,'0')+':'+String(x%60).padStart(2,'0')}
+function backDone(){return !!(fillGet('back','no')&&hmToMin(fillGet('back','dep'))!==null)}
+function backAug(it){
+  var o={},k;for(k in it)o[k]=it[k];
+  if(!backDone()){return o}
+  var dep=hmToMin(fillGet('back','dep')),air=dep-150,jr=air-45,al=fillGet('back','al'),no=fillGet('back','no'),arr=fillGet('back','arr'),ref=fillGet('back','ref'),bag=fillGet('back','bag');
+  var basis='依你們填的班機（'+minToHm(dep)+' 起飛）估算：起飛前約 2.5 小時到機場。';
+  if(it.backRole==='flight'){
+    o.time=minToHm(dep);o.title='（涵＋蘇）'+(al?al+' ':'')+no+' 新千歲 → 桃園';o.flags=[];
+    o.note='11/29（日）'+minToHm(dep)+' 起飛'+(arr?'，'+arr+' 抵達桃園':'')+(ref?'。訂位代號 '+ref:'')+(bag?'。'+bag:'')+'。';
+  }else if(it.backRole==='airport'){
+    o.time=minToHm(air);o.dur='約 1 小時（至約 '+minToHm(dep-90)+'）';o.note=(it.note||'')+' '+basis;
+  }else if(it.backRole==='jr'){
+    o.time=minToHm(jr);o.dur='約 40 分鐘（至約 '+minToHm(air)+'）';o.note=(it.note||'')+' '+basis+(jr<400?' 班機很早，飯店早餐可能趕不上，建議前一晚先買好早餐。':'');
+  }
+  return o;
+}
+function fillForm(k){
+  var d=FILL_DEF[k];
+  return '<div class="pop"><h2>'+icon('check','in')+esc(d.title)+'</h2><p class="prompt">▶ 之後拿到資料就填在這裡，紅色的待確認會跟著消失。只存在這支裝置的瀏覽器裡。</p><div class="cf">'
+    +d.fields.map(function(f){return '<label for="fill_'+f[0]+'">'+esc(f[1])+'</label><input id="fill_'+f[0]+'" type="text" placeholder="'+esc(f[2])+'" value="'+esc(fillGet(k,f[0]))+'">'}).join('')
+    +'</div><p id="fillmsg" class="small" style="margin:8px 0 0;color:var(--accent)"></p><div class="mact"><button class="btn go" type="button" data-act="fillsave" data-k="'+k+'">儲存</button><button class="btn" type="button" data-act="fillclear" data-k="'+k+'">清除</button><button class="btn" type="button" data-act="ltclose">取消</button></div></div>';
+}
+function openFill(k,opener){
+  ltOpener=opener||null;
+  var ov=document.getElementById('lt');
+  ov.innerHTML='<div class="lt-card"><button class="x lt-x" type="button" data-act="ltclose" aria-label="關閉">'+icon('x')+'</button>'+fillForm(k)+'</div>';
+  ov.hidden=false;document.body.classList.add('lt-open');
+  var f=ov.querySelector('.cf input');if(f)f.focus();
+}
+function fillSave(k){
+  var d=FILL_DEF[k],o={};
+  d.fields.forEach(function(f){var e=document.getElementById('fill_'+f[0]);o[f[0]]=e?e.value.trim():''});
+  if(k==='back'&&o.dep&&hmToMin(o.dep)===null){var m=document.getElementById('fillmsg');if(m)m.textContent='起飛時間請填 24 小時制，例如 12:30。';return}
+  fillv[k]=o;store.set('fillv',fillv);
+  if(k==='back'&&o.no&&hmToMin(o.dep)!==null){lists.todos=lists.todos.filter(function(i){return i.id!=='t2'});store.set('todos',lists.todos)}
+  closeLetter();go(true);
+}
+function backCard(){
+  var b=function(f){return esc(fillGet('back',f))};
+  var body;
+  if(backDone()){
+    body='<dl class="kv"><dt>航班</dt><dd>'+b('al')+' '+b('no')+'</dd><dt>起飛</dt><dd>11/29（日）'+b('dep')+'・新千歲機場</dd>'+(fillGet('back','arr')?'<dt>抵達</dt><dd>'+b('arr')+'・桃園國際機場</dd>':'')+(fillGet('back','ref')?'<dt>訂位代號</dt><dd>'+b('ref')+'</dd>':'')+(fillGet('back','bag')?'<dt>行李</dt><dd>'+b('bag')+'</dd>':'')+'</dl>'+fillBtn('back','編輯回程航班');
+  }else{
+    body='<dl class="kv"><dt>班次</dt><dd>比茜＋周早回來，之後提供 '+TBD+'</dd></dl>'+fillBtn('back','填寫回程航班');
+  }
+  return '<section class="card"><h2>'+icon('plane','in')+'回程・11/29（日）涵＋蘇</h2>'+body+'</section>';
+}
+
 /* ---------- router ---------- */
 var VIEWS=['flights','map','weather','lists','money'];
 var lastDay=store.get('day',null)||todayId()||1;
@@ -1143,6 +2419,7 @@ function route(){
   if(m){view='day';day=+m[1];lastDay=day;store.set('day',day)}
   else if(VIEWS.indexOf(hsh)>-1)view=hsh;
   else{view='day';day=lastDay}
+  if(!(view==='day'&&day===5))tzDone=false;
   var app=document.getElementById('app');
   var map={day:function(){return renderDay(day)},flights:renderFlights,map:renderMap,weather:renderWeather,lists:renderLists,money:renderMoney};
   app.innerHTML=map[view]();
@@ -1171,8 +2448,36 @@ document.addEventListener('click',function(ev){
   var a=el.getAttribute('data-act'),k=el.getAttribute('data-k'),id=el.getAttribute('data-id');
   if(a==='theme'){theme=theme==='auto'?'light':(theme==='light'?'dark':'auto');store.set('theme',theme);applyTheme()}
   else if(a==='toggleAll'){openAll=!openAll;go(true)}
+  else if(a==='pick'&&CH[el.getAttribute('data-key')]&&CH[el.getAttribute('data-key')].multi){var mk=el.getAttribute('data-key'),mi=+el.getAttribute('data-i'),ma=Array.isArray(picks[mk])?picks[mk].slice():[],mx=ma.indexOf(mi);if(mx>-1)ma.splice(mx,1);else ma.push(mi);picks[mk]=ma;store.set('pick',picks);go(true)}
   else if(a==='pick'){var pk=el.getAttribute('data-key'),pi=+el.getAttribute('data-i');picks[pk]=(picks[pk]===pi?null:pi);store.set('pick',picks);var pop=CH[pk]&&CH[pk].choices[pi]&&CH[pk].choices[pi].popup;go(true);if(pop&&picks[pk]===pi)openPopup(pop,el)}
   else if(a==='pickpop'){var qk=el.getAttribute('data-key'),qi=+el.getAttribute('data-i');picks[qk]=qi;store.set('pick',picks);closeLetter();go(true)}
+  else if(a==='dnreset'){dnPlaced={};dnLast=null;dnRender()}
+  else if(a==='crepe'){var cv=el.getAttribute('data-v');if(cv==='null')delete picks.d5crepe;else picks.d5crepe=+cv;store.set('pick',picks);go(true)}
+  else if(a==='morning'){openMorning(el)}
+  else if(a==='mopen'){morningOpen()}
+  else if(a==='mdone'){tzDone=true;closeLetter();go(true)}
+  else if(a==='pocopen'){openPoc(+el.getAttribute('data-d'),el)}
+  else if(a==='pocmake'){pocMake(+el.getAttribute('data-d'))}
+  else if(a==='pocdl'){pocDl(+el.getAttribute('data-d'))}
+  else if(a==='pocredo'){var rd=+el.getAttribute('data-d'),rs=pocSt(rd);if(rs.result){URL.revokeObjectURL(rs.result.url);rs.result=null}pocRefresh(rd)}
+  else if(a==='pocclear'){var cd=+el.getAttribute('data-d'),cs=pocSt(cd);cs.photos=[];cs.msg='';pocRefresh(cd)}
+  else if(a==='pocsender'){pocSt(pocOpen).sender=el.getAttribute('data-s');pocRefresh(pocOpen)}
+  else if(a==='pocdel'){pocSt(pocOpen).photos.splice(+el.getAttribute('data-i'),1);pocSt(pocOpen).msg='';pocRefresh(pocOpen)}
+  else if(a==='tax'){openTax(el)}
+  else if(a==='taxck'){var ti=+el.getAttribute('data-i');taxCk[ti]=!taxCk[ti];document.getElementById('taxbody').innerHTML=taxHTML()}
+  else if(a==='pcopen'){openPostcard(el)}
+  else if(a==='pcsender'){pcSender=el.getAttribute('data-s');pcRender()}
+  else if(a==='pcadd'){var fi=document.getElementById('pcfile');if(fi)fi.click()}
+  else if(a==='pcdel'){pcPhotos.splice(+el.getAttribute('data-i'),1);pcRender()}
+  else if(a==='pcmake'){pcMake()}
+  else if(a==='pcback'){pcVideo=null;pcRender()}
+  else if(a==='pcdl'){pcDl()}
+  else if(a==='fillopen'){openFill(el.getAttribute('data-k'),el)}
+  else if(a==='fillsave'){fillSave(el.getAttribute('data-k'))}
+  else if(a==='fillclear'){delete fillv[el.getAttribute('data-k')];store.set('fillv',fillv);closeLetter();go(true)}
+  else if(a==='caredit'){carEditing=true;go(true)}
+  else if(a==='carcancel'){carEditing=false;go(true)}
+  else if(a==='carsave'){['company','pickAddr','retAddr','fee','ref','note'].forEach(function(f){var e=document.getElementById('car_'+f);if(e)car[f]=e.value.trim()});store.set('car',car);carEditing=false;if(car.company&&car.pickAddr&&car.fee){lists.todos=lists.todos.filter(function(i){return i.id!=='t3'});store.set('todos',lists.todos)}go(true)}
   else if(a==='letter'){openLetter(el)}
   else if(a==='ltopen'){readLetter()}
   else if(a==='ltclose'){closeLetter()}
@@ -1189,12 +2494,13 @@ document.addEventListener('change',function(ev){
     var k=t.getAttribute('data-k'),id=t.getAttribute('data-id');
     lists[k].forEach(function(i){if(i.id===id)i.done=t.checked});
     store.set(k,lists[k]);go(true);
-  }else if(t.id==='rate'){
+  }else if(t.id==='pocfile'){var pfl2=[].slice.call(t.files||[]);t.value='';pocAdd(pocOpen,pfl2)}else if(t.id==='pcfile'){var pfl=[].slice.call(t.files||[]);t.value='';pcAddFiles(pfl)}else if(t.id==='rate'){
     var v=parseFloat(t.value);rate=isFinite(v)&&v>=0?v:0.2;store.set('rate',rate);go(true);
   }
 });
 document.addEventListener('input',function(ev){
   var t=ev.target;
+  if(t.hasAttribute&&t.hasAttribute('data-pocap')){(function(ph){if(ph)ph.cap=t.value})(pocSt(+t.getAttribute('data-d')).photos[+t.getAttribute('data-pocap')])}
   if(t.hasAttribute&&t.hasAttribute('data-wx')){
     wx[t.getAttribute('data-wx')]=t.value;store.set('wx',wx);
     var row=t.closest('.unit'),st=row&&row.querySelector('.small.muted');
